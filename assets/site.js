@@ -14,7 +14,7 @@
   $$('[data-budget-source]').forEach(link=>link.href=`${p.sourceUrl}#gid=${p.budget2027.gid}`);
 
   // Each image is a local, attributed city photograph, not an office rendering.
-  $('#city-monoliths').innerHTML=p.cities.map((c,i)=>`<figure class="monolith" style="--panel-height:${[75,91,100,88,73][i]}%;--drift:${[-15,9,0,-9,15][i]}px"><a href="#cities" data-city="${c.id}" aria-label="Посмотреть ${esc(c.name)}"><img src="${c.image}" alt="" width="360" height="520" fetchpriority="${i===2?'high':'auto'}"></a><figcaption>${esc(c.name)}</figcaption></figure>`).join('');
+  $('#city-monoliths').innerHTML=p.cities.map(c=>`<figure class="monolith"><a href="#cities" data-city="${c.id}" aria-label="Посмотреть ${esc(c.name)}"><img src="${c.image}" alt="" width="360" height="520"></a><figcaption>${esc(c.name)}</figcaption></figure>`).join('');
   let selectedCity=p.cities[0].id;
   $('#city-tabs').innerHTML=p.cities.map((c,i)=>`<button id="city-tab-${c.id}" role="tab" aria-selected="${i===0}" aria-controls="city-theatre" tabindex="${i===0?0:-1}" data-city-tab="${c.id}">${esc(c.name)}</button>`).join('');
   $('#economy-city-selector').innerHTML=p.cities.map((c,i)=>`<button data-economy-city="${c.id}" aria-pressed="${i===0}">${esc(c.name)}</button>`).join('');
