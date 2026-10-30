@@ -11,12 +11,26 @@
   const longMonths = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
   $$('[data-source]').forEach(link => link.href=p.sourceUrl);
   $$('[data-strategy]').forEach(link => link.href=`${p.sourceUrl}#gid=${p.strategyGid}`);
+  $$('[data-budget-source]').forEach(link=>link.href=`${p.sourceUrl}#gid=${p.budget2027.gid}`);
 
   // Each image is a local, attributed city photograph, not an office rendering.
   $('#city-monoliths').innerHTML=p.cities.map((c,i)=>`<figure class="monolith" style="--panel-height:${[75,91,100,88,73][i]}%;--drift:${[-15,9,0,-9,15][i]}px"><a href="#cities" data-city="${c.id}" aria-label="Посмотреть ${esc(c.name)}"><img src="${c.image}" alt="" width="360" height="520" fetchpriority="${i===2?'high':'auto'}"></a><figcaption>${esc(c.name)}</figcaption></figure>`).join('');
   let selectedCity=p.cities[0].id;
   $('#city-tabs').innerHTML=p.cities.map((c,i)=>`<button id="city-tab-${c.id}" role="tab" aria-selected="${i===0}" aria-controls="city-theatre" tabindex="${i===0?0:-1}" data-city-tab="${c.id}">${esc(c.name)}</button>`).join('');
   $('#economy-city-selector').innerHTML=p.cities.map((c,i)=>`<button data-economy-city="${c.id}" aria-pressed="${i===0}">${esc(c.name)}</button>`).join('');
+  const budget=p.budget2027;
+  const expenseMoney=value=>value==null?'Не заполнено':`${number(value)} ₽`;
+  $('#budget-city-select').innerHTML=budget.cities.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('');
+  $('#budget-overview').innerHTML=`<div class="finance-cell"><span>Сумма заполненных итогов · ${budget.citiesWithTotals} города</span><strong>${million(budget.reportedTotal)} <small>млн ₽ / год</small></strong></div><div class="finance-cell"><span>Первый месяц · по ${budget.citiesWithTotals} заполненным итогам</span><strong>${million(budget.reportedMonths[0])} <small>млн ₽</small></strong></div>`;
+  $('#budget-city-totals').innerHTML=`<table><thead><tr>${['Город','Январь, ₽','Следующий месяц, ₽','Итог за 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${budget.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${expenseMoney(c.months[0])}</td><td>${expenseMoney(c.monthly)}</td><td>${expenseMoney(c.annual)}</td></tr>`).join('')}</tbody></table>`;
+  function renderBudget(id){
+    const c=budget.cities.find(c=>c.id===id);
+    $('#budget-city-select').value=id;
+    $('#budget-line-items').innerHTML=`<table><caption class="budget-caption">${esc(c.name)} · ${esc(c.sourceRows)}</caption><thead><tr>${['Статья','Разово, ₽','Ежемесячно, ₽','Январь, ₽','За 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${c.items.map(item=>`<tr><th scope="row">${esc(item.label)}</th><td>${expenseMoney(item.launch)}</td><td>${expenseMoney(item.monthly)}</td><td>${expenseMoney(item.months[0])}</td><td>${expenseMoney(item.annual)}</td></tr>`).join('')}</tbody></table>${c.completeTotal?'':`<p class="dialog-note">По внесённым статьям Ростова: ${number(c.knownLineAnnual)} ₽ за год, без незаполненной аренды. Это частичный расчёт; общий итог города в таблице отсутствует.</p>`}`;
+    $('#budget-preview-city').textContent=`Смета 2027 · ${c.name}`;
+    $('#budget-preview-value').textContent=c.annual==null?'Итог не заполнен':`${million(c.annual)} млн ₽ / год`;
+  }
+  $('#budget-city-select').addEventListener('change',event=>showCity(event.target.value));
   function showCity(id) {
     const i=p.cities.findIndex(c=>c.id===id);
     if(i<0)return;
@@ -36,6 +50,7 @@
     $('#secondary-bar').style.width=`${c.secondary / 300000 * 100}%`;
     $('#primary-bar').style.width=`${c.primary / 300000 * 100}%`;
     $('#annual-finance').innerHTML=[['ВВ за 2027 · план',c.annualRevenue],['Агентам · 50%',c.agentPayment],['РОПу · 10%',c.ropPayment],['Остаток до расходов · 40%',c.beforeExpenses]].map(([title,value])=>`<div><span>${title}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('');
+    renderBudget(id);
   }
   document.addEventListener('click',event=>{const link=event.target.closest('[data-city]');if(link)showCity(link.dataset.city);});
   $('#city-tabs').addEventListener('click',event=>{const button=event.target.closest('[data-city-tab]');if(button)showCity(button.dataset.cityTab);});
