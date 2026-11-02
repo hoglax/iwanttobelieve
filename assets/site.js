@@ -29,8 +29,6 @@
     const c=budget.cities.find(c=>c.id===id);
     $('#budget-city-select').value=id;
     $('#budget-line-items').innerHTML=`<table><caption class="budget-caption">${esc(c.name)} · ${esc(c.sourceRows)}</caption><thead><tr>${['Статья','Разово, ₽','Ежемесячно, ₽','Январь, ₽','За 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${c.items.map(item=>`<tr><th scope="row">${esc(item.label)}</th><td>${expenseMoney(item.launch)}</td><td>${expenseMoney(item.monthly)}</td><td>${expenseMoney(item.months[0])}</td><td>${expenseMoney(item.annual)}</td></tr>`).join('')}</tbody></table>${c.completeTotal?'':`<p class="dialog-note">По внесённым статьям Ростова: ${number(c.knownLineAnnual)} ₽ за год, без незаполненной аренды. Это частичный расчёт; общий итог города в таблице отсутствует.</p>`}`;
-    $('#budget-preview-city').textContent=`Смета 2027 · ${c.name}`;
-    $('#budget-preview-value').textContent=c.annual==null?'Итог не заполнен':`${million(c.annual)} млн ₽ / год`;
   }
   $('#budget-city-select').addEventListener('change',event=>showCity(event.target.value));
   function showCity(id) {
@@ -47,17 +45,12 @@
     $('#city-counter').textContent=`0${i+1} / 05`;
     $('#economy-city-name').textContent=c.name.toUpperCase();
     $('#average-value').innerHTML=`${number(c.average)}<span>₽</span>`;
-    $('#secondary-value').textContent=`${number(c.secondary)} ₽`;
-    $('#primary-value').textContent=`${number(c.primary)} ₽`;
-    $('#secondary-bar').style.width=`${c.secondary / 300000 * 100}%`;
-    $('#primary-bar').style.width=`${c.primary / 300000 * 100}%`;
-    $('#annual-finance').innerHTML=[['ВВ за 2027 · план',c.annualRevenue],['Агентам · 50%',c.agentPayment],['РОПу · 10%',c.ropPayment],['Остаток до расходов · 40%',c.beforeExpenses]].map(([title,value])=>`<div><span>${title}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('');
     renderBudget(id);
     if(presenting)updateControls();
   }
   document.addEventListener('click',event=>{const link=event.target.closest('[data-city]');if(link)showCity(link.dataset.city);});
   $('#city-tabs').addEventListener('click',event=>{const button=event.target.closest('[data-city-tab]');if(button)showCity(button.dataset.cityTab);});
-  $('#economy-city-selector').addEventListener('click',event=>{const button=event.target.closest('[data-economy-city]');if(button)showCity(button.dataset.economyCity);});
+  $('#economy-city-selector').addEventListener('click',event=>{const button=event.target.closest('[data-economy-city]');if(button){showCity(button.dataset.economyCity);scheduleEconomyRotation();}});
   function moveCity(delta){const i=p.cities.findIndex(c=>c.id===selectedCity);showCity(p.cities[(i+delta+p.cities.length)%p.cities.length].id);}
   $('#previous-city').addEventListener('click',()=>presenting?stepPresentation(-1):moveCity(-1));
   $('#next-city').addEventListener('click',()=>presenting?stepPresentation(1):moveCity(1));
@@ -68,33 +61,54 @@
     const tab=$(`#city-tab-${selectedCity}`);tab.focus({preventScroll:true});tab.scrollIntoView({block:'nearest',inline:'nearest',behavior:reduced.matches?'instant':'smooth'});
   });
 
-  let month=0;
   let teamScope='office';
-  const width=1020,height=205,left=25,right=25,top=18,bottom=27;
   function renderTeam(){
     const values=teamScope==='office'?p.cities[0].agents:p.totalAgents;
-    const max=values[11];
-    const x=i=>left+i/11*(width-left-right);
-    const y=value=>height-bottom-value/max*(height-top-bottom);
-    const path=values.map((value,i)=>`${i?'L':'M'}${x(i).toFixed(2)},${y(value).toFixed(2)}`).join(' ');
-    const activePath=values.slice(0,month+1).map((value,i)=>`${i?'L':'M'}${x(i).toFixed(2)},${y(value).toFixed(2)}`).join(' ');
-    $('#team-value').textContent=number(values[month]);
-    const count=values[month];
-    const agentWord=count%100>=11&&count%100<=14?'агентов':count%10===1?'агент':count%10>=2&&count%10<=4?'агента':'агентов';
-    $('#team-unit').textContent=`${agentWord} ${teamScope==='office'?'на офис':'в пяти городах'}`;
-    $('#month-output').textContent=`${longMonths[month]} 2027`;
-    $('#team-month').setAttribute('aria-valuetext',`${longMonths[month]} 2027: ${number(values[month])} ${teamScope==='office'?'агентов на офис':'агентов в сети'}`);
+    const max=Math.max(...values);
+    $('#team-value').textContent=number(values.at(-1));
+    $('#team-unit').textContent=teamScope==='office'?'агентов на офис':'агентов в пяти городах';
     $$('[data-team-scope]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.teamScope===teamScope));
-    $('#team-chart').innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="team-svg-title team-svg-desc"><title id="team-svg-title">План роста команды — ${teamScope==='office'?'один офис':'пять офисов'}</title><desc id="team-svg-desc">От ${number(values[0])} в январе до ${number(values[11])} агентов в декабре 2027. Выбран ${longMonths[month].toLowerCase()}: ${number(values[month])}.</desc><defs><linearGradient id="team-area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4e6fdc" stop-opacity=".1"/><stop offset="1" stop-color="#4e6fdc" stop-opacity="0"/></linearGradient></defs>${[.25,.5,.75,1].map(v=>`<line x1="${left}" x2="${width-right}" y1="${y(max*v)}" y2="${y(max*v)}" stroke="#f0f0f5"/>`).join('')}<path d="${path} L${x(11)},${height-bottom} L${x(0)},${height-bottom}Z" fill="url(#team-area)"/><path d="${path}" fill="none" stroke="#e3e7f5" stroke-width="3"/><path d="${activePath}" fill="none" stroke="#4b6cda" stroke-width="3"/><line x1="${x(month)}" x2="${x(month)}" y1="${y(values[month])}" y2="${height-bottom}" stroke="#cdd6f1" stroke-dasharray="3 5"/>${values.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="${i===month?5:2.5}" fill="${i<=month?'#4b6cda':'#d2d8ed'}"/>`).join('')}${[0,2,5,8,11].map(i=>`<text x="${x(i)}" y="${height-4}" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg>`;
+    $('#team-chart').setAttribute('role','img');
+    $('#team-chart').setAttribute('aria-label',`План численности команды на 2027 год, ${teamScope==='office'?'один офис':'вся сеть'}: ${values.map((v,i)=>`${longMonths[i]} — ${v}`).join('; ')} агентов.`);
+    $('#team-chart').innerHTML=values.map((value,i)=>`<div class="team-bar" aria-hidden="true"><div class="team-bar-track"><div class="team-bar-column${i===11?' final-bar':''}" style="--bar-height:${value/max*100}%"><span class="team-bar-value">${number(value)}</span></div></div><span class="team-bar-month" title="${longMonths[i]} 2027">${p.months[i]}</span></div>`).join('');
   }
-  $('#team-month').addEventListener('input',event=>{month=Number(event.target.value);renderTeam();});
   $$('[data-team-scope]').forEach(button=>button.addEventListener('click',()=>{teamScope=button.dataset.teamScope;renderTeam();}));
+
+  let economyRotationPaused=false;
+  let economyRotationTimer=null;
+  let economyVisible=false;
+  function scheduleEconomyRotation(){
+    clearTimeout(economyRotationTimer);
+    if(economyRotationPaused||!economyVisible||document.hidden||$('dialog[open]'))return;
+    economyRotationTimer=setTimeout(()=>{moveCity(1);scheduleEconomyRotation();},5000);
+  }
+  $('#economy-rotation-toggle').addEventListener('click',()=>{
+    economyRotationPaused=!economyRotationPaused;
+    const button=$('#economy-rotation-toggle');
+    button.setAttribute('aria-pressed',economyRotationPaused);
+    button.setAttribute('aria-label',economyRotationPaused?'Продолжить автоматическую смену городов':'Приостановить автоматическую смену городов');
+    button.textContent=economyRotationPaused?'Продолжить':'Пауза';
+    $('#economy-rotation-status').textContent=economyRotationPaused?'Показ приостановлен':'Автопоказ городов';
+    $('#economy-rotation-status').classList.toggle('paused',economyRotationPaused);
+    scheduleEconomyRotation();
+  });
+  if('IntersectionObserver' in window){
+    const economyObserver=new IntersectionObserver(entries=>{
+      const visible=entries[0].intersectionRatio>=.5;
+      if(visible&&!economyVisible&&!economyRotationPaused)showCity(p.cities[0].id);
+      economyVisible=visible;scheduleEconomyRotation();
+    },{threshold:[0,.5]});
+    economyObserver.observe($('#economics'));
+  }else{
+    const trackEconomy=()=>{const r=$('#economics').getBoundingClientRect();const visible=r.top<innerHeight*.5&&r.bottom>innerHeight*.5;if(visible!==economyVisible){economyVisible=visible;scheduleEconomyRotation();}};
+    window.addEventListener('scroll',trackEconomy,{passive:true});trackEconomy();
+  }
+  document.addEventListener('visibilitychange',scheduleEconomyRotation);
   const productivity=p.cities[0].productivity;
   $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>расчётных сделок за год / офис</span></div><div><strong>${number(p.annual.deals,1)}</strong><span>расчётных сделок за год / сеть</span></div>`;
-  $('#network-revenue-summary').innerHTML=`Пять городов: <b>${million(p.annual.revenue)} млн ₽</b> плановой ВВ за 2027.<br><span>${million(p.annual.beforeExpenses)} млн ₽ — остаток сети после агентских и РОП, до остальных расходов.</span>`;
   const px=i=>24+i/11*1070;
   const py=value=>115-value/2*90;
-  $('#productivity-chart').innerHTML=`<svg viewBox="0 0 1120 158" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">План продуктивности, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${p.months[i]}: ${number(v,2)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#5c514a"/><stop offset="1" stop-color="#efc3a0"/></linearGradient></defs><line x1="24" x2="1094" y1="115" y2="115" stroke="#ffffff0d"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="${i===11?4:2}" fill="${i===11?'#efc3a0':'#625348'}"/>`).join('')}${[0,2,5,8,11].map(i=>`<text x="${px(i)}" y="146" text-anchor="middle">${p.months[i]}</text>`).join('')}<text x="1094" y="13" text-anchor="end" fill="#d0a487">2,00</text></svg>`;
+  $('#productivity-chart').innerHTML=`<svg viewBox="0 0 1120 158" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">План продуктивности, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${p.months[i]}: ${number(v,2)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#5c514a"/><stop offset="1" stop-color="#efc3a0"/></linearGradient></defs><line x1="24" x2="1094" y1="115" y2="115" stroke="#ffffff0d"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="${i===11?4:2}" fill="${i===11?'#efc3a0':'#625348'}"/>`).join('')}${[0,2,5,8,11].map(i=>`<text x="${px(i)}" y="146" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg>`;
 
   const phases={
     prepare:{period:'ПРЕДЛАГАЕМЫЙ ЭТАП · НЕДЕЛИ 1–2',title:'Город. Люди.<br>Основа для старта.',lead:'До первых обязательств — понятная смета, местная команда и правила проверки.',points:[['Выбрать город и руководителя','Проверить условия рынка, формат работы и договоры.'],['Согласовать смету и предел расходов','Подготовка, аренда, команда, сервисы и резерв должны получить оценку.'],['Настроить учёт с первого дня','Раздельно фиксировать кандидатов, клиентов, каналы и оплаты.']]},
@@ -136,6 +150,7 @@
   let activeScene=0;
   let presenting=false;
   let sceneNavigation=null;
+  let sceneNavigationTimer=null;
   function updateControls(){
     const cityIndex=p.cities.findIndex(c=>c.id===selectedCity);
     $('#scene-indicator').textContent=`${String(activeScene+1).padStart(2,'0')} / ${String(scenes.length).padStart(2,'0')}`;
@@ -149,6 +164,8 @@
     const previous=activeScene;
     activeScene=Math.max(0,Math.min(index,scenes.length-1));
     sceneNavigation={index:activeScene,until:performance.now()+1400};
+    clearTimeout(sceneNavigationTimer);
+    sceneNavigationTimer=setTimeout(()=>{sceneNavigation=null;onScroll();},1450);
     if(presenting&&scenes[activeScene].id==='cities'&&previous!==activeScene)showCity((activeScene>previous?p.cities[0]:p.cities.at(-1)).id);
     scenes[activeScene].scrollIntoView({block:'start',behavior:reduced.matches?'instant':'smooth'});updateControls();
   }
