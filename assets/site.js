@@ -41,7 +41,7 @@
     $$('[data-economy-city]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.economyCity===id));
     $('#city-theatre').setAttribute('aria-labelledby',`city-tab-${id}`);
     $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} — вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())} · НАПРАВЛЕНИЕ 0${i+1}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><p>${esc(c.intro)}</p><div class="city-plan-metric"><span>ПЛАН КОМАНДЫ<br>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
-    $('#city-reason').textContent=`Перед открытием: ${c.verify.replace(/\.$/,'')}.`;
+    $('#city-reason').textContent=`До открытия уточним, ${c.verify.replace(/\.$/,'')}.`;
     $('#city-counter').textContent=`0${i+1} / 05`;
     $('#economy-city-name').textContent=c.name.toUpperCase();
     $('#average-value').innerHTML=`${number(c.average)}<span>₽</span>`;
@@ -105,7 +105,7 @@
   }
   document.addEventListener('visibilitychange',scheduleEconomyRotation);
   const productivity=p.cities[0].productivity;
-  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>расчётных сделок за год / офис</span></div><div><strong>${number(p.annual.deals,1)}</strong><span>расчётных сделок за год / сеть</span></div>`;
+  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>сделок на один офис за год</span></div><div><strong>${number(p.annual.deals,1)}</strong><span>сделок на всю сеть за год</span></div>`;
   const px=i=>24+i/11*1070;
   const py=value=>115-value/2*90;
   $('#productivity-chart').innerHTML=`<svg viewBox="0 0 1120 158" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">План продуктивности, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${p.months[i]}: ${number(v,2)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#5c514a"/><stop offset="1" stop-color="#efc3a0"/></linearGradient></defs><line x1="24" x2="1094" y1="115" y2="115" stroke="#ffffff0d"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="${i===11?4:2}" fill="${i===11?'#efc3a0':'#625348'}"/>`).join('')}${[0,2,5,8,11].map(i=>`<text x="${px(i)}" y="146" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg>`;
@@ -113,58 +113,58 @@
   const phases={
   "prepare": {
     "period": "ДО ОТКРЫТИЯ",
-    "title": "Подготовить офис<br>и команду.",
-    "lead": "Выбираем город, находим руководителя и считаем затраты.",
+    "title": "Сначала найдём<br>руководителя.",
+    "lead": "До открытия найдём руководителя, соберём первую команду и посчитаем расходы.",
     "points": [
       [
-        "Выбрать город и руководителя",
-        "Провести собеседования с руководителями и кандидатами в команду."
+        "Найдём руководителя на месте",
+        "Нам нужен человек, который знает город и сможет собрать вокруг себя команду."
       ],
       [
-        "Подготовить расчёты",
-        "Учесть аренду, оборудование, сервисы, рекламу и оплату команды."
+        "Посчитаем, во сколько обойдётся запуск",
+        "Заранее учтём аренду, оборудование, сервисы и оплату команды. Отдельно посчитаем рекламу."
       ],
       [
-        "Подготовить офис к работе",
-        "Оформить договоры, подключить CRM и телефонию."
+        "Подготовим офис к первому рабочему дню",
+        "Оформим договоры и подключим CRM и телефонию, чтобы команда могла сразу начать работу."
       ]
     ]
   },
   "start": {
     "period": "ОТКРЫТИЕ И ПЕРВЫЕ СДЕЛКИ",
-    "title": "Открыть офис.<br>Начать работу.",
-    "lead": "Команда проходит обучение, принимает первые обращения и ведёт сделки.",
+    "title": "Берёмся<br>за первые сделки.",
+    "lead": "В первые недели важно, чтобы агентам было к кому прийти с вопросами, а каждое обращение доходило до нужного человека.",
     "points": [
       [
-        "Обучить агентов",
-        "Разобрать сервисы компании, правила работы и этапы сделки."
+        "Поможем агентам освоиться",
+        "Покажем, как устроены наши сервисы, как мы ведём клиента и что важно знать на первой сделке."
       ],
       [
-        "Запустить привлечение клиентов",
-        "Подключить согласованные рекламные каналы и обработку обращений."
+        "Запустим рекламу и приём обращений",
+        "Подключим согласованные каналы и проследим, чтобы обращения попадали к нужным агентам."
       ],
       [
-        "Организовать работу команды",
-        "Закрепить за агентами клиентов и наставников."
+        "Будем рядом в первых сделках",
+        "Опытные коллеги помогут новичкам разобраться с вопросами клиентов и документами."
       ]
     ]
   },
   "scale": {
     "period": "ПОСЛЕ ЗАПУСКА ПЕРВОГО ОФИСА",
-    "title": "Подготовить<br>следующий город.",
-    "lead": "Используем опыт первого офиса: что сработало в найме, обучении и привлечении клиентов.",
+    "title": "Теперь готовим<br>следующий офис.",
+    "lead": "Первый запуск покажет, сколько времени занимает найм и что нужно уточнить в расчётах. С этим опытом будет проще открывать дальше.",
     "points": [
       [
-        "Оценить результаты",
-        "Сравнить план с числом работающих агентов и закрытых сделок."
+        "Посмотрим, как прошёл первый запуск",
+        "Сверим план с первыми результатами: сколько агентов работает и сколько сделок они закрывают."
       ],
       [
-        "Скорректировать расчёты",
-        "Учесть фактическую аренду, рекламу, сервисы и расходы на команду."
+        "Обновим расчёты",
+        "Учтём, сколько заплатили за аренду, рекламу и сервисы, во что обошлась команда."
       ],
       [
-        "Согласовать открытие",
-        "Утвердить город, руководителя, бюджет и дату."
+        "Решим, когда открывать следующий офис",
+        "Выберем город, договоримся с руководителем и утвердим бюджет. После этого назначим дату открытия."
       ]
     ]
   }
