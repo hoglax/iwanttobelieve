@@ -40,8 +40,7 @@
     $$('[data-city-tab]').forEach(button=>{const active=button.dataset.cityTab===id;button.setAttribute('aria-selected',active);button.tabIndex=active?0:-1;});
     $$('[data-economy-city]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.economyCity===id));
     $('#city-theatre').setAttribute('aria-labelledby',`city-tab-${id}`);
-    $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} — вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())} · НАПРАВЛЕНИЕ 0${i+1}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><p>${esc(c.intro)}</p><div class="city-plan-metric"><span>ПЛАН КОМАНДЫ<br>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
-    $('#city-reason').textContent=`До открытия уточним, ${c.verify.replace(/\.$/,'')}.`;
+    $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} — вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><p>${esc(c.intro)}</p><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
     $('#city-counter').textContent=`0${i+1} / 05`;
     $('#economy-city-name').textContent=c.name.toUpperCase();
     $('#average-value').innerHTML=`${number(c.average)}<span>₽</span>`;
@@ -89,8 +88,6 @@
     button.setAttribute('aria-pressed',economyRotationPaused);
     button.setAttribute('aria-label',economyRotationPaused?'Продолжить автоматическую смену городов':'Приостановить автоматическую смену городов');
     button.textContent=economyRotationPaused?'Продолжить':'Пауза';
-    $('#economy-rotation-status').textContent=economyRotationPaused?'Показ приостановлен':'Автопоказ городов';
-    $('#economy-rotation-status').classList.toggle('paused',economyRotationPaused);
     scheduleEconomyRotation();
   });
   if('IntersectionObserver' in window){
@@ -106,14 +103,13 @@
   }
   document.addEventListener('visibilitychange',scheduleEconomyRotation);
   const productivity=p.cities[0].productivity;
-  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>сделок на один офис за год</span></div><div><strong>${number(p.annual.deals,1)}</strong><span>сделок на всю сеть за год</span></div>`;
+  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>план сделок на офис за год</span></div><div><strong>${number(p.annual.deals,1)}</strong><span>план сделок на всю сеть за год</span></div>`;
   const px=i=>24+i/11*1070;
   const py=value=>115-value/2*90;
   $('#productivity-chart').innerHTML=`<svg viewBox="0 0 1120 158" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">План продуктивности, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${p.months[i]}: ${number(v,2)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#5c514a"/><stop offset="1" stop-color="#efc3a0"/></linearGradient></defs><line x1="24" x2="1094" y1="115" y2="115" stroke="#ffffff0d"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="${i===11?4:2}" fill="${i===11?'#efc3a0':'#625348'}"/>`).join('')}${[0,2,5,8,11].map(i=>`<text x="${px(i)}" y="146" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg>`;
 
   const phases={
   "prepare": {
-    "period": "ДО ОТКРЫТИЯ",
     "title": "Сначала найдём<br>руководителя.",
     "lead": "До открытия найдём руководителя, соберём первую команду и посчитаем расходы.",
     "points": [
@@ -132,7 +128,6 @@
     ]
   },
   "start": {
-    "period": "ОТКРЫТИЕ И ПЕРВЫЕ СДЕЛКИ",
     "title": "Берёмся<br>за первые сделки.",
     "lead": "В первые недели важно, чтобы агентам было к кому прийти с вопросами, а каждое обращение доходило до нужного человека.",
     "points": [
@@ -151,7 +146,6 @@
     ]
   },
   "scale": {
-    "period": "ПОСЛЕ ЗАПУСКА ПЕРВОГО ОФИСА",
     "title": "Теперь готовим<br>следующий офис.",
     "lead": "Первый запуск покажет, сколько времени занимает найм и что нужно уточнить в расчётах. С этим опытом будет проще открывать дальше.",
     "points": [
@@ -176,7 +170,7 @@
     phase=id;const v=phases[id];
     $$('[data-phase]').forEach(button=>{const active=button.dataset.phase===id;button.setAttribute('aria-selected',active);button.tabIndex=active?0:-1;});
     $('#launch-detail').setAttribute('aria-labelledby',`phase-tab-${id}`);
-    $('#launch-detail').innerHTML=`<div class="phase-title"><span>${v.period}</span><h3>${v.title}</h3><p>${v.lead}</p></div><div class="phase-points">${v.points.map(([title,text],i)=>`<div class="phase-point"><span>0${i+1}</span><div><b>${title}</b><p>${text}</p></div></div>`).join('')}</div>`;
+    $('#launch-detail').innerHTML=`<div class="phase-title"><h3>${v.title}</h3><p>${v.lead}</p></div><div class="phase-points">${v.points.map(([title,text],i)=>`<div class="phase-point"><span>0${i+1}</span><div><b>${title}</b><p>${text}</p></div></div>`).join('')}</div>`;
     if(presenting)updateControls();
   }
   $('#launch-tabs').addEventListener('click',event=>{const button=event.target.closest('[data-phase]');if(button)showPhase(button.dataset.phase);});
@@ -201,7 +195,7 @@
   $('#finance-summary').innerHTML=[['Финансирование с резервом',f.financing],['Максимальный дефицит',f.deficit],['Дополнительный резерв',f.reserve],['Денежный поток 2027',f.cash2027],['Подготовка в 2026',f.preparation2026],['Денежный поток декабря 2029',f.december2029]].map(([title,value])=>`<div class="finance-cell"><span>${esc(title)}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('')+`<div class="finance-cell" style="grid-column:1/-1"><span>Денежная окупаемость</span><strong style="font-size:19px;letter-spacing:-.5px">${esc(f.payback)}</strong></div>`;
   $('#strategy-summary').innerHTML=`<table><caption style="text-align:left;font-size:10px;color:#999;margin-bottom:10px">Основная стратегия, план на 2027 · точные суммы в ₽</caption><thead><tr>${['Город','Январь, агенты','Декабрь, агенты','Средний чек, ₽','ВВ за год, ₽','Агентам 50%, ₽','РОПу 10%, ₽','До расходов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.agents[0])}</td><td>${number(c.agents[11])}</td><td>${number(c.average)}</td><td>${number(c.annualRevenue)}</td><td>${number(c.agentPayment)}</td><td>${number(c.ropPayment)}</td><td>${number(c.beforeExpenses)}</td></tr>`).join('')}<tr><th scope="row">Сеть — всего</th><td>${number(p.totalAgents[0])}</td><td>${number(p.totalAgents[11])}</td><td>—</td><td>${number(p.annual.revenue)}</td><td>${number(p.annual.agentPayment)}</td><td>${number(p.annual.ropPayment)}</td><td>${number(p.annual.beforeExpenses)}</td></tr></tbody></table>`;
   $('#strategy-months').innerHTML=`<table><thead><tr>${['Месяц 2027','Агенты / офис','Агенты / сеть','Сделки / агент, план','Сделки / офис','Сделки / сеть','ВВ / сеть, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.months.map((m,i)=>`<tr><th scope="row">${longMonths[i]}</th><td>${number(p.cities[0].agents[i])}</td><td>${number(p.totalAgents[i])}</td><td>${number(productivity[i],2)}</td><td>${number(p.cities[0].deals[i],1)}</td><td>${number(p.totalDeals[i],1)}</td><td>${number(p.totalRevenue[i])}</td></tr>`).join('')}</tbody></table>`;
-  $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Оригинал на Wikimedia Commons</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p><small>Уменьшение, преобразование в WebP, кадрирование и цветовая обработка в оформлении сайта. Фотография сохраняет условия указанной лицензии.</small></article>`).join('');
+  $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Оригинал на Wikimedia Commons</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p></article>`).join('');
   let dialogTrigger=null;
   $$('[data-open]').forEach(button=>button.addEventListener('click',()=>{dialogTrigger=button;const dialog=document.getElementById(button.dataset.open);dialog.showModal();document.body.style.overflow='hidden';dialog.querySelector('[data-close]').focus();}));
   $$('dialog').forEach(dialog=>{
@@ -219,8 +213,48 @@
   const scenes=$$('.scene');
   let activeScene=0;
   let presenting=false;
-  let sceneNavigation=null;
-  let sceneNavigationTimer=null;
+  let presentationCanvases=[];
+  let presentationFitFrame=0;
+  const presentationResizeObserver='ResizeObserver' in window?new ResizeObserver(()=>schedulePresentationFit()):null;
+  function schedulePresentationFit(){
+    if(!presenting||presentationFitFrame)return;
+    presentationFitFrame=requestAnimationFrame(()=>{presentationFitFrame=0;fitPresentation();});
+  }
+  function fitPresentation(){
+    if(!presenting)return;
+    const root=document.documentElement;
+    const viewportHeight=window.visualViewport?.height||innerHeight;
+    const headerBottom=$('.site-header').getBoundingClientRect().bottom;
+    const controlsTop=$('#presentation-controls').getBoundingClientRect().top;
+    root.style.setProperty('--presentation-viewport-height',`${viewportHeight}px`);
+    root.style.setProperty('--presentation-top',`${Math.max(0,headerBottom)}px`);
+    root.style.setProperty('--presentation-bottom',`${Math.max(64,viewportHeight-controlsTop+16)}px`);
+    const stage=$('#main');
+    const canvas=presentationCanvases[activeScene];
+    if(!canvas)return;
+    const edge=stage.clientWidth<=520?10:20;
+    canvas.style.width=`${Math.max(240,Math.min(1360,stage.clientWidth-edge*2))}px`;
+    const width=canvas.offsetWidth;
+    const height=canvas.offsetHeight;
+    const scale=Math.min(1,(stage.clientWidth-edge*2)/width,(stage.clientHeight-edge*2)/height);
+    canvas.style.setProperty('--presentation-scale',String(Math.max(.05,scale)));
+  }
+  function mountPresentation(){
+    presentationCanvases=scenes.map(scene=>{
+      const canvas=document.createElement('div');canvas.className='presentation-canvas';
+      while(scene.firstChild)canvas.append(scene.firstChild);
+      scene.append(canvas);presentationResizeObserver?.observe(canvas);return canvas;
+    });
+  }
+  function unmountPresentation(){
+    presentationResizeObserver?.disconnect();
+    if(presentationFitFrame)cancelAnimationFrame(presentationFitFrame);
+    presentationFitFrame=0;
+    presentationCanvases.forEach(canvas=>canvas.replaceWith(...canvas.childNodes));
+    presentationCanvases=[];
+    scenes.forEach(scene=>scene.classList.remove('presentation-active'));
+    ['--presentation-viewport-height','--presentation-top','--presentation-bottom'].forEach(property=>document.documentElement.style.removeProperty(property));
+  }
   function getPresentationStep(){
     const id=scenes[activeScene].id;
     if(id==='cities')return {index:p.cities.findIndex(c=>c.id===selectedCity),labels:p.cities.map(c=>c.name),select:i=>showCity(p.cities[i].id)};
@@ -243,15 +277,22 @@
     $('#next-scene').disabled=activeScene===scenes.length-1;
     $('#previous-city').setAttribute('aria-label',presenting&&cityIndex===0?'Предыдущий слайд':'Предыдущий город');
     $('#next-city').setAttribute('aria-label',presenting&&cityIndex===p.cities.length-1?'Следующий слайд':'Следующий город');
+    schedulePresentationFit();
   }
   function goToScene(index){
     const previous=activeScene;
+    const focusWasInside=scenes[previous].contains(document.activeElement);
     activeScene=Math.max(0,Math.min(index,scenes.length-1));
-    sceneNavigation={index:activeScene,until:performance.now()+1400};
-    clearTimeout(sceneNavigationTimer);
-    sceneNavigationTimer=setTimeout(()=>{sceneNavigation=null;onScroll();},1450);
     if(presenting&&previous!==activeScene){const step=getPresentationStep();if(step)step.select(activeScene>previous?0:step.labels.length-1);}
-    scenes[activeScene].scrollIntoView({block:'start',behavior:reduced.matches?'instant':'smooth'});updateControls();
+    if(presenting){
+      scenes.forEach((scene,i)=>scene.classList.toggle('presentation-active',i===activeScene));
+      updateControls();fitPresentation();
+      if(previous!==activeScene&&focusWasInside){
+        let control=$(activeScene>previous?'#next-scene':'#previous-scene');
+        if(control.disabled)control=$('#exit-presentation');
+        control.focus({preventScroll:true});
+      }
+    }else{scenes[activeScene].scrollIntoView({block:'start',behavior:reduced.matches?'instant':'smooth'});updateControls();}
   }
   function stepPresentation(delta){
     const step=getPresentationStep();
@@ -262,20 +303,44 @@
     goToScene(activeScene+delta);
   }
   function setPresentation(enabled){
+    if(enabled===presenting)return;
+    const returningScene=scenes[activeScene];
     presenting=enabled;
     document.documentElement.classList.toggle('presenting',enabled);
     $('#presentation-toggle').setAttribute('aria-pressed',enabled);
     $('#presentation-toggle>span').textContent=enabled?'Выйти из показа':'Презентация';
     $('#presentation-controls').hidden=!enabled;
-    closeMenu();updateControls();
-    if(enabled){if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{});goToScene(activeScene);}
-    else if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(()=>{});
+    closeMenu();
+    if(enabled){
+      mountPresentation();goToScene(activeScene);
+      if(document.documentElement.requestFullscreen&&!document.fullscreenElement){
+        document.documentElement.requestFullscreen().then(()=>{
+          if(presenting)schedulePresentationFit();
+          else if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});
+        }).catch(schedulePresentationFit);
+      }
+    }else{
+      unmountPresentation();updateControls();
+      const restore=()=>requestAnimationFrame(()=>{if(!presenting)returningScene.scrollIntoView({block:'start',behavior:'instant'});});
+      restore();
+      if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().then(restore).catch(restore);
+    }
   }
   $('#presentation-toggle').addEventListener('click',()=>setPresentation(!presenting));
   $('#exit-presentation').addEventListener('click',()=>setPresentation(false));
   $('#previous-scene').addEventListener('click',()=>stepPresentation(-1));
   $('#next-scene').addEventListener('click',()=>stepPresentation(1));
-  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&presenting)setPresentation(false);});
+  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&presenting)setPresentation(false);else schedulePresentationFit();});
+  document.addEventListener('click',event=>{
+    if(!presenting)return;
+    const link=event.target.closest('a[href^="#"]');
+    if(!link)return;
+    const index=scenes.findIndex(scene=>`#${scene.id}`===link.getAttribute('href'));
+    if(index<0)return;
+    event.preventDefault();goToScene(index);
+    if(link.dataset.city)showCity(link.dataset.city);
+    else{const step=getPresentationStep();if(step)step.select(0);}
+  });
   document.addEventListener('keydown',event=>{
     if(event.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();return;}
     if($('dialog[open]'))return;
@@ -288,11 +353,11 @@
     else if(event.key==='End'){event.preventDefault();goToScene(scenes.length-1);}
   });
   let queued=false;
-  function onScroll(){if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;const anchor=innerHeight*.4;let best=Infinity;let visibleScene=activeScene;scenes.forEach((scene,i)=>{const r=scene.getBoundingClientRect();const distance=anchor<r.top?r.top-anchor:anchor>r.bottom?anchor-r.bottom:0;if(distance<best){best=distance;visibleScene=i;}});if(!sceneNavigation||visibleScene===sceneNavigation.index||performance.now()>sceneNavigation.until){activeScene=visibleScene;sceneNavigation=null;}updateControls();if(!reduced.matches)$('#home').style.setProperty('--hero-progress',Math.max(0,Math.min(1,scrollY/800)).toFixed(3));});}
-  window.addEventListener('wheel',()=>{sceneNavigation=null;},{passive:true});
-  window.addEventListener('touchstart',()=>{sceneNavigation=null;},{passive:true});
+  function onScroll(){if(presenting){schedulePresentationFit();return;}if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;if(presenting){schedulePresentationFit();return;}const anchor=innerHeight*.4;let best=Infinity;scenes.forEach((scene,i)=>{const r=scene.getBoundingClientRect();const distance=anchor<r.top?r.top-anchor:anchor>r.bottom?anchor-r.bottom:0;if(distance<best){best=distance;activeScene=i;}});updateControls();if(!reduced.matches)$('#home').style.setProperty('--hero-progress',Math.max(0,Math.min(1,scrollY/800)).toFixed(3));});}
   window.addEventListener('scroll',onScroll,{passive:true});
   window.addEventListener('resize',onScroll,{passive:true});
+  window.visualViewport?.addEventListener('resize',schedulePresentationFit,{passive:true});
+  document.addEventListener('load',event=>{if(event.target.tagName==='IMG')schedulePresentationFit();},true);
   if(!reduced.matches&&'IntersectionObserver' in window){
     document.documentElement.classList.add('motion-ready');
     const reveal=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');reveal.unobserve(entry.target);}});},{rootMargin:'0px 0px -35px 0px',threshold:.08});
