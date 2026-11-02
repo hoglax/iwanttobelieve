@@ -71,6 +71,7 @@
     $('#team-chart').setAttribute('role','img');
     $('#team-chart').setAttribute('aria-label',`План численности команды на 2027 год, ${teamScope==='office'?'один офис':'вся сеть'}: ${values.map((v,i)=>`${longMonths[i]} — ${v}`).join('; ')} агентов.`);
     $('#team-chart').innerHTML=values.map((value,i)=>`<div class="team-bar" aria-hidden="true"><div class="team-bar-track"><div class="team-bar-column${i===11?' final-bar':''}" style="--bar-height:${value/max*100}%"><span class="team-bar-value">${number(value)}</span></div></div><span class="team-bar-month" title="${longMonths[i]} 2027">${p.months[i]}</span></div>`).join('');
+    if(presenting)updateControls();
   }
   $$('[data-team-scope]').forEach(button=>button.addEventListener('click',()=>{teamScope=button.dataset.teamScope;renderTeam();}));
 
@@ -176,9 +177,20 @@
     $$('[data-phase]').forEach(button=>{const active=button.dataset.phase===id;button.setAttribute('aria-selected',active);button.tabIndex=active?0:-1;});
     $('#launch-detail').setAttribute('aria-labelledby',`phase-tab-${id}`);
     $('#launch-detail').innerHTML=`<div class="phase-title"><span>${v.period}</span><h3>${v.title}</h3><p>${v.lead}</p></div><div class="phase-points">${v.points.map(([title,text],i)=>`<div class="phase-point"><span>0${i+1}</span><div><b>${title}</b><p>${text}</p></div></div>`).join('')}</div>`;
+    if(presenting)updateControls();
   }
   $('#launch-tabs').addEventListener('click',event=>{const button=event.target.closest('[data-phase]');if(button)showPhase(button.dataset.phase);});
-  $('#launch-tabs').addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const ids=Object.keys(phases);const i=ids.indexOf(phase);const id=event.key==='Home'?ids[0]:event.key==='End'?ids.at(-1):ids[(i+(event.key==='ArrowRight'?1:-1)+ids.length)%ids.length];showPhase(id);$(`#phase-tab-${id}`).focus();});
+  $('#launch-tabs').addEventListener('keydown',event=>{
+    const forward=['ArrowRight','ArrowDown','PageDown'].includes(event.key);
+    const backward=['ArrowLeft','ArrowUp','PageUp'].includes(event.key);
+    if(presenting&&scenes[activeScene].id==='launch'&&(forward||backward)){
+      event.preventDefault();event.stopPropagation();stepPresentation(forward?1:-1);
+      const focus=scenes[activeScene].id==='launch'?$(`#phase-tab-${phase}`):$(forward?'#next-scene':'#previous-scene');
+      focus.focus({preventScroll:true});return;
+    }
+    if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+    event.preventDefault();const ids=Object.keys(phases);const i=ids.indexOf(phase);const id=event.key==='Home'?ids[0]:event.key==='End'?ids.at(-1):ids[(i+(event.key==='ArrowRight'?1:-1)+ids.length)%ids.length];showPhase(id);$(`#phase-tab-${id}`).focus();
+  });
 
   $('#payback-months').textContent=number(p.payback.months);
   $('#payback-cities').innerHTML=p.cities.map(c=>`<li><span>${esc(c.name)}</span><strong${c.paybackMonths==null?' class="pending"':''}>${c.paybackMonths==null?'Уточняется':`${number(c.paybackMonths)} мес.`}</strong></li>`).join('');
@@ -209,10 +221,24 @@
   let presenting=false;
   let sceneNavigation=null;
   let sceneNavigationTimer=null;
+  function getPresentationStep(){
+    const id=scenes[activeScene].id;
+    if(id==='cities')return {index:p.cities.findIndex(c=>c.id===selectedCity),labels:p.cities.map(c=>c.name),select:i=>showCity(p.cities[i].id)};
+    if(id==='team'){
+      const scopes=['office','network'];
+      return {index:scopes.indexOf(teamScope),labels:scopes.map(scope=>$(`[data-team-scope="${scope}"]`).textContent),select:i=>{teamScope=scopes[i];renderTeam();}};
+    }
+    if(id==='launch'){
+      const ids=Object.keys(phases);
+      return {index:ids.indexOf(phase),labels:ids.map(id=>$(`#phase-tab-${id}`).textContent.replace(/^\s*\d+\s*/, '').trim()),select:i=>showPhase(ids[i])};
+    }
+    return null;
+  }
   function updateControls(){
     const cityIndex=p.cities.findIndex(c=>c.id===selectedCity);
+    const step=presenting?getPresentationStep():null;
     $('#scene-indicator').textContent=`${String(activeScene+1).padStart(2,'0')} / ${String(scenes.length).padStart(2,'0')}`;
-    $('#scene-name').textContent=presenting&&scenes[activeScene].id==='cities'?`${p.cities[cityIndex].name} · ${cityIndex+1} / ${p.cities.length}`:scenes[activeScene].dataset.title;
+    $('#scene-name').textContent=step?`${step.labels[step.index]} · ${step.index+1} / ${step.labels.length}`:scenes[activeScene].dataset.title;
     $('#previous-scene').disabled=activeScene===0;
     $('#next-scene').disabled=activeScene===scenes.length-1;
     $('#previous-city').setAttribute('aria-label',presenting&&cityIndex===0?'Предыдущий слайд':'Предыдущий город');
@@ -224,13 +250,14 @@
     sceneNavigation={index:activeScene,until:performance.now()+1400};
     clearTimeout(sceneNavigationTimer);
     sceneNavigationTimer=setTimeout(()=>{sceneNavigation=null;onScroll();},1450);
-    if(presenting&&scenes[activeScene].id==='cities'&&previous!==activeScene)showCity((activeScene>previous?p.cities[0]:p.cities.at(-1)).id);
+    if(presenting&&previous!==activeScene){const step=getPresentationStep();if(step)step.select(activeScene>previous?0:step.labels.length-1);}
     scenes[activeScene].scrollIntoView({block:'start',behavior:reduced.matches?'instant':'smooth'});updateControls();
   }
   function stepPresentation(delta){
-    if(scenes[activeScene].id==='cities'){
-      const cityIndex=p.cities.findIndex(c=>c.id===selectedCity)+delta;
-      if(cityIndex>=0&&cityIndex<p.cities.length){showCity(p.cities[cityIndex].id);updateControls();return;}
+    const step=getPresentationStep();
+    if(step){
+      const next=step.index+delta;
+      if(next>=0&&next<step.labels.length){step.select(next);updateControls();return;}
     }
     goToScene(activeScene+delta);
   }
