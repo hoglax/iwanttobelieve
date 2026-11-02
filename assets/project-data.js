@@ -1,5 +1,5 @@
 window.PROJECT = {
-  "asOf": "30.10.2026",
+  "asOf": "02.11.2026",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/17VLUhYE2MeV78FpBGQdUhig3JvAh2j_HaQ3GlzqCpIE/edit",
   "strategyGid": 1145813300,
   "cities": [
@@ -7,7 +7,7 @@ window.PROJECT = {
       "id": "ekaterinburg",
       "name": "Екатеринбург",
       "region": "Урал",
-      "intro": "Точка роста на Урале.",
+      "intro": "Офис и команда в Екатеринбурге.",
       "agents": [
         3,
         6,
@@ -39,7 +39,7 @@ window.PROJECT = {
       "secondary": 160000,
       "primary": 246000,
       "average": 203000,
-      "reason": "Приоритет 1. Крупный рынок Урала. Проверим масштабируемость команды.",
+      "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Ядро опытных агентов и отдельный набор новичков",
       "verify": "Фактические комиссии, лиды на агента, аренда",
       "image": "assets/ekaterinburg.webp",
@@ -76,14 +76,15 @@ window.PROJECT = {
       "agentPayment": 21304850,
       "ropPayment": 4260970,
       "beforeExpenses": 17043880,
-      "operatingExpenses": null,
-      "paybackMonths": null
+      "operatingExpenses": 4791563,
+      "paybackMonths": 5,
+      "afterEnteredExpenses": 12252317
     },
     {
       "id": "nizhny",
       "name": "Нижний Новгород",
       "region": "Поволжье",
-      "intro": "Новый взгляд на Поволжье.",
+      "intro": "Офис и команда в Нижнем Новгороде.",
       "agents": [
         3,
         6,
@@ -115,7 +116,7 @@ window.PROJECT = {
       "secondary": 170000,
       "primary": 190000,
       "average": 180000,
-      "reason": "Приоритет 2. Поволжье. Проверим экономику более дорогого объекта.",
+      "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Нанять местного РОПа до массового набора",
       "verify": "Комиссии, договоры с застройщиками, удержание",
       "image": "assets/nizhny.webp",
@@ -152,14 +153,15 @@ window.PROJECT = {
       "agentPayment": 18891000,
       "ropPayment": 3778200,
       "beforeExpenses": 15112800,
-      "operatingExpenses": null,
-      "paybackMonths": null
+      "operatingExpenses": 5090563,
+      "paybackMonths": 5,
+      "afterEnteredExpenses": 10022237
     },
     {
       "id": "samara",
       "name": "Самара",
       "region": "Поволжье",
-      "intro": "Волжский характер. Новый масштаб.",
+      "intro": "Офис и команда в Самаре.",
       "agents": [
         3,
         6,
@@ -191,7 +193,7 @@ window.PROJECT = {
       "secondary": 145000,
       "primary": 243000,
       "average": 194000,
-      "reason": "Приоритет 3. Второй рынок Поволжья для сравнения с НН.",
+      "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Рекомендации и кандидаты из смежных продаж",
       "verify": "Реальная конкуренция за кандидатов и сделки",
       "image": "assets/samara.webp",
@@ -228,14 +230,15 @@ window.PROJECT = {
       "agentPayment": 20360300,
       "ropPayment": 4072060,
       "beforeExpenses": 16288240,
-      "operatingExpenses": null,
-      "paybackMonths": null
+      "operatingExpenses": 5311563,
+      "paybackMonths": 5,
+      "afterEnteredExpenses": 10976677
     },
     {
       "id": "rostov",
       "name": "Ростов-на-Дону",
       "region": "Юг России",
-      "intro": "Южное направление. Большие возможности.",
+      "intro": "Офис и команда в Ростове-на-Дону.",
       "agents": [
         3,
         6,
@@ -267,7 +270,7 @@ window.PROJECT = {
       "secondary": 140000,
       "primary": 245000,
       "average": 192500,
-      "reason": "Приоритет 4. Южный рынок. Проверим работу в конкурентном найме.",
+      "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Локальный руководитель и два отдельных профиля агентов",
       "verify": "Расходы на лиды, конверсии и операционные риски",
       "image": "assets/rostov.webp",
@@ -305,13 +308,14 @@ window.PROJECT = {
       "ropPayment": 4040575,
       "beforeExpenses": 16162300,
       "operatingExpenses": null,
-      "paybackMonths": null
+      "paybackMonths": null,
+      "afterEnteredExpenses": null
     },
     {
       "id": "ufa",
       "name": "Уфа",
       "region": "Башкортостан",
-      "intro": "Следующая точка на карте роста.",
+      "intro": "Офис и команда в Уфе.",
       "agents": [
         3,
         6,
@@ -343,7 +347,7 @@ window.PROJECT = {
       "secondary": 145000,
       "primary": 293000,
       "average": 219000,
-      "reason": "Приоритет 5. Замена Тюмени по решению Яны 07.10.2026; экономика и местный найм требуют проверки.",
+      "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Местный руководитель; отдельный найм опытных и новичков; прозрачная комиссия, наставник и правила заявок.",
       "verify": "Число сделок и агентств; фактическая комиссия; удержание; стоимость лидов; доступность аренды.",
       "image": "assets/ufa.webp",
@@ -380,8 +384,9 @@ window.PROJECT = {
       "agentPayment": 22984050,
       "ropPayment": 4596810,
       "beforeExpenses": 18387240,
-      "operatingExpenses": null,
-      "paybackMonths": null
+      "operatingExpenses": 4856563,
+      "paybackMonths": 5,
+      "afterEnteredExpenses": 13530677
     }
   ],
   "months": [
@@ -504,7 +509,7 @@ window.PROJECT = {
     "beforeExpenses": 82994460
   },
   "verified": true,
-  "strategyRange": "A1:Q41",
+  "strategyRange": "A1:R41",
   "budget2027": {
     "gid": 1900272027,
     "range": "A1:P93",
@@ -1922,7 +1927,27 @@ window.PROJECT = {
     "unfilledCityTotals": [
       "Ростов-на-Дону"
     ],
-    "integratedIntoStrategy": false,
-    "fixedRopMonthly": 250000
+    "integratedIntoStrategy": true,
+    "fixedRopMonthly": 250000,
+    "integrationComplete": false
+  },
+  "payback": {
+    "asOf": "02.11.2026",
+    "sourceRange": "Q2:R40",
+    "computedCities": 4,
+    "months": 5,
+    "missingCities": [
+      "Ростов-на-Дону"
+    ],
+    "method": "Первый месяц, когда накопленные 40% плановой ВВ покрывают накопленные расходы из листа «Расходы 2027».",
+    "startMonth": "Январь 2027",
+    "costsComplete": false,
+    "sourceCells": {
+      "ekaterinburg": "R8",
+      "nizhny": "R16",
+      "samara": "R24",
+      "rostov": "R32",
+      "ufa": "R40"
+    }
   }
 };
