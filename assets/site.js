@@ -220,7 +220,8 @@
     event.preventDefault();const market=window.MARKETS.find(m=>m.id===control.dataset.worldMarket);if(!market)return;
     $$('[data-world-market]').forEach(node=>{if(node.tagName==='BUTTON')node.setAttribute('aria-pressed',node.dataset.worldMarket===market.id);});
     $$('[data-market-shape]').forEach(node=>node.classList.toggle('is-selected',node.dataset.marketShape===market.id));
-    $('#market-detail').innerHTML=`<p><strong>${esc(market.country)} · ${esc(market.city)}.</strong> ${esc(market.description)}</p>`;
+    const detail=$('#market-detail');
+    if(detail)detail.innerHTML=`<p><strong>${esc(market.country)} · ${esc(market.city)}.</strong> ${esc(market.description)}</p>`;
     schedulePresentationFit();
   });
   let dialogTrigger=null;
