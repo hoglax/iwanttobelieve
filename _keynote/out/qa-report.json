@@ -1,0 +1,70 @@
+{
+  "viewports": [
+    {
+      "width": 1600,
+      "height": 1049,
+      "forward": 27,
+      "backward": 26,
+      "layoutFailures": [],
+      "equalHeroSizes": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "forward": 27,
+      "backward": 26,
+      "layoutFailures": [],
+      "equalHeroSizes": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "forward": 27,
+      "backward": 26,
+      "layoutFailures": [],
+      "equalHeroSizes": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "forward": 27,
+      "backward": 26,
+      "layoutFailures": [],
+      "equalHeroSizes": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "forward": 27,
+      "backward": 26,
+      "layoutFailures": [],
+      "equalHeroSizes": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "forward": 27,
+      "backward": 26,
+      "layoutFailures": [],
+      "equalHeroSizes": true
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "forward": 27,
+      "backward": 26,
+      "layoutFailures": [],
+      "equalHeroSizes": true
+    }
+  ],
+  "errors": [],
+  "interactions": {
+    "mapDotAndLabelClicks": 10,
+    "russiaMapLabels": 57,
+    "cisArrows": true,
+    "cityTeamAndAverageSteps": true,
+    "sourceTableDialog": true
+  },
+  "pdfPages": 27,
+  "success": true
+}

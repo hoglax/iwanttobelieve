@@ -3,7 +3,7 @@
   const p = window.PROJECT;
   const $ = selector => document.querySelector(selector);
   const $$ = selector => [...document.querySelectorAll(selector)];
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const esc = value => String(value ?? '').replaceAll('\u2014','–').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const number = (value, digits = 0) => new Intl.NumberFormat('ru-RU',{minimumFractionDigits:digits,maximumFractionDigits:digits}).format(value);
   const million = value => number(value / 1e6,2);
   const safeURL = value => {try {const u=new URL(value);return ['https:','http:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -17,13 +17,31 @@
   // Each image is a local, attributed city photograph, not an office rendering.
   $('#city-monoliths').innerHTML=p.cities.map(c=>`<figure class="monolith"><a href="#cities" data-city="${c.id}" aria-label="Посмотреть ${esc(c.name)}"><img src="${c.image}" alt="" width="360" height="520"></a><figcaption>${esc(c.name)}</figcaption></figure>`).join('');
   const mapViewport=$('#russia-map-viewport');
-  if(mapViewport&&mapViewport.scrollWidth>mapViewport.clientWidth)mapViewport.scrollLeft=(mapViewport.scrollWidth-mapViewport.clientWidth)*.42;
-  // Give each project city one continuous hit area across its marker and label.
+  let mapZoom=1;
+  $$('[data-map-zoom]').forEach(button=>button.addEventListener('click',()=>{
+    if(!mapViewport)return;
+    const cx=(mapViewport.scrollLeft+mapViewport.clientWidth/2)/Math.max(1,mapViewport.scrollWidth);
+    const cy=(mapViewport.scrollTop+mapViewport.clientHeight/2)/Math.max(1,mapViewport.scrollHeight);
+    mapZoom=button.dataset.mapZoom==='reset'?1:Math.max(1,Math.min(3,mapZoom+Number(button.dataset.mapZoom)*.5));
+    mapViewport.style.setProperty('--map-zoom',String(mapZoom));
+    mapViewport.scrollLeft=mapZoom===1?0:cx*mapViewport.scrollWidth-mapViewport.clientWidth/2;
+    mapViewport.scrollTop=mapZoom===1?0:cy*mapViewport.scrollHeight-mapViewport.clientHeight/2;
+    $('[data-map-zoom="-1"]').disabled=mapZoom===1;
+    $('[data-map-zoom="1"]').disabled=mapZoom===3;
+  }));
+  // Separate target areas keep distant callout labels from covering other cities.
   $$('.map-project-city').forEach(link=>{
-    const box=link.getBBox();
-    const target=document.createElementNS('http://www.w3.org/2000/svg','rect');
-    for(const [key,value] of Object.entries({x:box.x-4,y:box.y-4,width:box.width+8,height:box.height+8,fill:'transparent',stroke:'none','pointer-events':'all'}))target.setAttribute(key,String(value));
-    target.classList.add('map-city-hit-area');link.prepend(target);
+    const label=link.querySelector('text'),dot=link.querySelector('.map-city-dot');
+    if(label){
+      const box=label.getBBox(),target=document.createElementNS('http://www.w3.org/2000/svg','rect');
+      for(const [key,value] of Object.entries({x:box.x-5,y:box.y-5,width:box.width+10,height:box.height+10,fill:'transparent',stroke:'none','pointer-events':'all'}))target.setAttribute(key,String(value));
+      target.classList.add('map-city-label-hit-area');link.prepend(target);
+    }
+    if(dot){
+      const target=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      for(const [key,value] of Object.entries({cx:dot.getAttribute('cx'),cy:dot.getAttribute('cy'),r:12,fill:'transparent',stroke:'none','pointer-events':'all'}))target.setAttribute(key,String(value));
+      target.classList.add('map-city-dot-hit-area');link.prepend(target);
+    }
   });
   let selectedCity=p.cities[0].id;
   $('#city-tabs').innerHTML=p.cities.map((c,i)=>`<button id="city-tab-${c.id}" role="tab" aria-selected="${i===0}" aria-controls="city-theatre" tabindex="${i===0?0:-1}" data-city-tab="${c.id}">${esc(c.name)}</button>`).join('');
@@ -49,7 +67,7 @@
     $$('[data-city-tab]').forEach(button=>{const active=button.dataset.cityTab===id;button.setAttribute('aria-selected',active);button.tabIndex=active?0:-1;});
     $$('[data-economy-city]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.economyCity===id));
     $('#city-theatre').setAttribute('aria-labelledby',`city-tab-${id}`);
-    $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} — вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><p>${esc(c.intro)}</p><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
+    $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} – вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><p>${esc(c.intro)}</p><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
     $('#city-counter').textContent=`0${i+1} / 05`;
     $('#economy-city-name').textContent=c.name.toUpperCase();
     $('#average-value').innerHTML=`${number(c.average)}<span>₽</span>`;
@@ -87,7 +105,7 @@
     $('#team-unit').textContent=teamScope==='office'?'агентов на офис':'агентов в пяти городах';
     $$('[data-team-scope]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.teamScope===teamScope));
     $('#team-chart').setAttribute('role','img');
-    $('#team-chart').setAttribute('aria-label',`План численности команды на 2027 год, ${teamScope==='office'?'один офис':'вся сеть'}: ${values.map((v,i)=>`${longMonths[i]} — ${v}`).join('; ')} агентов.`);
+    $('#team-chart').setAttribute('aria-label',`План численности команды на 2027 год, ${teamScope==='office'?'один офис':'вся сеть'}: ${values.map((v,i)=>`${longMonths[i]} – ${v}`).join('; ')} агентов.`);
     $('#team-chart').innerHTML=values.map((value,i)=>`<div class="team-bar" aria-hidden="true"><div class="team-bar-track"><div class="team-bar-column${i===11?' final-bar':''}" style="--bar-height:${value/max*100}%"><span class="team-bar-value">${number(value)}</span></div></div><span class="team-bar-month" title="${longMonths[i]} 2027">${p.months[i]}</span></div>`).join('');
     if(presenting)updateControls();
   }
@@ -205,14 +223,14 @@
     event.preventDefault();const ids=Object.keys(phases);const i=ids.indexOf(phase);const id=event.key==='Home'?ids[0]:event.key==='End'?ids.at(-1):ids[(i+(event.key==='ArrowRight'?1:-1)+ids.length)%ids.length];showPhase(id);$(`#phase-tab-${id}`).focus();
   });
 
-  $('#payback-months').textContent=p.payback.minMonths==null?'—':`${p.payback.minMonths}–${p.payback.maxMonths}`;
+  $('#payback-months').textContent=p.payback.minMonths==null?'–':`${p.payback.minMonths}–${p.payback.maxMonths}`;
   $('#payback-cities').innerHTML=p.cities.map(c=>`<li><span>${esc(c.name)}</span><strong${c.paybackMonths==null?' class="pending"':''}>${c.paybackMonths==null?'Уточняется':`${number(c.paybackMonths)} мес.`}</strong></li>`).join('');
   $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">Срок в месяцах</th><th scope="col">Ячейка</th><th scope="col">Результат исходной формулы</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>Уточняется</td><td>${esc(c.paybackSourceCell)}</td><td>${number(c.paybackSourceValue)} · не число месяцев</td></tr>`).join('')}</tbody></table>`;
 
   // Financial version 2.0 remains separate from the primary 3 → 18 strategy.
   const f=p.money;
   $('#finance-summary').innerHTML=[['Финансирование с резервом',f.financing],['Максимальный дефицит',f.deficit],['Дополнительный резерв',f.reserve],['Денежный поток 2027',f.cash2027],['Подготовка в 2026',f.preparation2026],['Денежный поток декабря 2029',f.december2029]].map(([title,value])=>`<div class="finance-cell"><span>${esc(title)}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('')+`<div class="finance-cell" style="grid-column:1/-1"><span>Денежная окупаемость</span><strong style="font-size:19px;letter-spacing:-.5px">${esc(f.payback)}</strong></div>`;
-  $('#strategy-summary').innerHTML=`<table><caption style="text-align:left;font-size:10px;color:#999;margin-bottom:10px">Основная стратегия, план на 2027 · точные суммы в ₽</caption><thead><tr>${['Город','Январь, агенты','Декабрь, агенты','Средний чек, ₽','ВВ за год, ₽','Агентам 50%, ₽','РОПу 10%, ₽','До расходов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.agents[0])}</td><td>${number(c.agents[11])}</td><td>${number(c.average)}</td><td>${number(c.annualRevenue)}</td><td>${number(c.agentPayment)}</td><td>${number(c.ropPayment)}</td><td>${number(c.beforeExpenses)}</td></tr>`).join('')}<tr><th scope="row">Сеть — всего</th><td>${number(p.totalAgents[0])}</td><td>${number(p.totalAgents[11])}</td><td>—</td><td>${number(p.annual.revenue)}</td><td>${number(p.annual.agentPayment)}</td><td>${number(p.annual.ropPayment)}</td><td>${number(p.annual.beforeExpenses)}</td></tr></tbody></table>`;
+  $('#strategy-summary').innerHTML=`<table><caption style="text-align:left;font-size:10px;color:#999;margin-bottom:10px">Основная стратегия, план на 2027 · точные суммы в ₽</caption><thead><tr>${['Город','Январь, агенты','Декабрь, агенты','Средний чек, ₽','ВВ за год, ₽','Агентам 50%, ₽','РОПу 10%, ₽','До расходов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.agents[0])}</td><td>${number(c.agents[11])}</td><td>${number(c.average)}</td><td>${number(c.annualRevenue)}</td><td>${number(c.agentPayment)}</td><td>${number(c.ropPayment)}</td><td>${number(c.beforeExpenses)}</td></tr>`).join('')}<tr><th scope="row">Сеть – всего</th><td>${number(p.totalAgents[0])}</td><td>${number(p.totalAgents[11])}</td><td>–</td><td>${number(p.annual.revenue)}</td><td>${number(p.annual.agentPayment)}</td><td>${number(p.annual.ropPayment)}</td><td>${number(p.annual.beforeExpenses)}</td></tr></tbody></table>`;
   $('#strategy-months').innerHTML=`<table><thead><tr>${['Месяц 2027','Агенты / офис','Агенты / пять новых офисов','Сделки / агент, план','Сделки / офис','Сделки / пять новых офисов','ВВ / пять новых офисов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.months.map((m,i)=>`<tr><th scope="row">${longMonths[i]}</th><td>${number(p.cities[0].agents[i])}</td><td>${number(p.totalAgents[i])}</td><td>${number(productivity[i],2)}</td><td>${number(p.cities[0].deals[i],1)}</td><td>${number(p.totalDeals[i],1)}</td><td>${number(p.totalRevenue[i])}</td></tr>`).join('')}</tbody></table>`;
   $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Оригинал на Wikimedia Commons</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p></article>`).join('');
   document.addEventListener('click',event=>{
@@ -261,7 +279,7 @@
     const canvas=presentationCanvases[activeScene];
     if(!canvas)return;
     const edge=stage.clientWidth<=520?10:20;
-    canvas.style.width=`${Math.max(240,Math.min(1360,stage.clientWidth-edge*2))}px`;
+    canvas.style.width=`${Math.max(240,Math.min(scenes[activeScene].id==='vision'?1680:1360,stage.clientWidth-edge*2))}px`;
     const width=canvas.offsetWidth;
     const height=canvas.offsetHeight;
     const scale=Math.min(1,(stage.clientWidth-edge*2)/width,(stage.clientHeight-edge*2)/height);
