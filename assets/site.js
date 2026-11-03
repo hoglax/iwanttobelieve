@@ -11,6 +11,7 @@
   const longMonths = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
   $$('[data-source]').forEach(link => link.href=p.sourceUrl);
   $$('[data-strategy]').forEach(link => link.href=`${p.sourceUrl}#gid=${p.strategyGid}`);
+  $$('[data-advertising-source]').forEach(link=>link.href=`${p.sourceUrl}#gid=${p.advertising2027.gid}`);
   $$('[data-budget-source]').forEach(link=>link.href=`${p.sourceUrl}#gid=${p.budget2027.gid}`);
 
   // Each image is a local, attributed city photograph, not an office rendering.
@@ -23,12 +24,13 @@
   const budget=p.budget2027;
   const expenseMoney=value=>value==null?'Не заполнено':`${number(value)} ₽`;
   $('#budget-city-select').innerHTML=budget.cities.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('');
-  $('#budget-overview').innerHTML=`<div class="finance-cell"><span>Сумма заполненных итогов · ${budget.citiesWithTotals} города</span><strong>${million(budget.reportedTotal)} <small>млн ₽ / год</small></strong></div><div class="finance-cell"><span>Первый месяц · по ${budget.citiesWithTotals} заполненным итогам</span><strong>${million(budget.reportedMonths[0])} <small>млн ₽</small></strong></div>`;
-  $('#budget-city-totals').innerHTML=`<table><thead><tr>${['Город','Январь, ₽','Следующий месяц, ₽','Итог за 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${budget.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${expenseMoney(c.months[0])}</td><td>${expenseMoney(c.monthly)}</td><td>${expenseMoney(c.annual)}</td></tr>`).join('')}</tbody></table>`;
+  $('#budget-overview').innerHTML=`<div class="finance-cell"><span>Пять новых офисов · без Воронежа</span><strong>${million(budget.reportedTotal)} <small>млн ₽ / год</small></strong></div><div class="finance-cell"><span>Первый месяц · пять новых офисов</span><strong>${million(budget.reportedMonths[0])} <small>млн ₽</small></strong></div>`;
+  $('#budget-city-totals').innerHTML=`<table><thead><tr>${['Город','Январь, ₽','Декабрь, ₽','Итог за 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${budget.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${expenseMoney(c.months[0])}</td><td>${expenseMoney(c.months[11])}</td><td>${expenseMoney(c.annual)}</td></tr>`).join('')}</tbody></table>`;
   function renderBudget(id){
     const c=budget.cities.find(c=>c.id===id);
     $('#budget-city-select').value=id;
-    $('#budget-line-items').innerHTML=`<table><caption class="budget-caption">${esc(c.name)} · ${esc(c.sourceRows)}</caption><thead><tr>${['Статья','Разово, ₽','Ежемесячно, ₽','Январь, ₽','За 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${c.items.map(item=>`<tr><th scope="row">${esc(item.label)}</th><td>${expenseMoney(item.launch)}</td><td>${expenseMoney(item.monthly)}</td><td>${expenseMoney(item.months[0])}</td><td>${expenseMoney(item.annual)}</td></tr>`).join('')}</tbody></table>${c.completeTotal?'':`<p class="dialog-note">По внесённым статьям Ростова: ${number(c.knownLineAnnual)} ₽ за год, без незаполненной аренды. Это частичный расчёт; общий итог города в таблице отсутствует.</p>`}`;
+    const monthRange=item=>{const values=item.months.slice(1);const lo=Math.min(...values),hi=Math.max(...values);return lo===hi?expenseMoney(lo):`${number(lo)}–${number(hi)} ₽`;};
+    $('#budget-line-items').innerHTML=`<table><caption class="budget-caption">${esc(c.name)} · ${esc(c.sourceRows)}</caption><thead><tr>${['Статья','Разово, ₽','Январь, ₽','Фев–дек, ₽/мес','За 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${c.items.map(item=>`<tr><th scope="row">${esc(item.label)}</th><td>${expenseMoney(item.launch)}</td><td>${expenseMoney(item.months[0])}</td><td>${monthRange(item)}</td><td>${expenseMoney(item.annual)}</td></tr>`).join('')}</tbody></table>`;
   }
   $('#budget-city-select').addEventListener('change',event=>showCity(event.target.value));
   function showCity(id) {
@@ -52,6 +54,8 @@
   $('#economy-city-selector').addEventListener('click',event=>{const button=event.target.closest('[data-economy-city]');if(button){showCity(button.dataset.economyCity);scheduleEconomyRotation();}});
   function moveCity(delta){const i=p.cities.findIndex(c=>c.id===selectedCity);showCity(p.cities[(i+delta+p.cities.length)%p.cities.length].id);}
   $('#previous-city').addEventListener('click',()=>presenting?stepPresentation(-1):moveCity(-1));
+  $('#previous-average').addEventListener('click',()=>{presenting?stepPresentation(-1):moveCity(-1);scheduleEconomyRotation();});
+  $('#next-average').addEventListener('click',()=>{presenting?stepPresentation(1):moveCity(1);scheduleEconomyRotation();});
   $('#next-city').addEventListener('click',()=>presenting?stepPresentation(1):moveCity(1));
   $('#city-tabs').addEventListener('keydown',event=>{
     if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;
@@ -79,7 +83,7 @@
   let economyVisible=false;
   function scheduleEconomyRotation(){
     clearTimeout(economyRotationTimer);
-    if(economyRotationPaused||!economyVisible||document.hidden||$('dialog[open]'))return;
+    if(presenting||economyRotationPaused||!economyVisible||document.hidden||$('dialog[open]'))return;
     economyRotationTimer=setTimeout(()=>{moveCity(1);scheduleEconomyRotation();},5000);
   }
   $('#economy-rotation-toggle').addEventListener('click',()=>{
@@ -93,7 +97,7 @@
   if('IntersectionObserver' in window){
     const economyObserver=new IntersectionObserver(entries=>{
       const visible=entries[0].intersectionRatio>=.5;
-      if(visible&&!economyVisible&&!economyRotationPaused)showCity(p.cities[0].id);
+      if(!presenting&&visible&&!economyVisible&&!economyRotationPaused)showCity(p.cities[0].id);
       economyVisible=visible;scheduleEconomyRotation();
     },{threshold:[0,.5]});
     economyObserver.observe($('#economics'));
@@ -103,7 +107,7 @@
   }
   document.addEventListener('visibilitychange',scheduleEconomyRotation);
   const productivity=p.cities[0].productivity;
-  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>план сделок на офис за год</span></div><div><strong>${number(p.annual.deals,1)}</strong><span>план сделок на всю сеть за год</span></div>`;
+  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>план сделок на офис за год<br><small>без Воронежа</small></span></div><div><strong>${number(p.annual.deals,1)}</strong><span>план сделок на всю сеть за год<br><small>без Воронежа</small></span></div>`;
   const px=i=>24+i/11*1070;
   const py=value=>115-value/2*90;
   $('#productivity-chart').innerHTML=`<svg viewBox="0 0 1120 158" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">План продуктивности, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${p.months[i]}: ${number(v,2)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#5c514a"/><stop offset="1" stop-color="#efc3a0"/></linearGradient></defs><line x1="24" x2="1094" y1="115" y2="115" stroke="#ffffff0d"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="${i===11?4:2}" fill="${i===11?'#efc3a0':'#625348'}"/>`).join('')}${[0,2,5,8,11].map(i=>`<text x="${px(i)}" y="146" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg>`;
@@ -186,21 +190,29 @@
     event.preventDefault();const ids=Object.keys(phases);const i=ids.indexOf(phase);const id=event.key==='Home'?ids[0]:event.key==='End'?ids.at(-1):ids[(i+(event.key==='ArrowRight'?1:-1)+ids.length)%ids.length];showPhase(id);$(`#phase-tab-${id}`).focus();
   });
 
-  $('#payback-months').textContent=number(p.payback.months);
+  $('#payback-months').textContent=`${p.payback.minMonths}–${p.payback.maxMonths}`;
   $('#payback-cities').innerHTML=p.cities.map(c=>`<li><span>${esc(c.name)}</span><strong${c.paybackMonths==null?' class="pending"':''}>${c.paybackMonths==null?'Уточняется':`${number(c.paybackMonths)} мес.`}</strong></li>`).join('');
-  $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">Окупаемость по плану</th><th scope="col">Статус</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${c.paybackMonths==null?'Не рассчитана':`${number(c.paybackMonths)} месяцев`}</td><td>${c.paybackMonths==null?'Не заполнена аренда':'Май 2027 · по текущим расходам'}</td></tr>`).join('')}</tbody></table>`;
+  $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">По формуле</th><th scope="col">Ручная пометка</th><th scope="col">Статус</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.paybackMonths)} мес. · ${esc(c.paybackCalendarMonth)}</td><td>${number(c.manualPaybackMonths)} месяцев</td><td>Требует согласования</td></tr>`).join('')}</tbody></table>`;
 
   // Financial version 2.0 remains separate from the primary 3 → 18 strategy.
   const f=p.money;
   $('#finance-summary').innerHTML=[['Финансирование с резервом',f.financing],['Максимальный дефицит',f.deficit],['Дополнительный резерв',f.reserve],['Денежный поток 2027',f.cash2027],['Подготовка в 2026',f.preparation2026],['Денежный поток декабря 2029',f.december2029]].map(([title,value])=>`<div class="finance-cell"><span>${esc(title)}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('')+`<div class="finance-cell" style="grid-column:1/-1"><span>Денежная окупаемость</span><strong style="font-size:19px;letter-spacing:-.5px">${esc(f.payback)}</strong></div>`;
   $('#strategy-summary').innerHTML=`<table><caption style="text-align:left;font-size:10px;color:#999;margin-bottom:10px">Основная стратегия, план на 2027 · точные суммы в ₽</caption><thead><tr>${['Город','Январь, агенты','Декабрь, агенты','Средний чек, ₽','ВВ за год, ₽','Агентам 50%, ₽','РОПу 10%, ₽','До расходов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.agents[0])}</td><td>${number(c.agents[11])}</td><td>${number(c.average)}</td><td>${number(c.annualRevenue)}</td><td>${number(c.agentPayment)}</td><td>${number(c.ropPayment)}</td><td>${number(c.beforeExpenses)}</td></tr>`).join('')}<tr><th scope="row">Сеть — всего</th><td>${number(p.totalAgents[0])}</td><td>${number(p.totalAgents[11])}</td><td>—</td><td>${number(p.annual.revenue)}</td><td>${number(p.annual.agentPayment)}</td><td>${number(p.annual.ropPayment)}</td><td>${number(p.annual.beforeExpenses)}</td></tr></tbody></table>`;
-  $('#strategy-months').innerHTML=`<table><thead><tr>${['Месяц 2027','Агенты / офис','Агенты / сеть','Сделки / агент, план','Сделки / офис','Сделки / сеть','ВВ / сеть, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.months.map((m,i)=>`<tr><th scope="row">${longMonths[i]}</th><td>${number(p.cities[0].agents[i])}</td><td>${number(p.totalAgents[i])}</td><td>${number(productivity[i],2)}</td><td>${number(p.cities[0].deals[i],1)}</td><td>${number(p.totalDeals[i],1)}</td><td>${number(p.totalRevenue[i])}</td></tr>`).join('')}</tbody></table>`;
+  $('#strategy-months').innerHTML=`<table><thead><tr>${['Месяц 2027','Агенты / офис','Агенты / пять новых офисов','Сделки / агент, план','Сделки / офис','Сделки / пять новых офисов','ВВ / пять новых офисов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.months.map((m,i)=>`<tr><th scope="row">${longMonths[i]}</th><td>${number(p.cities[0].agents[i])}</td><td>${number(p.totalAgents[i])}</td><td>${number(productivity[i],2)}</td><td>${number(p.cities[0].deals[i],1)}</td><td>${number(p.totalDeals[i],1)}</td><td>${number(p.totalRevenue[i])}</td></tr>`).join('')}</tbody></table>`;
   $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Оригинал на Wikimedia Commons</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p></article>`).join('');
+  document.addEventListener('click',event=>{
+    const control=event.target.closest('[data-world-market]');if(!control)return;
+    event.preventDefault();const market=window.MARKETS.find(m=>m.id===control.dataset.worldMarket);if(!market)return;
+    $$('[data-world-market]').forEach(node=>{if(node.tagName==='BUTTON')node.setAttribute('aria-pressed',node.dataset.worldMarket===market.id);});
+    $$('[data-market-shape]').forEach(node=>node.classList.toggle('is-selected',node.dataset.marketShape===market.id));
+    $('#market-detail').innerHTML=`<p><strong>${esc(market.country)} · ${esc(market.city)}.</strong> ${esc(market.description)}</p>`;
+    schedulePresentationFit();
+  });
   let dialogTrigger=null;
-  $$('[data-open]').forEach(button=>button.addEventListener('click',()=>{dialogTrigger=button;const dialog=document.getElementById(button.dataset.open);dialog.showModal();document.body.style.overflow='hidden';dialog.querySelector('[data-close]').focus();}));
+  $$('[data-open]').forEach(button=>button.addEventListener('click',()=>{dialogTrigger=button;const dialog=document.getElementById(button.dataset.open);dialog.showModal();clearTimeout(economyRotationTimer);document.body.style.overflow='hidden';dialog.querySelector('[data-close]').focus();}));
   $$('dialog').forEach(dialog=>{
     dialog.querySelector('[data-close]').addEventListener('click',()=>dialog.close());
-    dialog.addEventListener('close',()=>{document.body.style.overflow='';dialogTrigger?.focus({preventScroll:true});});
+    dialog.addEventListener('close',()=>{document.body.style.overflow='';scheduleEconomyRotation();dialogTrigger?.focus({preventScroll:true});});
     dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();});
   });
 
@@ -257,7 +269,7 @@
   }
   function getPresentationStep(){
     const id=scenes[activeScene].id;
-    if(id==='cities')return {index:p.cities.findIndex(c=>c.id===selectedCity),labels:p.cities.map(c=>c.name),select:i=>showCity(p.cities[i].id)};
+    if(id==='cities'||id==='economics')return {index:p.cities.findIndex(c=>c.id===selectedCity),labels:p.cities.map(c=>c.name),select:i=>showCity(p.cities[i].id)};
     if(id==='team'){
       const scopes=['office','network'];
       return {index:scopes.indexOf(teamScope),labels:scopes.map(scope=>$(`[data-team-scope="${scope}"]`).textContent),select:i=>{teamScope=scopes[i];renderTeam();}};
@@ -276,6 +288,8 @@
     $('#previous-scene').disabled=activeScene===0;
     $('#next-scene').disabled=activeScene===scenes.length-1;
     $('#previous-city').setAttribute('aria-label',presenting&&cityIndex===0?'Предыдущий слайд':'Предыдущий город');
+    $('#previous-average').setAttribute('aria-label',presenting&&cityIndex===0?'Предыдущий слайд':'Предыдущий средний чек');
+    $('#next-average').setAttribute('aria-label',presenting&&cityIndex===p.cities.length-1?'Следующий слайд':'Следующий средний чек');
     $('#next-city').setAttribute('aria-label',presenting&&cityIndex===p.cities.length-1?'Следующий слайд':'Следующий город');
     schedulePresentationFit();
   }
@@ -306,6 +320,7 @@
     if(enabled===presenting)return;
     const returningScene=scenes[activeScene];
     presenting=enabled;
+    scheduleEconomyRotation();
     document.documentElement.classList.toggle('presenting',enabled);
     $('#presentation-toggle').setAttribute('aria-pressed',enabled);
     $('#presentation-toggle>span').textContent=enabled?'Выйти из показа':'Презентация';
