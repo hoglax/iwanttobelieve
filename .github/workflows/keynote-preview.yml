@@ -1,0 +1,14 @@
+name: Keynote first six preview
+on:
+  push:
+    branches: [keynote-first-six-20261103]
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check build environment
+        run: python --version
