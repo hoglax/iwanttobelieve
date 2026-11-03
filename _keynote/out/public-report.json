@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "commit": "319356857a7d9d4f0fb9f712ba782e06867f9669",
+  "url": "https://hoglax.github.io/iwanttobelieve/?v=3193568",
+  "files": [
+    {
+      "path": "index.html",
+      "match": true,
+      "sha256": "a2744ea198223b1226da3e1aa69d2dd0634a2b4374584f0af5ed68e4cf6f39f6",
+      "bytes": 693499
+    },
+    {
+      "path": "assets/site.css",
+      "match": true,
+      "sha256": "2592a818057c0cc784772226f40c4c342a338ee190b6e5f34c114794d0eb9069",
+      "bytes": 102265
+    },
+    {
+      "path": "assets/site.js",
+      "match": true,
+      "sha256": "4e90150b0550137970a76e55dd54996e8405ae2cf540e125561e949aa5f857db",
+      "bytes": 34944
+    },
+    {
+      "path": "assets/project-data.js",
+      "match": true,
+      "sha256": "650da97f7c6c2a5796dbb3947904b9a861f0b999df4416ef8242a3327aae9a56",
+      "bytes": 55953
+    },
+    {
+      "path": "assets/market-data.js",
+      "match": true,
+      "sha256": "dcc2e0752c808e39939340dcbb9cbded93b8910cd92e2208daf384e397a601a1",
+      "bytes": 3277
+    },
+    {
+      "path": "assets/photo-credits.json",
+      "match": true,
+      "sha256": "d0c3c2e35147cad065f728c909cd43b88a7ee54fc25d75013e7326a6c055507c",
+      "bytes": 2046
+    },
+    {
+      "path": "assets/ekaterinburg.webp",
+      "match": true,
+      "sha256": "df657bd2c9c02347c04050944327b457880fdf41005ae27ccea9cd73b5ca4be2",
+      "bytes": 1086348
+    },
+    {
+      "path": "assets/nizhny.webp",
+      "match": true,
+      "sha256": "cb2dc702d72936e22e3fe69a9f2834e09b29b05b274a2d588b451936927ddb00",
+      "bytes": 897704
+    },
+    {
+      "path": "assets/samara.webp",
+      "match": true,
+      "sha256": "f9abba0bf454e8636dfe10d114cad4d594120dbbd0ac8a2818dfabecb8e9c928",
+      "bytes": 225498
+    },
+    {
+      "path": "assets/rostov.webp",
+      "match": true,
+      "sha256": "47467d5b062f3d023326734aed06fa393156c2ea3c370ffa5f8e5999baaf176c",
+      "bytes": 736124
+    },
+    {
+      "path": "assets/ufa.webp",
+      "match": true,
+      "sha256": "0b9666abaad36ac6aa5ae234b730b061aceb990c5bd13d20a249343f508b7999",
+      "bytes": 237968
+    },
+    {
+      "path": "assets/russia-expansion.svg",
+      "match": true,
+      "sha256": "0acaca3f9f0305015d7044d7a1b884f35d97146a9b364f291e8a1f922b3e4d37",
+      "bytes": 20159
+    },
+    {
+      "path": "assets/voronezh-offices.svg",
+      "match": true,
+      "sha256": "ef81ca9083a67d3f25b216629c7e3af86b1d0949feec766d3f4044205aa852e3",
+      "bytes": 357662
+    },
+    {
+      "path": "assets/voronezh-offices.json",
+      "match": true,
+      "sha256": "bd1dffa2b71b36eda534eea75cbaa5fd664cf2a0350804ea1521c694f67d8ba9",
+      "bytes": 1902
+    }
+  ]
+}
