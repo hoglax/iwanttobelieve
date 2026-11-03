@@ -18,9 +18,9 @@
 
 Уменьшение, WebP; кадрирование и цветовая обработка средствами CSS. Производные изображения доступны на условиях указанной лицензии.
 
-## Краснодар
+## Ростов-на-Дону
 
-[assets/krasnodar.webp](https://commons.wikimedia.org/wiki/File:Krasnodar.jpg) · Кобелева Евгения · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+[assets/rostov.webp](https://commons.wikimedia.org/wiki/File:Rostov_City_Hall_2021.jpg) · pavljenko · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
 
 Уменьшение, WebP; кадрирование и цветовая обработка средствами CSS. Производные изображения доступны на условиях указанной лицензии.
 

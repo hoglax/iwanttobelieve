@@ -190,9 +190,9 @@
     event.preventDefault();const ids=Object.keys(phases);const i=ids.indexOf(phase);const id=event.key==='Home'?ids[0]:event.key==='End'?ids.at(-1):ids[(i+(event.key==='ArrowRight'?1:-1)+ids.length)%ids.length];showPhase(id);$(`#phase-tab-${id}`).focus();
   });
 
-  $('#payback-months').textContent=`${p.payback.minMonths}–${p.payback.maxMonths}`;
+  $('#payback-months').textContent=p.payback.minMonths==null?'—':`${p.payback.minMonths}–${p.payback.maxMonths}`;
   $('#payback-cities').innerHTML=p.cities.map(c=>`<li><span>${esc(c.name)}</span><strong${c.paybackMonths==null?' class="pending"':''}>${c.paybackMonths==null?'Уточняется':`${number(c.paybackMonths)} мес.`}</strong></li>`).join('');
-  $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">По формуле</th><th scope="col">Ручная пометка</th><th scope="col">Статус</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.paybackMonths)} мес. · ${esc(c.paybackCalendarMonth)}</td><td>${number(c.manualPaybackMonths)} месяцев</td><td>Требует согласования</td></tr>`).join('')}</tbody></table>`;
+  $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">Срок в месяцах</th><th scope="col">Ячейка</th><th scope="col">Результат исходной формулы</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>Уточняется</td><td>${esc(c.paybackSourceCell)}</td><td>${number(c.paybackSourceValue)} · не число месяцев</td></tr>`).join('')}</tbody></table>`;
 
   // Financial version 2.0 remains separate from the primary 3 → 18 strategy.
   const f=p.money;
