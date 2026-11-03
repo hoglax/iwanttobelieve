@@ -1,0 +1,487 @@
+{
+  "baseSha": "c2b93ef880264167965f7465a22ebe1dc30f3be3",
+  "officialContactsUrl": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/contacts/",
+  "offices": [
+    {
+      "name": "Центральный",
+      "address": "ул. 40 лет Октября, 8, оф. 9",
+      "lat": 51.669333,
+      "lon": 39.182051,
+      "source": "https://yandex.com/maps/193/voronezh/house/ulitsa_40_let_oktyabrya_8/Z0AYdw9iSUAGQFtrfXp3eH9gZw==/"
+    },
+    {
+      "name": "Плехановская",
+      "address": "ул. Плехановская, 53, оф. 302",
+      "lat": 51.674226,
+      "lon": 39.184719,
+      "source": "https://yandex.com/maps/193/voronezh/house/Z0AYdw9kTkQOQFtrfXp2dX5hYg==/"
+    },
+    {
+      "name": "Невский",
+      "address": "ул. Владимира Невского, 24А",
+      "lat": 51.709594,
+      "lon": 39.151589,
+      "source": "https://yandex.com/maps/193/voronezh/house/ulitsa_vladimira_nevskogo_24a/Z0AYdwJhTE0OQFtrfXtxeHlqYA==/"
+    },
+    {
+      "name": "Ленинский",
+      "address": "Ленинский проспект, 96А",
+      "lat": 51.663155,
+      "lon": 39.248482,
+      "source": "https://yandex.com/maps/193/voronezh/house/leninskiy_prospekt_96a/Z0AYdANoTU0FQFtrfXp3cn1mYQ==/"
+    },
+    {
+      "name": "Московский",
+      "address": "Московский проспект, 126",
+      "lat": 51.718908,
+      "lon": 39.181548,
+      "source": "https://yandex.com/maps/193/voronezh/house/moskovskiy_prospekt_126/Z0AYdw9hTEEPQFtrfXtweXVjbA==/"
+    },
+    {
+      "name": "Северный",
+      "address": "Московский проспект, 109Д",
+      "lat": 51.708947,
+      "lon": 39.179347,
+      "source": "https://yandex.com/maps/193/voronezh/house/moskovskiy_prospekt_109d/Z0AYdwBpSkEAQFtrfXtxeXVnYw==/"
+    }
+  ],
+  "photos": [
+    {
+      "id": "ekaterinburg",
+      "filename": "Sevastyanov's_Mansion_(June_2025)_-_0_2.jpg",
+      "author": "Vyacheslav Bukharov",
+      "license": "CC BY-SA 4.0",
+      "hash": "3/37",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "landmark": "Дом Севастьянова"
+    },
+    {
+      "id": "nizhny",
+      "filename": "NN_Chkalov_Stairs_08-2016_img3.jpg",
+      "author": "A.Savin, Wikipedia",
+      "license": "FAL",
+      "hash": "0/0f",
+      "licenseUrl": "https://artlibre.org/licence/lal/en/",
+      "landmark": "Чкаловская лестница и Нижегородский кремль"
+    },
+    {
+      "id": "rostov",
+      "filename": "Rostov_on_Don_Cathedral_2021.jpg",
+      "author": "pavljenko",
+      "license": "CC BY-SA 4.0",
+      "hash": "a/a0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "landmark": "Кафедральный собор Рождества Пресвятой Богородицы"
+    },
+    {
+      "id": "ufa",
+      "filename": "Ufa._Monument_to_Salavat_Yulaev.jpg",
+      "author": "Александр Байдуков",
+      "license": "CC BY-SA 4.0",
+      "hash": "7/78",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "landmark": "Памятник Салавату Юлаеву"
+    }
+  ],
+  "mapCities": [
+    {
+      "id": "ekaterinburg",
+      "name": "Екатеринбург",
+      "lon": 60.6,
+      "lat": 56.84,
+      "kind": "project"
+    },
+    {
+      "id": "nizhny",
+      "name": "Нижний Новгород",
+      "lon": 44.01,
+      "lat": 56.33,
+      "kind": "project"
+    },
+    {
+      "id": "samara",
+      "name": "Самара",
+      "lon": 50.15,
+      "lat": 53.2,
+      "kind": "project"
+    },
+    {
+      "id": "rostov",
+      "name": "Ростов-на-Дону",
+      "lon": 39.72,
+      "lat": 47.24,
+      "kind": "project"
+    },
+    {
+      "id": "ufa",
+      "name": "Уфа",
+      "lon": 55.97,
+      "lat": 54.74,
+      "kind": "project"
+    },
+    {
+      "id": "moscow",
+      "name": "Москва",
+      "lon": 37.62,
+      "lat": 55.75,
+      "kind": "reference"
+    },
+    {
+      "id": "voronezh",
+      "name": "Воронеж",
+      "lon": 39.2,
+      "lat": 51.67,
+      "kind": "reference"
+    },
+    {
+      "id": "kaliningrad",
+      "name": "Калининград",
+      "lon": 20.51,
+      "lat": 54.71,
+      "kind": "context"
+    },
+    {
+      "id": "spb",
+      "name": "Санкт-Петербург",
+      "lon": 30.32,
+      "lat": 59.94,
+      "kind": "context"
+    },
+    {
+      "id": "murmansk",
+      "name": "Мурманск",
+      "lon": 33.08,
+      "lat": 68.97,
+      "kind": "context"
+    },
+    {
+      "id": "petrozavodsk",
+      "name": "Петрозаводск",
+      "lon": 34.35,
+      "lat": 61.79,
+      "kind": "context"
+    },
+    {
+      "id": "arkhangelsk",
+      "name": "Архангельск",
+      "lon": 40.54,
+      "lat": 64.54,
+      "kind": "context"
+    },
+    {
+      "id": "vologda",
+      "name": "Вологда",
+      "lon": 39.89,
+      "lat": 59.22,
+      "kind": "context"
+    },
+    {
+      "id": "pskov",
+      "name": "Псков",
+      "lon": 28.33,
+      "lat": 57.82,
+      "kind": "context"
+    },
+    {
+      "id": "tver",
+      "name": "Тверь",
+      "lon": 35.91,
+      "lat": 56.86,
+      "kind": "context"
+    },
+    {
+      "id": "smolensk",
+      "name": "Смоленск",
+      "lon": 32.05,
+      "lat": 54.78,
+      "kind": "context"
+    },
+    {
+      "id": "kursk",
+      "name": "Курск",
+      "lon": 36.19,
+      "lat": 51.73,
+      "kind": "context"
+    },
+    {
+      "id": "belgorod",
+      "name": "Белгород",
+      "lon": 36.59,
+      "lat": 50.6,
+      "kind": "context"
+    },
+    {
+      "id": "lipetsk",
+      "name": "Липецк",
+      "lon": 39.6,
+      "lat": 52.61,
+      "kind": "context"
+    },
+    {
+      "id": "ryazan",
+      "name": "Рязань",
+      "lon": 39.72,
+      "lat": 54.63,
+      "kind": "context"
+    },
+    {
+      "id": "vladimir",
+      "name": "Владимир",
+      "lon": 40.42,
+      "lat": 56.13,
+      "kind": "context"
+    },
+    {
+      "id": "yaroslavl",
+      "name": "Ярославль",
+      "lon": 39.88,
+      "lat": 57.63,
+      "kind": "context"
+    },
+    {
+      "id": "tambov",
+      "name": "Тамбов",
+      "lon": 41.43,
+      "lat": 52.72,
+      "kind": "context"
+    },
+    {
+      "id": "penza",
+      "name": "Пенза",
+      "lon": 45.02,
+      "lat": 53.2,
+      "kind": "context"
+    },
+    {
+      "id": "saratov",
+      "name": "Саратов",
+      "lon": 46.03,
+      "lat": 51.53,
+      "kind": "context"
+    },
+    {
+      "id": "ulyanovsk",
+      "name": "Ульяновск",
+      "lon": 48.4,
+      "lat": 54.31,
+      "kind": "context"
+    },
+    {
+      "id": "kazan",
+      "name": "Казань",
+      "lon": 49.12,
+      "lat": 55.79,
+      "kind": "context"
+    },
+    {
+      "id": "cheboksary",
+      "name": "Чебоксары",
+      "lon": 47.25,
+      "lat": 56.14,
+      "kind": "context"
+    },
+    {
+      "id": "izhevsk",
+      "name": "Ижевск",
+      "lon": 53.2,
+      "lat": 56.85,
+      "kind": "context"
+    },
+    {
+      "id": "kirov",
+      "name": "Киров",
+      "lon": 49.67,
+      "lat": 58.6,
+      "kind": "context"
+    },
+    {
+      "id": "perm",
+      "name": "Пермь",
+      "lon": 56.23,
+      "lat": 58.01,
+      "kind": "context"
+    },
+    {
+      "id": "chelyabinsk",
+      "name": "Челябинск",
+      "lon": 61.4,
+      "lat": 55.16,
+      "kind": "context"
+    },
+    {
+      "id": "orenburg",
+      "name": "Оренбург",
+      "lon": 55.1,
+      "lat": 51.77,
+      "kind": "context"
+    },
+    {
+      "id": "volgograd",
+      "name": "Волгоград",
+      "lon": 44.51,
+      "lat": 48.71,
+      "kind": "context"
+    },
+    {
+      "id": "krasnodar",
+      "name": "Краснодар",
+      "lon": 38.98,
+      "lat": 45.04,
+      "kind": "context"
+    },
+    {
+      "id": "astrakhan",
+      "name": "Астрахань",
+      "lon": 48.04,
+      "lat": 46.35,
+      "kind": "context"
+    },
+    {
+      "id": "sochi",
+      "name": "Сочи",
+      "lon": 39.72,
+      "lat": 43.59,
+      "kind": "context"
+    },
+    {
+      "id": "stavropol",
+      "name": "Ставрополь",
+      "lon": 41.97,
+      "lat": 45.04,
+      "kind": "context"
+    },
+    {
+      "id": "makhachkala",
+      "name": "Махачкала",
+      "lon": 47.5,
+      "lat": 42.98,
+      "kind": "context"
+    },
+    {
+      "id": "tyumen",
+      "name": "Тюмень",
+      "lon": 65.54,
+      "lat": 57.15,
+      "kind": "context"
+    },
+    {
+      "id": "omsk",
+      "name": "Омск",
+      "lon": 73.37,
+      "lat": 54.99,
+      "kind": "context"
+    },
+    {
+      "id": "novosibirsk",
+      "name": "Новосибирск",
+      "lon": 82.92,
+      "lat": 55.03,
+      "kind": "context"
+    },
+    {
+      "id": "tomsk",
+      "name": "Томск",
+      "lon": 84.95,
+      "lat": 56.5,
+      "kind": "context"
+    },
+    {
+      "id": "kemerovo",
+      "name": "Кемерово",
+      "lon": 86.09,
+      "lat": 55.36,
+      "kind": "context"
+    },
+    {
+      "id": "barnaul",
+      "name": "Барнаул",
+      "lon": 83.78,
+      "lat": 53.35,
+      "kind": "context"
+    },
+    {
+      "id": "krasnoyarsk",
+      "name": "Красноярск",
+      "lon": 92.87,
+      "lat": 56.01,
+      "kind": "context"
+    },
+    {
+      "id": "irkutsk",
+      "name": "Иркутск",
+      "lon": 104.3,
+      "lat": 52.29,
+      "kind": "context"
+    },
+    {
+      "id": "ulan-ude",
+      "name": "Улан-Удэ",
+      "lon": 107.58,
+      "lat": 51.83,
+      "kind": "context"
+    },
+    {
+      "id": "chita",
+      "name": "Чита",
+      "lon": 113.5,
+      "lat": 52.03,
+      "kind": "context"
+    },
+    {
+      "id": "yakutsk",
+      "name": "Якутск",
+      "lon": 129.73,
+      "lat": 62.03,
+      "kind": "context"
+    },
+    {
+      "id": "khabarovsk",
+      "name": "Хабаровск",
+      "lon": 135.07,
+      "lat": 48.48,
+      "kind": "context"
+    },
+    {
+      "id": "vladivostok",
+      "name": "Владивосток",
+      "lon": 131.89,
+      "lat": 43.12,
+      "kind": "context"
+    },
+    {
+      "id": "magadan",
+      "name": "Магадан",
+      "lon": 150.81,
+      "lat": 59.56,
+      "kind": "context"
+    },
+    {
+      "id": "anadyr",
+      "name": "Анадырь",
+      "lon": 177.51,
+      "lat": 64.73,
+      "kind": "context"
+    },
+    {
+      "id": "petropavlovsk",
+      "name": "Петропавловск-Камчатский",
+      "lon": 158.65,
+      "lat": 53.05,
+      "kind": "context"
+    },
+    {
+      "id": "yuzhno",
+      "name": "Южно-Сахалинск",
+      "lon": 142.73,
+      "lat": 46.96,
+      "kind": "context"
+    },
+    {
+      "id": "blago",
+      "name": "Благовещенск",
+      "lon": 127.54,
+      "lat": 50.29,
+      "kind": "context"
+    }
+  ]
+}
