@@ -18,6 +18,13 @@
   $('#city-monoliths').innerHTML=p.cities.map(c=>`<figure class="monolith"><a href="#cities" data-city="${c.id}" aria-label="Посмотреть ${esc(c.name)}"><img src="${c.image}" alt="" width="360" height="520"></a><figcaption>${esc(c.name)}</figcaption></figure>`).join('');
   const mapViewport=$('#russia-map-viewport');
   if(mapViewport&&mapViewport.scrollWidth>mapViewport.clientWidth)mapViewport.scrollLeft=(mapViewport.scrollWidth-mapViewport.clientWidth)*.42;
+  // Give each project city one continuous hit area across its marker and label.
+  $$('.map-project-city').forEach(link=>{
+    const box=link.getBBox();
+    const target=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    for(const [key,value] of Object.entries({x:box.x-4,y:box.y-4,width:box.width+8,height:box.height+8,fill:'transparent',stroke:'none','pointer-events':'all'}))target.setAttribute(key,String(value));
+    target.classList.add('map-city-hit-area');link.prepend(target);
+  });
   let selectedCity=p.cities[0].id;
   $('#city-tabs').innerHTML=p.cities.map((c,i)=>`<button id="city-tab-${c.id}" role="tab" aria-selected="${i===0}" aria-controls="city-theatre" tabindex="${i===0?0:-1}" data-city-tab="${c.id}">${esc(c.name)}</button>`).join('');
   $('#economy-city-selector').innerHTML=p.cities.map((c,i)=>`<button data-economy-city="${c.id}" aria-pressed="${i===0}">${esc(c.name)}</button>`).join('');
@@ -58,6 +65,14 @@
   $('#next-average').addEventListener('click',()=>{presenting?stepPresentation(1):moveCity(1);scheduleEconomyRotation();});
   $('#next-city').addEventListener('click',()=>presenting?stepPresentation(1):moveCity(1));
   $('#city-tabs').addEventListener('keydown',event=>{
+    if(event.altKey||event.ctrlKey||event.metaKey)return;
+    const forward=['ArrowRight','ArrowDown','PageDown'].includes(event.key);
+    const backward=['ArrowLeft','ArrowUp','PageUp'].includes(event.key);
+    if(presenting&&scenes[activeScene].id==='cities'&&(forward||backward)){
+      event.preventDefault();event.stopPropagation();stepPresentation(forward?1:-1);
+      const focus=scenes[activeScene].id==='cities'?$(`#city-tab-${selectedCity}`):$(forward?'#next-scene':'#previous-scene');
+      focus.focus({preventScroll:true});return;
+    }
     if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;
     event.preventDefault();
     if(event.key==='Home')showCity(p.cities[0].id);else if(event.key==='End')showCity(p.cities.at(-1).id);else moveCity(event.key==='ArrowRight'?1:-1);
