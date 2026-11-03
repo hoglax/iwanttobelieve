@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-03",
+  "officialContactsUrl": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/contacts/",
+  "coordinateReference": "WGS84 building centres; Yandex house pages",
+  "basemap": "OpenStreetMap contributors, ODbL",
+  "offices": [
+    {
+      "name": "Центральный",
+      "address": "ул. 40 лет Октября, 8, оф. 9",
+      "lat": 51.669333,
+      "lon": 39.182051,
+      "source": "https://yandex.com/maps/193/voronezh/house/ulitsa_40_let_oktyabrya_8/Z0AYdw9iSUAGQFtrfXp3eH9gZw==/"
+    },
+    {
+      "name": "Плехановская",
+      "address": "ул. Плехановская, 53, оф. 302",
+      "lat": 51.674226,
+      "lon": 39.184719,
+      "source": "https://yandex.com/maps/193/voronezh/house/Z0AYdw9kTkQOQFtrfXp2dX5hYg==/"
+    },
+    {
+      "name": "Невский",
+      "address": "ул. Владимира Невского, 24А",
+      "lat": 51.709594,
+      "lon": 39.151589,
+      "source": "https://yandex.com/maps/193/voronezh/house/ulitsa_vladimira_nevskogo_24a/Z0AYdwJhTE0OQFtrfXtxeHlqYA==/"
+    },
+    {
+      "name": "Ленинский",
+      "address": "Ленинский проспект, 96А",
+      "lat": 51.663155,
+      "lon": 39.248482,
+      "source": "https://yandex.com/maps/193/voronezh/house/leninskiy_prospekt_96a/Z0AYdANoTU0FQFtrfXp3cn1mYQ==/"
+    },
+    {
+      "name": "Московский",
+      "address": "Московский проспект, 126",
+      "lat": 51.718908,
+      "lon": 39.181548,
+      "source": "https://yandex.com/maps/193/voronezh/house/moskovskiy_prospekt_126/Z0AYdw9hTEEPQFtrfXtweXVjbA==/"
+    },
+    {
+      "name": "Северный",
+      "address": "Московский проспект, 109Д",
+      "lat": 51.708947,
+      "lon": 39.179347,
+      "source": "https://yandex.com/maps/193/voronezh/house/moskovskiy_prospekt_109d/Z0AYdwBpSkEAQFtrfXtxeXVnYw==/"
+    }
+  ]
+}

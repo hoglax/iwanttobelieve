@@ -2,20 +2,20 @@
   {
     "city": "Екатеринбург",
     "file": "assets/ekaterinburg.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:E-burg_asv2019-05_img46_view_from_VysotSky.jpg",
-    "author": "A.Savin",
-    "license": "FAL",
-    "licenseUrl": "http://artlibre.org/licence/lal/en",
-    "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+    "source": "https://commons.wikimedia.org/wiki/File:Sevastyanov%27s_Mansion_%28June_2025%29_-_0_2.jpg",
+    "author": "Vyacheslav Bukharov",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Resized and converted to WebP; cropped in the page layout."
   },
   {
     "city": "Нижний Новгород",
     "file": "assets/nizhny.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_2025-04-29_Minin_and_Pozharsky_square_01.jpg",
-    "author": "AlexTref871",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+    "source": "https://commons.wikimedia.org/wiki/File:NN_Chkalov_Stairs_08-2016_img3.jpg",
+    "author": "A.Savin, Wikipedia",
+    "license": "FAL",
+    "licenseUrl": "https://artlibre.org/licence/lal/en/",
+    "modifications": "Resized and converted to WebP; cropped in the page layout."
   },
   {
     "city": "Самара",
@@ -29,19 +29,19 @@
   {
     "city": "Ростов-на-Дону",
     "file": "assets/rostov.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Rostov_City_Hall_2021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Rostov_on_Don_Cathedral_2021.jpg",
     "author": "pavljenko",
     "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Resized and converted to WebP; cropped in the page layout."
   },
   {
     "city": "Уфа",
     "file": "assets/ufa.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Ufa_view_from_Belaya_river_2022-05.jpg",
-    "author": "Svetlov Artem",
+    "source": "https://commons.wikimedia.org/wiki/File:Ufa._Monument_to_Salavat_Yulaev.jpg",
+    "author": "Александр Байдуков",
     "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "modifications": "Resized and converted to WebP; cropped in the page layout."
   }
 ]

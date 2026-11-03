@@ -42,7 +42,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Ядро опытных агентов и отдельный набор новичков",
       "verify": "какая комиссия получается по сделкам, откуда придут клиенты и сколько стоит аренда",
-      "image": "assets/ekaterinburg.webp",
+      "image": "assets/ekaterinburg.webp?v=20261103-landmarks",
       "deals": [
         0,
         4.2,
@@ -83,7 +83,8 @@ window.PROJECT = {
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R9",
       "paybackSourceValue": 6006317,
-      "paybackSourceFormula": "=R8-O9"
+      "paybackSourceFormula": "=R8-O9",
+      "landmark": "Дом Севастьянова"
     },
     {
       "id": "nizhny",
@@ -124,7 +125,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Нанять местного РОПа до массового набора",
       "verify": "на каких условиях работают застройщики, какую комиссию можно получить и как удержать команду",
-      "image": "assets/nizhny.webp",
+      "image": "assets/nizhny.webp?v=20261103-landmarks",
       "deals": [
         0,
         4.2,
@@ -165,7 +166,8 @@ window.PROJECT = {
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R17",
       "paybackSourceValue": 4604237,
-      "paybackSourceFormula": "=R16-O17"
+      "paybackSourceFormula": "=R16-O17",
+      "landmark": "Чкаловская лестница и Нижегородский кремль"
     },
     {
       "id": "samara",
@@ -288,7 +290,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Местный руководитель и команда агентов по новостройкам и вторичному рынку",
       "verify": "местные комиссии, стоимость обращений и условия работы с застройщиками",
-      "image": "assets/rostov.webp",
+      "image": "assets/rostov.webp?v=20261103-landmarks",
       "deals": [
         0,
         4.2,
@@ -329,7 +331,8 @@ window.PROJECT = {
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R33",
       "paybackSourceValue": 12107735,
-      "paybackSourceFormula": "=R32-O32"
+      "paybackSourceFormula": "=R32-O32",
+      "landmark": "Кафедральный собор Рождества Пресвятой Богородицы"
     },
     {
       "id": "ufa",
@@ -370,7 +373,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Местный руководитель; отдельный найм опытных и новичков; прозрачная комиссия, наставник и правила заявок.",
       "verify": "сколько в городе агентств, какие сделки и комиссии получают местные агенты, что удерживает команду и сколько стоят заявки и аренда",
-      "image": "assets/ufa.webp",
+      "image": "assets/ufa.webp?v=20261103-landmarks",
       "deals": [
         0,
         4.2,
@@ -411,7 +414,8 @@ window.PROJECT = {
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R41",
       "paybackSourceValue": 14592675,
-      "paybackSourceFormula": "=R40-O40"
+      "paybackSourceFormula": "=R40-O40",
+      "landmark": "Памятник Салавату Юлаеву"
     }
   ],
   "months": [
@@ -455,20 +459,20 @@ window.PROJECT = {
     {
       "city": "Екатеринбург",
       "file": "assets/ekaterinburg.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:E-burg_asv2019-05_img46_view_from_VysotSky.jpg",
-      "author": "A.Savin",
-      "license": "FAL",
-      "licenseUrl": "http://artlibre.org/licence/lal/en",
-      "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+      "source": "https://commons.wikimedia.org/wiki/File:Sevastyanov%27s_Mansion_%28June_2025%29_-_0_2.jpg",
+      "author": "Vyacheslav Bukharov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Resized and converted to WebP; cropped in the page layout."
     },
     {
       "city": "Нижний Новгород",
       "file": "assets/nizhny.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Nizhny_Novgorod_2025-04-29_Minin_and_Pozharsky_square_01.jpg",
-      "author": "AlexTref871",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+      "source": "https://commons.wikimedia.org/wiki/File:NN_Chkalov_Stairs_08-2016_img3.jpg",
+      "author": "A.Savin, Wikipedia",
+      "license": "FAL",
+      "licenseUrl": "https://artlibre.org/licence/lal/en/",
+      "modifications": "Resized and converted to WebP; cropped in the page layout."
     },
     {
       "city": "Самара",
@@ -482,20 +486,20 @@ window.PROJECT = {
     {
       "city": "Ростов-на-Дону",
       "file": "assets/rostov.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Rostov_City_Hall_2021.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Rostov_on_Don_Cathedral_2021.jpg",
       "author": "pavljenko",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Resized and converted to WebP; cropped in the page layout."
     },
     {
       "city": "Уфа",
       "file": "assets/ufa.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Ufa_view_from_Belaya_river_2022-05.jpg",
-      "author": "Svetlov Artem",
+      "source": "https://commons.wikimedia.org/wiki/File:Ufa._Monument_to_Salavat_Yulaev.jpg",
+      "author": "Александр Байдуков",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Resized and converted to WebP; cropped in the page layout."
     }
   ],
   "totalDeals": [
@@ -651,7 +655,7 @@ window.PROJECT = {
             "sourceRow": 10
           },
           {
-            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -672,7 +676,7 @@ window.PROJECT = {
             "sourceRow": 11
           },
           {
-            "label": "ФОТ — офис-менеджер",
+            "label": "ФОТ – офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -934,7 +938,7 @@ window.PROJECT = {
             "sourceRow": 27
           },
           {
-            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -955,7 +959,7 @@ window.PROJECT = {
             "sourceRow": 28
           },
           {
-            "label": "ФОТ — офис-менеджер",
+            "label": "ФОТ – офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1217,7 +1221,7 @@ window.PROJECT = {
             "sourceRow": 44
           },
           {
-            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1238,7 +1242,7 @@ window.PROJECT = {
             "sourceRow": 45
           },
           {
-            "label": "ФОТ — офис-менеджер",
+            "label": "ФОТ – офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1500,7 +1504,7 @@ window.PROJECT = {
             "sourceRow": 61
           },
           {
-            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1521,7 +1525,7 @@ window.PROJECT = {
             "sourceRow": 62
           },
           {
-            "label": "ФОТ — офис-менеджер",
+            "label": "ФОТ – офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1783,7 +1787,7 @@ window.PROJECT = {
             "sourceRow": 78
           },
           {
-            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1804,7 +1808,7 @@ window.PROJECT = {
             "sourceRow": 79
           },
           {
-            "label": "ФОТ — офис-менеджер",
+            "label": "ФОТ – офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
