@@ -80,7 +80,7 @@ xs,ys=zip(*pts);xmin,xmax=min(xs),max(xs);ymin,ymax=min(ys),max(ys)
 scale=min(1280/(xmax-xmin),550/(ymax-ymin))
 ox=(1440-(xmax-xmin)*scale)/2;oy=(650-(ymax-ymin)*scale)/2
 def xy(lon,lat):
-    x,y=project(lon,lat);return ox+(x-xmin)*scale,oy+(y-ymin)*scale
+    x,y=project(lon,lat);return ox+(x-xmin)*scale,oy+(ymax-y)*scale
 land=[]
 for poly in polys:
     rings=[]
@@ -160,14 +160,32 @@ def vxy(lon,lat):return 320+(lon-vcx)*math.cos(lat0)*vs,190-(lat-vcy)*vs
 def geom_path(coords,closed=False):
     if not coords:return ""
     return "M"+"L".join(f"{x:.1f} {y:.1f}" for x,y in (vxy(pt["lon"],pt["lat"]) for pt in coords))+("Z" if closed else "")
+def joined_water_rings(members):
+    segments=[m["geometry"] for m in members if m.get("role") in ("outer","") and m.get("geometry")]
+    rings=[]
+    def same(a,b):return abs(a["lon"]-b["lon"])<1e-7 and abs(a["lat"]-b["lat"])<1e-7
+    while segments:
+        chain=segments.pop()
+        while True:
+            match=False
+            for i,other in enumerate(segments):
+                if same(chain[-1],other[0]):chain=chain+other[1:]
+                elif same(chain[-1],other[-1]):chain=chain+list(reversed(other[:-1]))
+                elif same(chain[0],other[-1]):chain=other[:-1]+chain
+                elif same(chain[0],other[0]):chain=list(reversed(other[1:]))+chain
+                else:continue
+                segments.pop(i);match=True;break
+            if not match:break
+        if len(chain)>3 and same(chain[0],chain[-1]):rings.append(chain)
+    return rings
+
 water=[];roads=[]
 for e in geometry["elements"]:
     tags=e.get("tags",{})
     if tags.get("natural")=="water":
         if e["type"]=="relation":
-            for m in e.get("members",[]):
-                if m.get("role") in ("outer","") and m.get("geometry"):
-                    water.append('<path d="'+geom_path(m["geometry"])+'" fill="#253a49" stroke="#43556677" stroke-width="1.2"/>')
+            for ring in joined_water_rings(e.get("members",[])):
+                water.append('<path d="'+geom_path(ring,True)+'" fill="#253a49" stroke="#43556677" stroke-width="1.2"/>')
         elif e.get("geometry"):
             water.append('<path d="'+geom_path(e["geometry"],True)+'" fill="#253a49" stroke="#43556677" stroke-width="1.2"/>')
     if tags.get("waterway")=="river" and e.get("geometry"):
@@ -192,7 +210,7 @@ vpanel='<div class="voronezh-map-panel" data-reveal><div class="voronezh-map-hea
 h=Path("index.html").read_text()
 h=h.replace("\u2014","–")
 home=section(h,"home")
-home=re.sub(r'<div class="expansion-pillars".*?</div>','<div class="scale-vision"><h2 id="scale-title">Масштабируемся</h2><div class="expansion-pillars" aria-labelledby="scale-title"><a href="#russia" class="expansion-pillar"><span class="horizon-name">Россия</span></a><a href="#cis" class="expansion-pillar"><span class="horizon-name">СНГ</span></a><a href="#world" class="expansion-pillar"><span class="horizon-name">Популярные<br>мировые направления</span></a></div></div>',home,flags=re.S)
+home=re.sub(r'<div class="expansion-pillars".*?</div>','<div class="scale-vision"><h2 id="scale-title">Масштабируемся</h2><div class="expansion-pillars" aria-labelledby="scale-title"><a href="#russia" class="expansion-pillar"><span class="horizon-name">Россия</span></a><a href="#cis" class="expansion-pillar"><span class="horizon-name">СНГ</span></a><a href="#world" class="expansion-pillar"><span class="horizon-name">Популярные <br>мировые направления</span></a></div></div>',home,flags=re.S)
 h=replace_section(h,"home",home)
 system=section(h,"system")
 system=system.replace('<span>04</span> ИДЕЯ РАСШИРЕНИЯ','<span>03</span> ИДЕЯ РАСШИРЕНИЯ')

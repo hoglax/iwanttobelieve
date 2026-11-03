@@ -79,6 +79,7 @@ try:
             dims=home.locator(".expansion-pillar").evaluate_all("(ns)=>ns.map(n=>{const b=n.getBoundingClientRect();const t=n.querySelector('.horizon-name'),s=getComputedStyle(t);return {w:b.width,h:b.height,size:s.fontSize}})")
             assert max(d["w"] for d in dims)-min(d["w"] for d in dims)<1.5,dims
             assert len({d["size"] for d in dims})==1,dims
+            assert "Популярные мировые направления" in " ".join(home.locator(".expansion-pillars").inner_text().split())
             assert page.locator("#russia .monolith img").evaluate_all("(ns)=>ns.every(n=>getComputedStyle(n).filter==='none')")
             if fail:page.screenshot(path=str(OUT/f"layout-fail-{width}.png"),full_page=True)
             report["viewports"].append({"width":width,"height":height,"forward":len(frames),"backward":len(backward),"layoutFailures":fail,"equalHeroSizes":True})
@@ -114,6 +115,8 @@ try:
           return out;
         }""")
         assert not collision,collision
+        map_points={c["id"]:c["point"] for c in json.loads((OUT/"russia-map-manifest.json").read_text())["cities"]}
+        assert map_points["murmansk"][1]<map_points["rostov"][1],"Russia north/south orientation"
         report["interactions"]["russiaMapLabels"]=page.locator("#vision .full-russia-map text").count()
         assert page.locator("#system .voronezh-map a").count()==6
         assert page.locator("#system .office-addresses li").count()==6

@@ -85,3 +85,12 @@
  .system .system-layout{grid-template-columns:1fr 1.14fr}
  .voronezh-map-panel{print-color-adjust:exact;break-inside:avoid}
 }
+
+/* Copper tones match the opening scene; SVG labels do not inherit icon strokes. */
+.system{background:#08090c}
+.system .system-aurora{background:radial-gradient(ellipse at 70% 60%,#8d603719,transparent 65%)}
+.system .silver-text{background:linear-gradient(110deg,#f2dfce,#c99d78 52%,#e4c4a8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.system .chapter-label{color:#ad967f}
+.system .section-lead,.system .system-principles p{color:#b9ada2}
+.system .system-principles p span{color:#a8896d}
+.voronezh-map{fill:none;stroke:none}
