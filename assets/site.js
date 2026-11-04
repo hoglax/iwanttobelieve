@@ -69,8 +69,7 @@
     $('#city-theatre').setAttribute('aria-labelledby',`city-tab-${id}`);
     $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} – вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><p>${esc(c.intro)}</p><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
     $('#city-counter').textContent=`0${i+1} / 05`;
-    $('#economy-city-name').textContent=c.name.toUpperCase();
-    $('#average-value').innerHTML=`${number(c.average)}<span>₽</span>`;
+    $('#average-value').innerHTML=`${number(c.average)}<span>₽</span><sup aria-label="источник в примечании">*</sup>`;
     renderBudget(id);
     if(presenting)updateControls();
   }
@@ -147,56 +146,56 @@
 
   const phases={
   "prepare": {
-    "title": "Сначала найдём<br>руководителя.",
-    "lead": "До открытия найдём руководителя, соберём первую команду и посчитаем расходы.",
+    "title": "Подготовка",
+    "lead": "",
     "points": [
       [
-        "Найдём руководителя на месте",
-        "Нам нужен человек, который знает город и сможет собрать вокруг себя команду."
+        "Назначить руководителя",
+        "Команда и сроки найма."
       ],
       [
-        "Посчитаем, во сколько обойдётся запуск",
-        "Заранее учтём аренду, оборудование, сервисы и оплату команды. Отдельно посчитаем рекламу."
+        "Утвердить бюджет",
+        "Аренда, оборудование, сервисы, реклама."
       ],
       [
-        "Подготовим офис к первому рабочему дню",
-        "Оформим договоры и подключим CRM и телефонию, чтобы команда могла сразу начать работу."
+        "Подготовить офис",
+        "Договоры, CRM и телефония."
       ]
     ]
   },
   "start": {
-    "title": "Берёмся<br>за первые сделки.",
-    "lead": "В первые недели важно, чтобы агентам было к кому прийти с вопросами, а каждое обращение доходило до нужного человека.",
+    "title": "Запуск",
+    "lead": "",
     "points": [
       [
-        "Поможем агентам освоиться",
-        "Покажем, как устроены наши сервисы, как мы ведём клиента и что важно знать на первой сделке."
+        "Обучить команду",
+        "Сервисы, работа с клиентом, документы."
       ],
       [
-        "Запустим рекламу и приём обращений",
-        "Подключим согласованные каналы и проследим, чтобы обращения попадали к нужным агентам."
+        "Запустить рекламу",
+        "Каналы, бюджет, распределение обращений."
       ],
       [
-        "Будем рядом в первых сделках",
-        "Опытные коллеги помогут новичкам разобраться с вопросами клиентов и документами."
+        "Провести первые сделки",
+        "Поддержка агентов и проверка документов."
       ]
     ]
   },
   "scale": {
-    "title": "Теперь готовим<br>следующий офис.",
-    "lead": "Первый запуск покажет, сколько времени занимает найм и что нужно уточнить в расчётах. С этим опытом будет проще открывать дальше.",
+    "title": "Следующий офис",
+    "lead": "",
     "points": [
       [
-        "Посмотрим, как прошёл первый запуск",
-        "Сверим план с первыми результатами: сколько агентов работает и сколько сделок они закрывают."
+        "Сверить план и факт",
+        "Команда, сделки, выручка, расходы."
       ],
       [
-        "Обновим расчёты",
-        "Учтём, сколько заплатили за аренду, рекламу и сервисы, во что обошлась команда."
+        "Обновить расчёты",
+        "По результатам первого запуска."
       ],
       [
-        "Решим, когда открывать следующий офис",
-        "Выберем город, договоримся с руководителем и утвердим бюджет. После этого назначим дату открытия."
+        "Утвердить следующий запуск",
+        "Город, руководитель, бюджет, дата."
       ]
     ]
   }
@@ -207,7 +206,7 @@
     phase=id;const v=phases[id];
     $$('[data-phase]').forEach(button=>{const active=button.dataset.phase===id;button.setAttribute('aria-selected',active);button.tabIndex=active?0:-1;});
     $('#launch-detail').setAttribute('aria-labelledby',`phase-tab-${id}`);
-    $('#launch-detail').innerHTML=`<div class="phase-title"><h3>${v.title}</h3><p>${v.lead}</p></div><div class="phase-points">${v.points.map(([title,text],i)=>`<div class="phase-point"><span>0${i+1}</span><div><b>${title}</b><p>${text}</p></div></div>`).join('')}</div>`;
+    $('#launch-detail').innerHTML=`<div class="phase-title"><h3>${v.title}</h3></div><div class="phase-points">${v.points.map(([title,text],i)=>`<div class="phase-point"><span>0${i+1}</span><div><b>${title}</b><p>${text}</p></div></div>`).join('')}</div>`;
     if(presenting)updateControls();
   }
   $('#launch-tabs').addEventListener('click',event=>{const button=event.target.closest('[data-phase]');if(button)showPhase(button.dataset.phase);});
@@ -279,7 +278,7 @@
     const canvas=presentationCanvases[activeScene];
     if(!canvas)return;
     const edge=stage.clientWidth<=520?10:20;
-    canvas.style.width=`${Math.max(240,Math.min(scenes[activeScene].id==='vision'?1680:1360,stage.clientWidth-edge*2))}px`;
+    canvas.style.width=`${Math.max(240,Math.min(['vision','cis','world'].includes(scenes[activeScene].id)?1680:1360,stage.clientWidth-edge*2))}px`;
     const width=canvas.offsetWidth;
     const height=canvas.offsetHeight;
     const scale=Math.min(1,(stage.clientWidth-edge*2)/width,(stage.clientHeight-edge*2)/height);

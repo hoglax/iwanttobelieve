@@ -1,0 +1,359 @@
+{
+  "checkedAt": "2026-11-03",
+  "summary": "Казахстан и Узбекистан первыми сравнить для собственной сети. Кыргызстан, Беларусь, Армению, Азербайджан и Таджикистан сначала проработать через местных партнёров. Список городов - предложение, а не утверждённый график открытия.",
+  "countries": [
+    {
+      "id": "kazakhstan",
+      "country": "Казахстан",
+      "code": "KAZ",
+      "tier": "priority",
+      "decision": "Изучить в первую очередь",
+      "why": "Три города-миллионника",
+      "recommendation": "Алматы и Астана - первые варианты для сравнения. Шымкент - следующая альтернатива. Несколько крупных самостоятельных городов дают выбор площадки; спрос на услуги нового агентства ещё нужно подтвердить.",
+      "entryCondition": "Сравнить Алматы и Астану по комиссии, аренде, найму и стоимости привлечения. Проверить партнёров, требования к организации агентства и банковские расчёты.",
+      "cities": [
+        {
+          "name": "Алматы",
+          "neName": "Almaty",
+          "population": 2392105,
+          "populationDate": "01.10.2026",
+          "additional": false,
+          "scope": "город республиканского значения",
+          "sourceUrl": "https://stat.gov.kz/en/region/",
+          "lon": 76.91309,
+          "lat": 43.326936,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Казахстан",
+          "countryId": "kazakhstan"
+        },
+        {
+          "name": "Астана",
+          "neName": "Nur-Sultan",
+          "population": 1707150,
+          "populationDate": "01.10.2026",
+          "additional": false,
+          "scope": "город республиканского значения",
+          "sourceUrl": "https://stat.gov.kz/en/region/",
+          "lon": 71.427774,
+          "lat": 51.181125,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Казахстан",
+          "countryId": "kazakhstan"
+        },
+        {
+          "name": "Шымкент",
+          "neName": "Shymkent",
+          "population": 1320743,
+          "populationDate": "01.10.2026",
+          "additional": false,
+          "scope": "город республиканского значения",
+          "sourceUrl": "https://stat.gov.kz/en/region/",
+          "lon": 69.595018,
+          "lat": 42.320012,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Казахстан",
+          "countryId": "kazakhstan"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Казахстан: официальная статистика населения",
+          "url": "https://stat.gov.kz/en/region/",
+          "date": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "uzbekistan",
+      "country": "Узбекистан",
+      "code": "UZB",
+      "tier": "priority",
+      "decision": "Изучить в первую очередь",
+      "why": "Столица и крупные региональные центры",
+      "recommendation": "Начать сравнение с Ташкента. Наманган и Самарканд рассмотреть следующими, Андижан - как региональный резерв. Численность этих городов позволяет сформировать список площадок, но не доказывает окупаемость.",
+      "entryCondition": "Проверить вознаграждение от застройщиков, локальные каналы привлечения и руководителя. Отдельно посчитать Ташкент и региональные города; проверить условия работы иностранной компании.",
+      "cities": [
+        {
+          "name": "Ташкент",
+          "neName": "Tashkent",
+          "population": 3195900,
+          "populationDate": "01.04.2026",
+          "additional": false,
+          "scope": "город Ташкент, отдельно от Ташкентской области",
+          "sourceUrl": "https://stat.uz/en/press-center/news-of-committee/68042-ajsi-udud-a-olisi-eng-k-p-5",
+          "lon": 69.268823,
+          "lat": 41.303828,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Узбекистан",
+          "countryId": "uzbekistan"
+        },
+        {
+          "name": "Самарканд",
+          "neName": "Samarkand",
+          "population": 607600,
+          "populationDate": "01.04.2026",
+          "additional": false,
+          "scope": "город, не Самаркандская область",
+          "sourceUrl": "https://stat.uz/en/press-center/news-of-committee/68794-a-olisi-soni-eng-k-p-b-lgan-top-10-tuman-va-sha-arlar-5",
+          "lon": 66.944999,
+          "lat": 39.670019,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Узбекистан",
+          "countryId": "uzbekistan"
+        },
+        {
+          "name": "Наманган",
+          "neName": "Namangan",
+          "population": 731300,
+          "populationDate": "01.04.2026",
+          "additional": true,
+          "scope": "город, не Наманганская область",
+          "sourceUrl": "https://stat.uz/en/press-center/news-of-committee/68794-a-olisi-soni-eng-k-p-b-lgan-top-10-tuman-va-sha-arlar-5",
+          "lon": 71.669982,
+          "lat": 41.000016,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Узбекистан",
+          "countryId": "uzbekistan"
+        },
+        {
+          "name": "Андижан",
+          "neName": "Andijan",
+          "population": 506000,
+          "populationDate": "01.04.2026",
+          "additional": true,
+          "scope": "город, не Андижанская область",
+          "sourceUrl": "https://stat.uz/en/press-center/news-of-committee/68794-a-olisi-soni-eng-k-p-b-lgan-top-10-tuman-va-sha-arlar-5",
+          "lon": 72.339967,
+          "lat": 40.790002,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Узбекистан",
+          "countryId": "uzbekistan"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Узбекистан: официальная статистика населения",
+          "url": "https://stat.uz/en/press-center/news-of-committee/68042-ajsi-udud-a-olisi-eng-k-p-5",
+          "date": "2026-04-01"
+        },
+        {
+          "title": "Узбекистан: официальная статистика населения",
+          "url": "https://stat.uz/en/press-center/news-of-committee/68794-a-olisi-soni-eng-k-p-b-lgan-top-10-tuman-va-sha-arlar-5",
+          "date": "2026-04-01"
+        }
+      ]
+    },
+    {
+      "id": "kyrgyzstan",
+      "country": "Кыргызстан",
+      "code": "KGZ",
+      "tier": "partner",
+      "decision": "Через партнёра",
+      "why": "Бишкек первым, Ош следующим",
+      "recommendation": "Сначала проверить партнёрскую модель в Бишкеке. Ош рассмотреть как следующую региональную площадку. Административные границы городов менялись, поэтому рост населения сам по себе не показывает рост спроса на недвижимость.",
+      "entryCondition": "Сначала замерить спрос, вознаграждение и расходы партнёрской модели в Бишкеке. Ош сравнить отдельно, учитывая изменение административных границ.",
+      "cities": [
+        {
+          "name": "Бишкек",
+          "neName": "Bishkek",
+          "population": 1358600,
+          "populationDate": "01.01.2026",
+          "additional": false,
+          "scope": "постоянное население административного города",
+          "sourceUrl": "https://www.stat.gov.kg/ru/opendata/category/39/",
+          "lon": 74.583258,
+          "lat": 42.875025,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Кыргызстан",
+          "countryId": "kyrgyzstan"
+        },
+        {
+          "name": "Ош",
+          "neName": "Osh",
+          "population": 484900,
+          "populationDate": "01.01.2026",
+          "additional": true,
+          "scope": "постоянное население города, не Ошской области",
+          "sourceUrl": "https://www.stat.gov.kg/ru/opendata/category/39/",
+          "lon": 72.790017,
+          "lat": 40.540405,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Кыргызстан",
+          "countryId": "kyrgyzstan"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кыргызстан: официальная статистика населения",
+          "url": "https://www.stat.gov.kg/ru/opendata/category/39/",
+          "date": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "id": "belarus",
+      "country": "Беларусь",
+      "code": "BLR",
+      "tier": "partner",
+      "decision": "Через партнёра",
+      "why": "Столица и региональные альтернативы",
+      "recommendation": "Минск - первая площадка для оценки партнёрства. Гомель - региональный резерв по размеру города. Гродно и Брест оставим для следующего сравнения. Собственный офис не ставим в первую очередь без проверки местных условий и экономики.",
+      "entryCondition": "Проверить действующие правила риелторской деятельности, требования к организации и иностранному участию. Сравнить экономику Минска и Гомеля до решения о своём офисе.",
+      "cities": [
+        {
+          "name": "Минск",
+          "neName": "Minsk",
+          "population": 1995091,
+          "populationDate": "01.01.2026",
+          "additional": false,
+          "scope": "город Минск",
+          "sourceUrl": "https://nashaniva.com/ru/391394",
+          "lon": 27.564681,
+          "lat": 53.901923,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Беларусь",
+          "countryId": "belarus"
+        },
+        {
+          "name": "Гомель",
+          "neName": "Homyel",
+          "population": 499853,
+          "populationDate": "01.01.2026",
+          "additional": true,
+          "scope": "город Гомель",
+          "sourceUrl": "https://nashaniva.com/ru/391394",
+          "lon": 31.000009,
+          "lat": 52.430016,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Беларусь",
+          "countryId": "belarus"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Наша Ніва: таблица городов по статистике Белстата, 27.03.2026 (вторичная публикация)",
+          "url": "https://nashaniva.com/ru/391394",
+          "date": "2026-03-27"
+        },
+        {
+          "title": "Официальный Белстат: Брест и Гродно, 27.03.2026",
+          "url": "https://t.me/belstat_by/2850",
+          "date": "2026-03-27"
+        }
+      ]
+    },
+    {
+      "id": "armenia",
+      "country": "Армения",
+      "code": "ARM",
+      "tier": "partner",
+      "decision": "Сначала Ереван",
+      "why": "Масштаб сосредоточен в столице",
+      "recommendation": "Начать с партнёра в Ереване. Население столицы примерно в десять раз превышает население Гюмри. Отдельный региональный офис сейчас не обосновываем только численностью города.",
+      "entryCondition": "Подтвердить комиссию и поток сделок местного партнёра в Ереване. Сравнить реальные расходы с результатом, прежде чем добавлять региональные площадки.",
+      "cities": [
+        {
+          "name": "Ереван",
+          "neName": "Yerevan",
+          "population": 1149500,
+          "populationDate": "01.07.2026",
+          "additional": false,
+          "scope": "постоянное население города; 12 административных районов",
+          "sourceUrl": "https://www.armstat.am/file/article/population_01_07_26.pdf",
+          "lon": 44.511606,
+          "lat": 40.183097,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Армения",
+          "countryId": "armenia"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Armstat: постоянное население на 01.07.2026, страницы 4 и 7",
+          "url": "https://www.armstat.am/file/article/population_01_07_26.pdf",
+          "date": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "id": "azerbaijan",
+      "country": "Азербайджан",
+      "code": "AZE",
+      "tier": "partner",
+      "decision": "Сначала Баку",
+      "why": "Гянджа - региональный резерв",
+      "recommendation": "Сначала оценить партнёрскую модель в Баку. Гянджа - дополнительная региональная альтернатива после проверки столичного рынка. Сумгайыт близок к Баку, поэтому его рассмотрим как продолжение зоны обслуживания, а не обязательный отдельный первый офис.",
+      "entryCondition": "Проверить брокерскую модель и условия сделок для целевых покупателей. Разделить Баку, его соседнюю зону обслуживания и отдельный региональный рынок Гянджи.",
+      "cities": [
+        {
+          "name": "Баку",
+          "neName": "Baku",
+          "population": 2356200,
+          "populationDate": "01.01.2026",
+          "additional": false,
+          "scope": "Baku city - total, административная территория со всеми городскими районами и посёлками",
+          "sourceUrl": "https://www.stat.gov.az/source/demoqraphy/ap/en/2_6en.xls",
+          "lon": 49.860271,
+          "lat": 40.397218,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Азербайджан",
+          "countryId": "azerbaijan"
+        },
+        {
+          "name": "Гянджа",
+          "neName": "Ganca",
+          "population": 331100,
+          "populationDate": "01.01.2026",
+          "additional": true,
+          "scope": "Ganja city, административная городская единица, включая подчинённые посёлки",
+          "sourceUrl": "https://www.stat.gov.az/source/demoqraphy/ap/en/2_6en.xls",
+          "lon": 46.350028,
+          "lat": 40.684996,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Азербайджан",
+          "countryId": "azerbaijan"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Госкомстат Азербайджана: таблица 2.6, лист 2,6, строки B9:C9 и B153:C153, тыс. человек",
+          "url": "https://www.stat.gov.az/source/demoqraphy/ap/en/2_6en.xls",
+          "date": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "id": "tajikistan",
+      "country": "Таджикистан",
+      "code": "TJK",
+      "tier": "partner",
+      "decision": "Через партнёра",
+      "why": "Сначала проверить спрос и комиссию",
+      "recommendation": "Душанбе имеет масштаб города-миллионника. Для собственного офиса пока нет подтверждённой модели вознаграждения, привлечения клиентов и расходов, поэтому первым шагом предлагаем местного партнёра.",
+      "entryCondition": "Подтвердить размер вознаграждения, поток обращений, способы расчётов и расходы местного партнёра. К собственному офису возвращаться после финансового обоснования.",
+      "cities": [
+        {
+          "name": "Душанбе",
+          "neName": "Dushanbe",
+          "population": 1300800,
+          "populationDate": "01.07.2026",
+          "additional": false,
+          "scope": "город Душанбе в официальной административной статистике",
+          "sourceUrl": "https://www.stat.tj/ru/rost-chislennosti-naseleniya-i-demograficheskie-izmeneniya-v-strane/",
+          "lon": 68.773879,
+          "lat": 38.560035,
+          "coordinateSource": "Natural Earth 1:10m populated places",
+          "country": "Таджикистан",
+          "countryId": "tajikistan"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Таджикистан: официальная статистика населения",
+          "url": "https://www.stat.tj/ru/rost-chislennosti-naseleniya-i-demograficheskie-izmeneniya-v-strane/",
+          "date": "2026-07-01"
+        }
+      ]
+    }
+  ]
+}

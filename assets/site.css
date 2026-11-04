@@ -173,6 +173,103 @@ svg.external-link-icon{display:inline-block;width:1em;height:1em;flex-shrink:0;v
 .system .system-principles p span{color:#a8896d}
 .voronezh-map{fill:none;stroke:none}
 
+/* Second-stage editorial pass: concise content and readable geography. */
+.economics .economy-city-selector,.presenting .economics .economy-city-selector{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;width:100%;margin-top:34px}
+.economics .economy-city-selector button,.presenting .economics .economy-city-selector button{font-size:clamp(17px,1.7vw,24px);line-height:1.2;white-space:normal;padding:17px 12px;min-height:76px;border-radius:15px}
+.economics .average-check>strong>sup{font-size:.25em;line-height:1;vertical-align:top;display:inline-block;margin-top:.5em;margin-left:8px;color:#d6aa85;letter-spacing:0}
+.average-source{font-size:14px;line-height:1.6;letter-spacing:0;color:#9f958c;text-align:center;margin:24px auto 0;max-width:850px}
+.average-source a{color:#d1ac8a;text-decoration:underline;text-underline-offset:3px}
+.launch .launch-tabs{margin-top:32px}
+.launch .phase-title{margin-bottom:25px}
+.launch .phase-title>h3{font-size:clamp(36px,3.5vw,49px);line-height:1.1}
+.launch .phase-points{gap:24px}
+.launch .phase-point b{font-size:20px;line-height:1.3}
+.launch .phase-point p{font-size:16px;line-height:1.5;max-width:340px}
+#next .finale-actions{flex-wrap:wrap;gap:20px 28px;position:relative;z-index:3}
+#next .finale-actions a,#next .finale-actions button{pointer-events:auto;touch-action:manipulation}
+#next .finale-actions a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px}
+.cis .section-inner.wide,.world .section-inner.wide{max-width:1520px}
+.cis .display-heading,.presenting .cis .display-heading{white-space:nowrap;font-size:clamp(25px,4.8vw,66px);line-height:1.08}
+.cis .cis-layout,.presenting .cis .cis-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(330px,1fr);gap:28px;margin-top:28px;align-items:center}
+.cis .international-map-frame{width:100%;min-width:0;overflow:hidden;background:radial-gradient(ellipse at 50% 50%,#2f354340,#0c1119);border-color:#b998714d}
+.cis .cis-map,.presenting .cis .cis-map{display:block;width:100%;height:auto;max-height:none;min-width:0}
+.cis .cis-countries{display:grid;grid-template-columns:1fr;gap:0;margin:0;padding:0;list-style:none}
+.cis .cis-countries li,.presenting .cis .cis-countries li{display:block;padding:10px 0;border-bottom:1px solid #b794752b}
+.cis .cis-countries li:last-child{border:0}
+.cis-country-heading{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.cis .cis-countries strong{font-size:18px;font-weight:500;color:#e7c6aa}
+.cis .cis-countries .cis-tier{display:inline-block;color:#a59789;font-size:10px;line-height:1.2;text-align:right;letter-spacing:0;max-width:155px}
+.cis .cis-countries .cis-city-pop,.presenting .cis .cis-countries .cis-city-pop{display:block;color:#b5b0ab;font-size:12px;line-height:1.55;margin-top:4px}
+.cis .cis-countries .cis-why{display:block;color:#93897e;font-size:11px;line-height:1.4;margin-top:3px}
+.cis-analysis-action{display:flex;align-items:center;justify-content:flex-end;margin-top:15px}
+.cis-analysis-action button,.cis-analysis-action a{border:1px solid #b594714a;background:#251e184d;color:#dab899;border-radius:30px;padding:11px 18px;font-size:13px;line-height:1.3;min-height:40px}
+.cis .cis-map .international-land{fill:#26313e;stroke:#657286;stroke-width:.9}
+.cis .cis-map .cis-priority-land{fill:#72523c;stroke:#be966c;stroke-width:1.3}
+.cis .cis-map .cis-partner-land{fill:#443d38;stroke:#958a7b;stroke-width:1}
+.cis .cis-map text{font-family:Arial,sans-serif;stroke:none;letter-spacing:0}
+.cis .cis-map .cis-country-label{font-size:18px;font-weight:600;fill:#e5c6a9;paint-order:stroke;stroke:#111820;stroke-width:4px}
+.cis .cis-map .cis-city-label{font-size:16px;fill:#e3ded6;paint-order:stroke;stroke:#111820;stroke-width:4px}
+.cis .cis-map .cis-city-leader{stroke:#c0aa8a88;stroke-width:1;fill:none}
+.cis .cis-map .cis-map-dot{fill:#e8b98d;stroke:#282019;stroke-width:2}
+.cis .cis-map .cis-map-dot.cis-additional{fill:#d8dde1;stroke:#27313d}
+.cis-analysis-dialog{max-width:1080px}
+.cis-analysis-dialog .table-scroll{margin-top:22px}
+.cis-analysis-dialog table{min-width:760px}
+.cis-analysis-dialog td,.cis-analysis-dialog th{white-space:normal;vertical-align:top}
+.cis-analysis-dialog .analysis-sources a{font-size:12px;color:#78583c;text-decoration:underline;text-underline-offset:2px}
+.cis-analysis-dialog .analysis-sources{display:grid;gap:10px;padding-left:20px}
+.world .display-heading,.presenting .world .display-heading{font-size:clamp(38px,4.8vw,66px);line-height:1.08}
+.world .market-cards,.presenting .world .market-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.world .market-card,.presenting .world .market-card{padding:14px 18px;min-height:82px;border-color:#b495715e}
+.world .market-card strong,.presenting .world .market-card strong{font-size:20px;font-weight:500;line-height:1.2}
+.world .market-card span,.presenting .world .market-card span{font-size:13px;line-height:1.4;color:#c5b7aa;margin-top:6px}
+.world .international-map-frame,.presenting .world .international-map-frame{margin-top:20px;background:radial-gradient(ellipse at 60% 45%,#263447,#101720);border-color:#b495715e;overflow:hidden}
+.world .world-map,.presenting .world .world-map{width:100%;height:auto;max-height:none;min-width:0}
+.world .international-land{fill:#384655;stroke:#7b8998;stroke-width:.85}
+.world .world-market-land{fill:#856342;stroke:#d1ae86;stroke-width:1.3}
+.world .world-market-land.is-selected{fill:#bc8956;stroke:#f0c594;stroke-width:1.7}
+.world .world-pin-halo{fill:#e9b78015;stroke:#e9bd8588;stroke-width:1.5}
+.world .international-pin{fill:#ffe1bc;stroke:#432f1e;stroke-width:2.2}
+.world .world-label{font-size:20px;fill:#f4dbbf;font-weight:500;stroke:#111923;stroke-width:4px;paint-order:stroke}
+.world .world-leader{stroke:#d3b792b3;stroke-width:1.2}
+.world .world-grid{stroke:#a6b5c61c;stroke-width:.6}
+.franchise .franchise-statement,.presenting .franchise .franchise-statement{font-size:clamp(23px,2.5vw,33px);line-height:1.35}
+@media(max-width:1100px){
+ .cis .cis-layout,.presenting .cis .cis-layout{grid-template-columns:minmax(0,1.3fr) minmax(290px,1fr);gap:22px}
+ .cis .cis-countries strong{font-size:16px}.cis .cis-countries .cis-city-pop{font-size:11px}.cis .cis-countries .cis-why{font-size:10px}
+ .world .market-card strong,.presenting .world .market-card strong{font-size:17px}
+ .world .market-card span,.presenting .world .market-card span{font-size:12px}
+}
+@media(max-width:780px){
+ .economics .economy-city-selector,.presenting .economics .economy-city-selector{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+ .economics .economy-city-selector button,.presenting .economics .economy-city-selector button{font-size:16px;padding:12px 9px;min-height:63px}
+ .cis .cis-layout,.presenting .cis .cis-layout{grid-template-columns:1fr;gap:20px}
+ .cis .cis-countries{grid-template-columns:1fr 1fr;gap:0 20px}
+ .world .market-cards,.presenting .world .market-cards{grid-template-columns:1fr 1fr;gap:10px}
+ .world .market-card,.presenting .world .market-card{min-height:76px;padding:12px 14px}
+ .world .market-card strong,.presenting .world .market-card strong{font-size:17px}
+ .cis-country-heading{align-items:flex-start;gap:8px}
+ .cis .cis-countries .cis-tier{font-size:9px}
+}
+@media(max-width:520px){
+ .economics .economy-city-selector button,.presenting .economics .economy-city-selector button{font-size:14px;padding:12px 6px;min-height:62px}
+ .average-source{font-size:11px;line-height:1.5;margin-top:23px}
+ .launch .phase-title>h3{font-size:31px}.launch .phase-point b{font-size:17px}.launch .phase-point p{font-size:14px}
+ .launch .phase-points{gap:19px}
+ .cis .cis-countries,.presenting .cis .cis-countries{gap:0 14px}
+ .cis .cis-countries li,.presenting .cis .cis-countries li{padding:9px 0}
+ .cis-country-heading{display:block}
+ .cis .cis-countries strong{font-size:14px}
+ .cis .cis-countries .cis-tier{display:block;font-size:9px;text-align:left;margin-top:3px;max-width:none}
+ .cis .cis-countries .cis-city-pop,.presenting .cis .cis-countries .cis-city-pop{font-size:10px;line-height:1.5}
+ .cis .cis-countries .cis-why{font-size:10px;line-height:1.35}
+ .cis-analysis-action{margin-top:12px}.cis-analysis-action button,.cis-analysis-action a{font-size:11px;min-height:38px}
+ .world .market-card,.presenting .world .market-card{padding:10px 11px;min-height:77px}
+ .world .market-card strong,.presenting .world .market-card strong{font-size:15px}
+ .world .market-card span,.presenting .world .market-card span{font-size:11px;line-height:1.35}
+ .franchise .franchise-statement,.presenting .franchise .franchise-statement{font-size:21px;line-height:1.4}
+}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.motion-ready [data-reveal]{opacity:1;transform:none}.hero-art,.monolith{transform:none!important}}
 @media print{html,body{background:white;color:#222;scroll-behavior:auto}.site-header,.mobile-nav,.presentation-controls,.scroll-cue,.hero-bottom,.hero-glow,.finale-glow,.horizon-line,.hero-number,.site-footer button,.economics-bottom .text-button{display:none!important}.scene{break-before:page;overflow:visible;min-height:0!important;height:auto!important;background:#fff!important;color:#222!important}.scene:first-child{break-before:auto}.section-inner,.section-inner.wide,.finale .section-inner{margin:0;padding:30px 0!important;max-width:none}.hero{padding:35px 0!important}.hero h1{font-size:70px;color:#222}.hero .metal-text,.finale .metal-text,.launch .metal-text,.pace-number .metal-text{background:none;color:#7d5940}.hero-lead{color:#666}.hero-art{width:90%;height:230px;min-height:230px;max-height:none;flex:none;margin-top:35px}.monoliths{print-color-adjust:exact}.monolith{transform:none!important}.display-heading{font-size:42px!important;color:#222}.muted-text{color:#888}.motion-ready [data-reveal]{opacity:1;transform:none}.city-theatre{height:350px;print-color-adjust:exact}.city-tabs{background:none;border:0}.city-tabs button{font-size:10px;color:#888}.city-tabs button[aria-selected="true"]{background:#ddd;color:#222}.gallery-bottom>p{color:#777}.round-button{display:none}.gallery-controls{display:none}.pace-number>strong{font-size:150px}.pace-copy .section-lead,.phase-title>p{color:#777}.pace-date{color:#888}.city-image,.city-shade{print-color-adjust:exact}.hero-intro,.finale .eyebrow{color:#555}.team-summary{margin:20px 0}.growth-lab{box-shadow:none}.pace-layout{display:flex}.economy-stage{margin-top:30px;gap:50px}.economy-city-selector{display:none}.economics-bottom{display:block}.launch-tabs button{border-color:#ccc;color:#aaa}.launch-tabs button[aria-selected="true"]{color:#7d5940;border-color:#7d5940}.phase-title>h3{color:#333}.phase-point>div>b{color:#555}.phase-point p{color:#888}.site-footer{background:white;border-color:#ddd}.site-footer>div{display:none}.finale h2{font-size:60px}.finale-copy{color:#777}.finale-actions .text-button{display:none}.light-button{border:1px solid #ccc;background:white;color:#333}.closing-cities{color:#888;margin-top:40px}.finale-actions{display:none}.finale .section-inner{padding:90px 0!important}.footnote{font-size:8px!important;color:#888!important}.chapter-label{margin-bottom:20px}.detail-dialog{display:none!important}}
 
