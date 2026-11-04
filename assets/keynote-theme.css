@@ -92,6 +92,31 @@
 #main #russia .monolith{border-radius:12px;border-color:var(--cc-border)}
 #main #russia .monolith figcaption{font-size:13px;color:#fff4e9}
 #main .city-photo-credit{font-size:9px;color:#eee3d8b3}
+/* Landmark photographs need room: wide postcards and a complete gallery frame. */
+#main #russia .russia-art{width:100%;max-width:1120px;height:auto;min-height:0;max-height:none;flex:none;margin:28px auto 0;perspective:none;transform:none}
+#main #russia .city-monoliths{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:16px;height:auto;padding:0}
+#main #russia .monolith{flex:0 0 calc((100% - 32px)/3);width:auto;height:auto;aspect-ratio:16/10;border-radius:14px}
+#main #russia .monolith a{position:absolute;inset:0;display:block;height:100%}
+#main #russia .monolith img{display:block;width:100%;height:100%;object-fit:cover;transform:none;filter:none}
+#main #russia .monolith figcaption{font-size:15px;line-height:1.25;bottom:15px;left:10px;right:10px;pointer-events:none}
+#main #russia .horizon-line{display:none}
+#main .cities .chapter-label,#main .cities .section-heading-row{width:100%;max-width:960px;margin-left:auto;margin-right:auto}
+#main .cities .city-theatre{width:100%;max-width:960px;height:auto;min-height:0;aspect-ratio:4/3;margin:24px auto 0}
+#main .cities .gallery-bottom{width:100%;max-width:960px;margin:15px auto 0}
+#main .cities .city-samara~.city-slide-copy .city-slide-top{align-self:flex-end;text-align:right}
+#main .cities .city-shade{background:linear-gradient(180deg,#0007,transparent 32%,transparent 65%,#0009)}
+@media(max-width:780px){
+ #main #russia .city-monoliths{gap:12px}
+ #main #russia .monolith{flex-basis:calc((100% - 24px)/3);border-radius:10px}
+ #main #russia .monolith figcaption{font-size:12px;bottom:10px}
+}
+@media(max-width:520px){
+ #main #russia .russia-art{margin-top:24px}
+ #main #russia .city-monoliths{gap:10px}
+ #main #russia .monolith{flex-basis:calc((100% - 10px)/2);border-radius:9px}
+ #main #russia .monolith figcaption{font-size:11px;line-height:1.2;bottom:9px;left:6px;right:6px}
+ #main .cities .city-theatre{aspect-ratio:4/3;margin-top:18px}
+}
 .site-header .brand-caption{color:#a3978c;border-color:var(--cc-rule)}
 .presentation-controls{border-color:var(--cc-border);background:#161517ed;color:#b8a99b;box-shadow:0 10px 40px #0003}
 .presentation-controls button{color:var(--cc-accent-soft)}
@@ -131,7 +156,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[t
  #main .scene .display-heading,.presenting #main .scene .display-heading{font-size:clamp(34px,10vw,44px);line-height:1.1}
  #main #cis .display-heading,.presenting #main #cis .display-heading{font-size:clamp(23px,6.5vw,34px);line-height:1.15}
  #main .scene .chapter-label,.presenting #main .scene .chapter-label{font-size:9px;letter-spacing:1.5px;margin-bottom:20px}
- #main #russia .monolith figcaption{font-size:8px}
  #main .city-photo-credit{font-size:8px}
  #main :is(.round-button,.average-arrow){width:36px;height:36px}
  .detail-dialog .dialog-note,.detail-dialog table th,.detail-dialog table td{font-size:11px}

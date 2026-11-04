@@ -42,7 +42,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Ядро опытных агентов и отдельный набор новичков",
       "verify": "какая комиссия получается по сделкам, откуда придут клиенты и сколько стоит аренда",
-      "image": "assets/ekaterinburg.webp?v=20261103-landmarks",
+      "image": "assets/ekaterinburg.webp?v=20261104-postcards-43",
       "deals": [
         0,
         4.2,
@@ -86,7 +86,10 @@ window.PROJECT = {
       "paybackSourceFormula": "=R8-O9",
       "landmark": "Дом Севастьянова",
       "paybackBasis": "source_note",
-      "paybackNoteCell": "P3"
+      "paybackNoteCell": "P3",
+      "imagePosition": "50% 12%",
+      "cardPosition": "50% 12%",
+      "cardImage": "assets/ekaterinburg-card.webp?v=20261104-postcards-43"
     },
     {
       "id": "nizhny",
@@ -127,7 +130,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Нанять местного РОПа до массового набора",
       "verify": "на каких условиях работают застройщики, какую комиссию можно получить и как удержать команду",
-      "image": "assets/nizhny.webp?v=20261103-landmarks",
+      "image": "assets/nizhny.webp?v=20261104-postcards-43",
       "deals": [
         0,
         4.2,
@@ -171,7 +174,10 @@ window.PROJECT = {
       "paybackSourceFormula": "=R16-O17",
       "landmark": "Чкаловская лестница и Нижегородский кремль",
       "paybackBasis": "source_note",
-      "paybackNoteCell": "P11"
+      "paybackNoteCell": "P11",
+      "imagePosition": "62% 0%",
+      "cardPosition": "62% 0%",
+      "cardImage": "assets/nizhny-card.webp?v=20261104-postcards-43"
     },
     {
       "id": "samara",
@@ -212,7 +218,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Рекомендации и кандидаты из смежных продаж",
       "verify": "какие компании уже ищут агентов в городе и где искать первых клиентов",
-      "image": "assets/samara.webp",
+      "image": "assets/samara.webp?v=20261104-postcards-43",
       "deals": [
         0,
         4.2,
@@ -255,7 +261,11 @@ window.PROJECT = {
       "paybackSourceValue": 5054677,
       "paybackSourceFormula": "=R24-O25",
       "paybackBasis": "source_note",
-      "paybackNoteCell": "P19"
+      "paybackNoteCell": "P19",
+      "landmark": "Монумент Славы и панорама Самары",
+      "imagePosition": "33% 35%",
+      "cardPosition": "33% 35%",
+      "cardImage": "assets/samara-card.webp?v=20261104-postcards-43"
     },
     {
       "id": "rostov",
@@ -296,7 +306,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Местный руководитель и команда агентов по новостройкам и вторичному рынку",
       "verify": "местные комиссии, стоимость обращений и условия работы с застройщиками",
-      "image": "assets/rostov.webp?v=20261103-landmarks",
+      "image": "assets/rostov.webp?v=20261104-postcards-43",
       "deals": [
         0,
         4.2,
@@ -338,9 +348,12 @@ window.PROJECT = {
       "paybackSourceCell": "R33",
       "paybackSourceValue": 345985,
       "paybackSourceFormula": "=R32-O32-N33-M33",
-      "landmark": "Кафедральный собор Рождества Пресвятой Богородицы",
+      "landmark": "Ворошиловский мост и набережная Дона",
       "paybackBasis": "source_note",
-      "paybackNoteCell": "P27"
+      "paybackNoteCell": "P27",
+      "imagePosition": "50% 35%",
+      "cardPosition": "50% 35%",
+      "cardImage": "assets/rostov-card.webp?v=20261104-postcards-43"
     },
     {
       "id": "ufa",
@@ -381,7 +394,7 @@ window.PROJECT = {
       "reason": "Город в плане открытия офисов на 2027 год.",
       "hiring": "Местный руководитель; отдельный найм опытных и новичков; прозрачная комиссия, наставник и правила заявок.",
       "verify": "сколько в городе агентств, какие сделки и комиссии получают местные агенты, что удерживает команду и сколько стоят заявки и аренда",
-      "image": "assets/ufa.webp?v=20261103-landmarks",
+      "image": "assets/ufa.webp?v=20261104-postcards-43",
       "deals": [
         0,
         4.2,
@@ -425,7 +438,10 @@ window.PROJECT = {
       "paybackSourceFormula": "=R40-O40-N41-M41",
       "landmark": "Памятник Салавату Юлаеву",
       "paybackBasis": "source_note",
-      "paybackNoteCell": "P35"
+      "paybackNoteCell": "P35",
+      "imagePosition": "62% 20%",
+      "cardPosition": "62% 20%",
+      "cardImage": "assets/ufa-card.webp?v=20261104-postcards-43"
     }
   ],
   "months": [
@@ -469,20 +485,24 @@ window.PROJECT = {
     {
       "city": "Екатеринбург",
       "file": "assets/ekaterinburg.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Sevastyanov%27s_Mansion_%28June_2025%29_-_0_2.jpg",
-      "author": "Vyacheslav Bukharov",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3_%D0%94%D0%BE%D0%BC_%D0%A1%D0%B5%D0%B2%D0%B0%D1%81%D1%82%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0_2025.jpg",
+      "author": "Serhiomatviavelli",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "modifications": "Resized and converted to WebP; cropped in the page layout."
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; cropped only by the website layout.",
+      "landmark": "Дом Севастьянова",
+      "cardFile": "assets/ekaterinburg-card.webp"
     },
     {
       "city": "Нижний Новгород",
       "file": "assets/nizhny.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:NN_Chkalov_Stairs_08-2016_img3.jpg",
-      "author": "A.Savin, Wikipedia",
-      "license": "FAL",
-      "licenseUrl": "https://artlibre.org/licence/lal/en/",
-      "modifications": "Resized and converted to WebP; cropped in the page layout."
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%A7%D0%BA%D0%B0%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D1%83%D1%8E_%D0%BB%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D1%86%D1%83_%D0%B8_%D0%9A%D0%B0%D1%82%D0%B5%D1%80_%C2%AB%D0%93%D0%B5%D1%80%D0%BE%D0%B9%C2%BB_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5-%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B.jpg",
+      "author": "WildPea",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; cropped only by the website layout.",
+      "landmark": "Чкаловская лестница и Нижегородский кремль",
+      "cardFile": "assets/nizhny-card.webp"
     },
     {
       "city": "Самара",
@@ -491,25 +511,31 @@ window.PROJECT = {
       "author": "Michael live",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "modifications": "Resized, converted to WebP; cropped and colour-treated in the page layout."
+      "modifications": "Original photograph retained; smaller WebP prepared for the overview; framing adjusted only in the page layout.",
+      "cardFile": "assets/samara-card.webp",
+      "landmark": "Монумент Славы и панорама Самары"
     },
     {
       "city": "Ростов-на-Дону",
       "file": "assets/rostov.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Rostov_on_Don_Cathedral_2021.jpg",
-      "author": "pavljenko",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "modifications": "Resized and converted to WebP; cropped in the page layout."
+      "source": "https://commons.wikimedia.org/wiki/File:Rostov-on-Don,_New_Voroshilovsky_Bridge_at_dusk,_night,_Rostov-on-Don,_Russia.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; cropped only by the website layout.",
+      "landmark": "Ворошиловский мост и набережная Дона",
+      "cardFile": "assets/rostov-card.webp"
     },
     {
       "city": "Уфа",
       "file": "assets/ufa.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Ufa._Monument_to_Salavat_Yulaev.jpg",
-      "author": "Александр Байдуков",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "modifications": "Resized and converted to WebP; cropped in the page layout."
+      "source": "https://commons.wikimedia.org/wiki/File:Monument_to_Salawat_Yulayev,_Ufa-4.jpg",
+      "author": "Lesnoy Volk",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; cropped only by the website layout.",
+      "landmark": "Памятник Салавату Юлаеву",
+      "cardFile": "assets/ufa-card.webp"
     }
   ],
   "totalDeals": [
