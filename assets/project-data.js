@@ -1,5 +1,5 @@
 window.PROJECT = {
-  "asOf": "03.11.2026",
+  "asOf": "04.11.2026",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/17VLUhYE2MeV78FpBGQdUhig3JvAh2j_HaQ3GlzqCpIE/edit",
   "strategyGid": 1145813300,
   "cities": [
@@ -59,16 +59,16 @@ window.PROJECT = {
       ],
       "revenue": [
         0,
-        852600.0,
+        852600,
         1299200,
         2030000,
         2679600,
-        3166800.0,
-        3430700.0,
+        3166800,
+        3430700,
         4263000,
         5176500,
         5846400,
-        6556900.0,
+        6556900,
         7308000
       ],
       "annualRevenue": 42609700,
@@ -142,16 +142,16 @@ window.PROJECT = {
       ],
       "revenue": [
         0,
-        756000.0,
+        756000,
         1152000,
         1800000,
         2376000,
-        2808000.0,
-        3042000.0,
+        2808000,
+        3042000,
         3780000,
         4590000,
         5184000,
-        5814000.0,
+        5814000,
         6480000
       ],
       "annualRevenue": 37782000,
@@ -225,16 +225,16 @@ window.PROJECT = {
       ],
       "revenue": [
         0,
-        814800.0,
+        814800,
         1241600,
         1940000,
         2560800,
-        3026400.0,
-        3278600.0,
+        3026400,
+        3278600,
         4074000,
         4947000,
         5587200,
-        6266200.0,
+        6266200,
         6984000
       ],
       "annualRevenue": 40720600,
@@ -307,16 +307,16 @@ window.PROJECT = {
       ],
       "revenue": [
         0,
-        808500.0,
+        808500,
         1232000,
         1925000,
         2541000,
-        3003000.0,
-        3253250.0,
+        3003000,
+        3253250,
         4042500,
         4908750,
         5544000,
-        6217750.0,
+        6217750,
         6930000
       ],
       "annualRevenue": 40405750,
@@ -328,10 +328,10 @@ window.PROJECT = {
       "paybackMonths": null,
       "afterEnteredExpenses": 12107737,
       "paybackCalendarMonth": null,
-      "sourcePeriodNote": "За 11 месяцев",
+      "sourcePeriodNote": "За 10 месяцев",
       "paybackSourceCell": "R33",
-      "paybackSourceValue": 12107735,
-      "paybackSourceFormula": "=R32-O32",
+      "paybackSourceValue": 345985,
+      "paybackSourceFormula": "=R32-O32-N33-M33",
       "landmark": "Кафедральный собор Рождества Пресвятой Богородицы"
     },
     {
@@ -390,16 +390,16 @@ window.PROJECT = {
       ],
       "revenue": [
         0,
-        919800.0,
+        919800,
         1401600,
         2190000,
         2890800,
-        3416400.0,
-        3701100.0,
+        3416400,
+        3701100,
         4599000,
         5584500,
         6307200,
-        7073700.0,
+        7073700,
         7884000
       ],
       "annualRevenue": 45968100,
@@ -411,10 +411,10 @@ window.PROJECT = {
       "paybackMonths": null,
       "afterEnteredExpenses": 14592677,
       "paybackCalendarMonth": null,
-      "sourcePeriodNote": "За 11 месяцев",
+      "sourcePeriodNote": "За 10 месяцев",
       "paybackSourceCell": "R41",
-      "paybackSourceValue": 14592675,
-      "paybackSourceFormula": "=R40-O40",
+      "paybackSourceValue": 1211775,
+      "paybackSourceFormula": "=R40-O40-N41-M41",
       "landmark": "Памятник Салавату Юлаеву"
     }
   ],
@@ -518,16 +518,16 @@ window.PROJECT = {
   ],
   "totalRevenue": [
     0,
-    4151700.0,
+    4151700,
     6326400,
     9885000,
     13048200,
-    15420600.0,
-    16705650.0,
+    15420600,
+    16705650,
     20758500,
     25206750,
     28468800,
-    31928550.0,
+    31928550,
     35586000
   ],
   "annual": {
@@ -540,7 +540,7 @@ window.PROJECT = {
     "afterEnteredExpenses": 63137645
   },
   "verified": true,
-  "strategyRange": "A1:R41",
+  "strategyRange": "A1:S41",
   "budget2027": {
     "gid": 1900272027,
     "range": "A1:P93",
@@ -655,7 +655,7 @@ window.PROJECT = {
             "sourceRow": 10
           },
           {
-            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -676,7 +676,7 @@ window.PROJECT = {
             "sourceRow": 11
           },
           {
-            "label": "ФОТ – офис-менеджер",
+            "label": "ФОТ — офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -938,7 +938,7 @@ window.PROJECT = {
             "sourceRow": 27
           },
           {
-            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -959,7 +959,7 @@ window.PROJECT = {
             "sourceRow": 28
           },
           {
-            "label": "ФОТ – офис-менеджер",
+            "label": "ФОТ — офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1221,7 +1221,7 @@ window.PROJECT = {
             "sourceRow": 44
           },
           {
-            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1242,7 +1242,7 @@ window.PROJECT = {
             "sourceRow": 45
           },
           {
-            "label": "ФОТ – офис-менеджер",
+            "label": "ФОТ — офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1504,7 +1504,7 @@ window.PROJECT = {
             "sourceRow": 61
           },
           {
-            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1525,7 +1525,7 @@ window.PROJECT = {
             "sourceRow": 62
           },
           {
-            "label": "ФОТ – офис-менеджер",
+            "label": "ФОТ — офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1787,7 +1787,7 @@ window.PROJECT = {
             "sourceRow": 78
           },
           {
-            "label": "ФОТ РОП – 10% от ВВ (в Базовой стратегии)",
+            "label": "ФОТ РОП — 10% от ВВ (в Базовой стратегии)",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1808,7 +1808,7 @@ window.PROJECT = {
             "sourceRow": 79
           },
           {
-            "label": "ФОТ – офис-менеджер",
+            "label": "ФОТ — офис-менеджер",
             "launch": 0,
             "monthly": 0,
             "months": [
@@ -1982,12 +1982,12 @@ window.PROJECT = {
     "integratedIntoStrategy": true,
     "fixedRopMonthly": 0,
     "integrationComplete": true,
-    "asOf": "03.11.2026",
+    "asOf": "04.11.2026",
     "includesAdvertising": true,
     "monthlyBudgetsVary": true
   },
   "payback": {
-    "asOf": "03.11.2026",
+    "asOf": "04.11.2026",
     "sourceRange": "P2:R41",
     "computedCities": 0,
     "months": null,
@@ -1998,8 +1998,8 @@ window.PROJECT = {
       "ekaterinburg": "За 11 месяцев",
       "nizhny": "За 11 месяцев",
       "samara": "За 11 месяцев",
-      "rostov": "За 11 месяцев",
-      "ufa": "За 11 месяцев"
+      "rostov": "За 10 месяцев",
+      "ufa": "За 10 месяцев"
     },
     "sourceCells": {
       "ekaterinburg": "R9",
@@ -2017,7 +2017,7 @@ window.PROJECT = {
   "advertising2027": {
     "gid": 2027110201,
     "range": "A1:P50",
-    "asOf": "03.11.2026",
+    "asOf": "04.11.2026",
     "scenario": true,
     "cianPrice": 1200,
     "avitoPrice": 1800,

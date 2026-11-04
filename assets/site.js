@@ -67,7 +67,7 @@
     $$('[data-city-tab]').forEach(button=>{const active=button.dataset.cityTab===id;button.setAttribute('aria-selected',active);button.tabIndex=active?0:-1;});
     $$('[data-economy-city]').forEach(button=>button.setAttribute('aria-pressed',button.dataset.economyCity===id));
     $('#city-theatre').setAttribute('aria-labelledby',`city-tab-${id}`);
-    $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} – вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><p>${esc(c.intro)}</p><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
+    $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)} – вид города" width="1800" height="1200"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">Фото: ${esc(credit.author)} · ${esc(credit.license)}</a>`;
     $('#city-counter').textContent=`0${i+1} / 05`;
     $('#average-value').innerHTML=`${number(c.average)}<span>₽</span><sup aria-label="источник в примечании">*</sup>`;
     renderBudget(id);
@@ -222,7 +222,9 @@
     event.preventDefault();const ids=Object.keys(phases);const i=ids.indexOf(phase);const id=event.key==='Home'?ids[0]:event.key==='End'?ids.at(-1):ids[(i+(event.key==='ArrowRight'?1:-1)+ids.length)%ids.length];showPhase(id);$(`#phase-tab-${id}`).focus();
   });
 
-  $('#payback-months').textContent=p.payback.minMonths==null?'–':`${p.payback.minMonths}–${p.payback.maxMonths}`;
+  $('#payback-months').textContent=p.payback.minMonths==null?'Уточняется':`${p.payback.minMonths}–${p.payback.maxMonths}`;
+  $('#payback-months').classList.toggle('pending',p.payback.minMonths==null);
+  $('#payback-cities').hidden=p.cities.every(c=>c.paybackMonths==null);
   $('#payback-cities').innerHTML=p.cities.map(c=>`<li><span>${esc(c.name)}</span><strong${c.paybackMonths==null?' class="pending"':''}>${c.paybackMonths==null?'Уточняется':`${number(c.paybackMonths)} мес.`}</strong></li>`).join('');
   $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">Срок в месяцах</th><th scope="col">Ячейка</th><th scope="col">Результат исходной формулы</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>Уточняется</td><td>${esc(c.paybackSourceCell)}</td><td>${number(c.paybackSourceValue)} · не число месяцев</td></tr>`).join('')}</tbody></table>`;
 

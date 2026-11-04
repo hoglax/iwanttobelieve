@@ -61,6 +61,10 @@
 #main .team :is(.team-bar-value,.live-metric strong){color:var(--cc-accent-soft)}
 #main .team .team-bar-month{color:#a69b91}
 #main .payback-cities strong.pending{color:#b6a79a}
+#main .payback-metric #payback-months.pending{font-size:clamp(28px,3.3vw,46px);line-height:1.2;letter-spacing:-.045em}
+#main .decision .payback-cities[hidden]{display:none!important}
+#main .city-slide-bottom{display:flex;justify-content:flex-end}
+#main .team .growth-lab{margin-top:32px}
 #main .decision-bottom,#main .decision-intro{color:#a99b8e}
 #main .cis .cis-layout,.presenting #main .cis .cis-layout{grid-template-columns:minmax(0,2fr) minmax(330px,1fr)}
 #main .cis .cis-countries li{border-color:var(--cc-rule)}
