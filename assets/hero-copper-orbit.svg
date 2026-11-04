@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="copper-band" x1="230" y1="620" x2="1210" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#542610"/><stop offset=".17" stop-color="#bc7042"/><stop offset=".33" stop-color="#f9cf9f"/><stop offset=".48" stop-color="#94502c"/><stop offset=".68" stop-color="#6b331b"/><stop offset=".87" stop-color="#e5aa77"/><stop offset="1" stop-color="#ffe2b9"/>
+    </linearGradient>
+    <linearGradient id="copper-edge" x1="230" y1="160" x2="1210" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fce1be"/><stop offset=".35" stop-color="#bc8153"/><stop offset=".62" stop-color="#5c321f"/><stop offset="1" stop-color="#f7d6af"/>
+    </linearGradient>
+    <radialGradient id="atmosphere"><stop stop-color="#b86633" stop-opacity=".24"/><stop offset=".56" stop-color="#7f3f21" stop-opacity=".1"/><stop offset="1" stop-color="#402011" stop-opacity="0"/></radialGradient>
+    <radialGradient id="point-light"><stop stop-color="#fff2db"/><stop offset=".08" stop-color="#f9d1a3" stop-opacity=".85"/><stop offset=".28" stop-color="#de985a" stop-opacity=".2"/><stop offset="1" stop-color="#c47a42" stop-opacity="0"/></radialGradient>
+    <filter id="ring-bloom" x="-25%" y="-55%" width="150%" height="210%"><feGaussianBlur stdDeviation="13"/></filter>
+  </defs>
+  <ellipse cx="720" cy="440" rx="720" ry="440" fill="url(#atmosphere)"/>
+  <g transform="rotate(-18 720 440)">
+    <ellipse cx="720" cy="440" rx="604" ry="254" stroke="#c17b45" stroke-opacity=".25" stroke-width="30" filter="url(#ring-bloom)"/>
+    <ellipse cx="720" cy="440" rx="604" ry="254" stroke="url(#copper-band)" stroke-width="15"/>
+    <ellipse cx="720" cy="440" rx="612" ry="262" stroke="url(#copper-edge)" stroke-opacity=".76" stroke-width="1.3"/>
+    <ellipse cx="720" cy="440" rx="596" ry="246" stroke="#ffd9ad" stroke-opacity=".32" stroke-width=".8"/>
+    <ellipse cx="720" cy="440" rx="642" ry="284" stroke="#c79665" stroke-opacity=".16" stroke-width=".8"/>
+    <ellipse cx="720" cy="440" rx="570" ry="230" stroke="#c79665" stroke-opacity=".09" stroke-width=".8" stroke-dasharray="2 10"/>
+    <circle cx="1324" cy="440" r="65" fill="url(#point-light)"/>
+    <circle cx="1324" cy="440" r="4" fill="#ffe4bc"/>
+    <circle cx="417.9" cy="220" r="37" fill="url(#point-light)" opacity=".65"/>
+    <circle cx="417.9" cy="220" r="2.8" fill="#f4c897"/>
+    <circle cx="417.9" cy="660" r="26" fill="url(#point-light)" opacity=".55"/>
+    <circle cx="417.9" cy="660" r="2.2" fill="#e9b782"/>
+  </g>
+  <g fill="#d6b08b">
+    <circle cx="246" cy="145" r=".9" opacity=".4"/><circle cx="1280" cy="112" r="1" opacity=".35"/>
+    <circle cx="119" cy="665" r=".8" opacity=".35"/><circle cx="1302" cy="710" r="1.1" opacity=".4"/>
+    <circle cx="1082" cy="790" r=".8" opacity=".35"/><circle cx="350" cy="780" r="1" opacity=".25"/>
+  </g>
+</svg>

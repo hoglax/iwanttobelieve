@@ -129,6 +129,46 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[t
  .detail-dialog .dialog-note,.detail-dialog table th,.detail-dialog table td{font-size:11px}
 }
 
+/* Opening cue: the same copper orbit as the brand and the global-network finale. */
+#main #home{isolation:isolate;background:#08090c}
+#main #home .hero-glow{z-index:0;inset:0;background:radial-gradient(ellipse at 50% 42%,#80422340,transparent 64%)}
+#main #home .hero-orbit{position:absolute;z-index:0;pointer-events:none;inset:0;display:flex;align-items:center;justify-content:center;overflow:visible}
+#main #home .hero-orbit img{display:block;width:1440px;min-width:1100px;max-width:none;height:auto;flex:none;opacity:.88}
+#main #home .hero-copy,#main #home .scale-vision,#main #home .scroll-cue{position:relative;z-index:1}
+#main #home .hero-copy{text-shadow:0 3px 35px #08090ce6}
+#main #home .hero-intro{color:#ddbaa0;letter-spacing:3px;font-weight:600}
+#main #home .hero-presenter{color:#edd1b9;font-size:clamp(22px,2.2vw,31px);margin-bottom:24px}
+#main #home h1{font-size:clamp(82px,9.6vw,138px);line-height:.98;letter-spacing:-.065em;color:#fffaf3}
+#main #home h1 .metal-text{background:linear-gradient(105deg,#ffe9cd 8%,#e5a66f 32%,#ad653b 47%,#f6cea6 67%,#ffe7ca 84%,#bd784b);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 5px 24px #b5693429)}
+#main #home .scale-vision{margin-top:40px}
+#main #home .scale-vision h2{color:#f1deca;font-weight:500;text-shadow:0 2px 20px #08090c}
+#main #home .expansion-pillars{gap:18px;margin-top:24px}
+#main #home .expansion-pillar{border-color:#d3a07175;background:linear-gradient(135deg,#513421bd,#241c16f2 54%,#171517f2);box-shadow:inset 0 1px #ffe0be26,0 12px 35px #0005;transition:border-color .2s,background .2s}
+#main #home .expansion-pillar:hover{border-color:#f0c59b;background:linear-gradient(135deg,#6b442bd9,#2d2119f2 60%,#1c1817f2)}
+#main #home .expansion-pillar>.horizon-name{color:#ffe6cb;align-self:center}
+#main #home .scroll-cue{color:#c1a48a}
+@media(max-width:1100px){
+ #main #home h1{font-size:clamp(76px,10vw,112px)}
+ #main #home .hero-orbit img{width:1250px}
+}
+@media(max-width:780px){
+ #main #home .hero-orbit img{width:1100px;min-width:1100px;opacity:.7}
+ #main #home h1{font-size:clamp(65px,11vw,88px)}
+ #main #home .hero-presenter{font-size:22px}
+ #main #home .expansion-pillars{gap:10px}
+}
+@media(max-width:520px){
+ #main #home .hero-orbit img{width:850px;min-width:850px;opacity:.6;transform:rotate(-14deg)}
+ #main #home .hero-glow{background:radial-gradient(ellipse at 50% 35%,#87442147,transparent 65%)}
+ #main #home .hero-presenter{font-size:20px;max-width:310px;margin-bottom:24px}
+ #main #home h1{font-size:clamp(48px,15.3vw,72px);line-height:1.02}
+ #main #home .hero-intro{letter-spacing:2.2px}
+ #main #home .scale-vision{margin-top:32px}
+ #main #home .scale-vision h2{font-size:27px}
+ #main #home .expansion-pillars{margin-top:20px;gap:10px}
+ #main #home .expansion-pillar{min-height:82px;background:linear-gradient(115deg,#583721d6,#251d17f2 60%,#181618f2);border-color:#c894667d}
+}
+
 /* Franchise: the operating model, then support and the partner's responsibilities. */
 #main .franchise-model .franchise-heading{align-items:center;gap:40px}
 #main .franchise-model .franchise-heading .section-lead{max-width:310px;font-size:19px;line-height:1.55}
