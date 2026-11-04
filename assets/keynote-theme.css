@@ -128,3 +128,126 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[t
  #main :is(.round-button,.average-arrow){width:36px;height:36px}
  .detail-dialog .dialog-note,.detail-dialog table th,.detail-dialog table td{font-size:11px}
 }
+
+/* Franchise: the operating model, then support and the partner's responsibilities. */
+#main .franchise-model .franchise-heading{align-items:center;gap:40px}
+#main .franchise-model .franchise-heading .section-lead{max-width:310px;font-size:19px;line-height:1.55}
+#main .franchise-model .franchise-offer{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:30px}
+#main .franchise-model .franchise-pillar{padding:20px 18px 22px}
+#main .franchise-model .franchise-pillar h3{font-size:22px;line-height:1.22}
+#main .franchise-model .franchise-pillar p{font-size:14px;line-height:1.5;margin-top:14px}
+#main .franchise-model .franchise-index{margin-bottom:18px}
+#main .franchise-model .franchise-statement{font-size:clamp(23px,2.5vw,32px);margin-top:27px}
+.franchise-support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+#main .franchise-operations .franchise-support-panel{padding:22px 25px}
+#main .franchise-operations .franchise-support-panel h3{font-size:23px;line-height:1.25}
+.franchise-support-panel ul{margin:18px 0 0;padding-left:19px;color:var(--cc-muted);display:grid;gap:12px}
+.franchise-support-panel li{font-size:16px;line-height:1.5;padding-left:3px}
+.franchise-support-panel li::marker{color:var(--cc-accent)}
+.franchise-roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:26px;padding-top:22px;border-top:1px solid var(--cc-border)}
+.franchise-role h3{font-size:17px;line-height:1.35;font-weight:500;color:var(--cc-accent-soft);margin:0}
+.franchise-role p{font-size:14px;line-height:1.55;color:var(--cc-muted);margin:9px 0 0;max-width:590px}
+@media(max-width:1100px){
+ #main .franchise-model .franchise-heading{gap:24px}
+ #main .franchise-model .franchise-heading .section-lead{font-size:16px;max-width:270px}
+ #main .franchise-model .franchise-offer{gap:10px}
+ #main .franchise-model .franchise-pillar{padding:18px 14px}
+ #main .franchise-model .franchise-pillar h3{font-size:19px}
+ #main .franchise-model .franchise-pillar p{font-size:12px}
+}
+@media(max-width:780px){
+ #main .franchise-model .franchise-heading{display:block}
+ #main .franchise-model .franchise-heading .section-lead{max-width:none;margin-top:22px}
+ #main .franchise-model .franchise-offer{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ #main .franchise-model .franchise-pillar:last-child{grid-column:1/-1}
+ #main .franchise-model .franchise-pillar h3{font-size:21px}
+ #main .franchise-model .franchise-pillar p{font-size:14px}
+ .franchise-support-grid{gap:14px;margin-top:25px}
+ #main .franchise-operations .franchise-support-panel{padding:19px}
+ .franchise-support-panel li{font-size:14px}
+ .franchise-role p{font-size:13px}
+}
+@media(max-width:520px){
+ #main .franchise-model .franchise-heading .section-lead{font-size:13px;line-height:1.45;margin-top:16px}
+ #main .franchise-model .franchise-offer{grid-template-columns:1fr;gap:9px;margin-top:22px}
+ #main .franchise-model .franchise-pillar{display:grid;grid-template-columns:18px minmax(0,.85fr) minmax(0,1.4fr);gap:9px;align-items:start;padding:13px 12px}
+ #main .franchise-model .franchise-index{font-size:9px;line-height:1.4;margin:2px 0 0}
+ #main .franchise-model .franchise-pillar h3{font-size:16px;line-height:1.25;letter-spacing:-.3px}
+ #main .franchise-model .franchise-pillar p{font-size:11px;line-height:1.4;margin:0}
+ #main .franchise-model .franchise-statement{font-size:20px;line-height:1.35;margin-top:21px}
+ .franchise-support-grid{gap:10px;margin-top:22px}
+ #main .franchise-operations .franchise-support-panel{padding:15px 12px}
+ #main .franchise-operations .franchise-support-panel h3{font-size:17px;line-height:1.25}
+ .franchise-support-panel ul{margin-top:13px;padding-left:13px;gap:10px}
+ .franchise-support-panel li{font-size:11px;line-height:1.45;padding-left:0}
+ .franchise-roles{gap:16px;margin-top:20px;padding-top:17px}
+ .franchise-role h3{font-size:14px}
+ .franchise-role p{font-size:11px;line-height:1.45;margin-top:7px}
+}
+/* The final two cues: a worldwide network, followed by the sales leadership goal. */
+.site-header .wordmark .brand-logo{width:158px;height:46px;object-fit:contain;object-position:left center;display:block}
+#main .world-finale{isolation:isolate;overflow:hidden}
+#main .world-finale .section-inner{padding-top:110px;padding-bottom:110px}
+.presenting #main .world-finale .section-inner{padding-top:25px;padding-bottom:25px}
+#main .conquest-finale .finale-glow{background:radial-gradient(ellipse at 78% 48%,#9b663326,transparent 58%)}
+#main .conquest-finale .conquest-layout{display:grid;grid-template-columns:1.12fr 1fr;align-items:center;gap:0;text-align:left}
+#main .conquest-copy{position:relative;z-index:2}
+#main .conquest-finale .eyebrow{font-size:11px;line-height:1.5;letter-spacing:2.7px;margin-bottom:34px;color:#c2a58b}
+#main .conquest-finale h2{font-size:clamp(48px,5.8vw,82px);line-height:1.08;font-weight:580;letter-spacing:-.055em;white-space:nowrap}
+#main .conquest-horizon{display:block;font-size:clamp(22px,2.6vw,36px);line-height:1.3;letter-spacing:-.035em;font-weight:450;margin-bottom:22px;color:#cbbfb3}
+#main .conquest-path{display:flex;align-items:center;gap:0;margin-top:40px;padding-top:22px;border-top:1px solid var(--cc-border);max-width:490px}
+#main .conquest-path span{font-size:16px;line-height:1.5;color:#c9b8a8}
+#main .conquest-path span+span::before{content:'·';padding:0 22px;color:#ac805d}
+#main .conquest-planet{position:relative;width:120%;max-width:720px;margin-left:-8%;pointer-events:none}
+#main .conquest-planet img{display:block;width:100%;height:auto;max-width:none}
+#main .leadership-finale .section-inner{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#main .leadership-finale .leadership-orbit{position:absolute;z-index:-1;width:min(78vw,860px);aspect-ratio:1;top:50%;left:50%;transform:translate(-50%,-50%);border:1px solid #c7a27b20;border-radius:50%;background:radial-gradient(ellipse at 50% 12%,#c990561a,transparent 65%);box-shadow:0 -1px 0 #f2cf9e4d,0 0 100px #bc82520a}
+#main .leadership-finale .leadership-orbit::after{content:'';position:absolute;inset:32px;border:1px solid #b9936c0d;border-radius:50%}
+#main .leadership-finale h2{position:relative;letter-spacing:-.055em}
+#main .leadership-finale .leadership-horizon{font-size:clamp(24px,2.6vw,36px);font-weight:450;line-height:1.3;color:#cbbfb3;margin:0 0 18px;letter-spacing:-.035em}
+#main .leadership-finale .leadership-verb{display:block;font-size:20px;font-weight:450;line-height:1.25;letter-spacing:.04em;color:#cbbfb3;margin-bottom:2px}
+#main .leadership-finale .leadership-goal{font-size:clamp(138px,16.5vw,230px);font-weight:650;line-height:.98;letter-spacing:-.065em;white-space:nowrap;padding:0 .055em .06em 0}
+#main .leadership-finale .leadership-measure{font-size:clamp(31px,3.8vw,51px);font-weight:500;line-height:1.14;letter-spacing:-.035em;color:#e5d9cc;margin-top:12px}
+#main .leadership-finale .finale-brand{display:block;width:190px;height:71px;object-fit:contain;margin:35px auto 0}
+@keyframes network-arrival{from{opacity:.45;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes leadership-arrival{from{filter:brightness(.7);transform:translateY(9px)}to{filter:brightness(1);transform:none}}
+@media(prefers-reduced-motion:no-preference){
+ .presenting #future.presentation-active .conquest-planet{animation:network-arrival 1.8s cubic-bezier(.16,1,.3,1) both}
+ .presenting #leadership.presentation-active .leadership-goal{animation:leadership-arrival 1.4s cubic-bezier(.16,1,.3,1) both}
+}
+@media(max-width:1100px){
+ #main .conquest-finale h2{font-size:clamp(44px,6.1vw,64px)}
+ #main .conquest-finale .eyebrow{font-size:10px;letter-spacing:1.7px}
+ #main .conquest-path span{font-size:14px}
+ #main .conquest-path span+span::before{padding:0 16px}
+}
+@media(max-width:780px){
+ #main .conquest-finale .conquest-layout{display:flex;flex-direction:column;gap:2px;text-align:center}
+ #main .conquest-finale .eyebrow{margin-bottom:22px}
+ #main .conquest-finale h2{font-size:clamp(40px,8.2vw,62px)}
+ #main .conquest-horizon{font-size:clamp(21px,4.2vw,29px);margin-bottom:18px}
+ #main .conquest-path{justify-content:center;margin:25px auto 0;padding-top:18px}
+ #main .conquest-planet{width:380px;max-width:100%;margin:-4px auto -28px}
+ #main .world-finale .section-inner{padding-top:90px;padding-bottom:90px}
+ .presenting #main .world-finale .section-inner{padding:0}
+ .presenting #main .world-finale .presentation-canvas{padding:35px 22px}
+ #main .leadership-finale .leadership-goal{font-size:clamp(120px,27vw,190px)}
+ #main .leadership-finale .leadership-measure{font-size:clamp(31px,6vw,44px)}
+}
+@media(max-width:520px){
+ .site-header .wordmark .brand-logo{width:119px;height:37px}
+ #main .conquest-finale .eyebrow{font-size:8px;letter-spacing:1.7px;margin-bottom:20px}
+ #main .conquest-finale h2{font-size:clamp(32px,10.2vw,48px);line-height:1.1}
+ #main .conquest-horizon{font-size:clamp(17px,5.3vw,23px);margin-bottom:17px}
+ #main .conquest-path{margin-top:22px;padding-top:16px}
+ #main .conquest-path span{font-size:11px}
+ #main .conquest-path span+span::before{padding:0 13px}
+ #main .conquest-planet{width:300px;margin-top:5px;margin-bottom:-16px}
+ .presenting #main .world-finale .presentation-canvas{padding:28px 18px}
+ #main .leadership-finale .leadership-horizon{font-size:clamp(20px,6vw,27px);margin-bottom:20px}
+ #main .leadership-finale .leadership-verb{font-size:17px}
+ #main .leadership-finale .leadership-goal{font-size:clamp(115px,36vw,165px)}
+ #main .leadership-finale .leadership-measure{font-size:clamp(27px,7.8vw,37px);margin-top:18px}
+ #main .leadership-finale .finale-brand{width:157px;height:59px;margin-top:35px}
+ #main .leadership-finale .leadership-orbit{width:520px;max-width:none}
+}
