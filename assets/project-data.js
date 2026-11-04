@@ -77,14 +77,16 @@ window.PROJECT = {
       "ropPayment": 4260970,
       "beforeExpenses": 17043880,
       "operatingExpenses": 3729563,
-      "paybackMonths": null,
+      "paybackMonths": 11,
       "afterEnteredExpenses": 13314317,
       "paybackCalendarMonth": null,
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R9",
       "paybackSourceValue": 6006317,
       "paybackSourceFormula": "=R8-O9",
-      "landmark": "Дом Севастьянова"
+      "landmark": "Дом Севастьянова",
+      "paybackBasis": "source_note",
+      "paybackNoteCell": "P3"
     },
     {
       "id": "nizhny",
@@ -160,14 +162,16 @@ window.PROJECT = {
       "ropPayment": 3778200,
       "beforeExpenses": 15112800,
       "operatingExpenses": 4028563,
-      "paybackMonths": null,
+      "paybackMonths": 11,
       "afterEnteredExpenses": 11084237,
       "paybackCalendarMonth": null,
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R17",
       "paybackSourceValue": 4604237,
       "paybackSourceFormula": "=R16-O17",
-      "landmark": "Чкаловская лестница и Нижегородский кремль"
+      "landmark": "Чкаловская лестница и Нижегородский кремль",
+      "paybackBasis": "source_note",
+      "paybackNoteCell": "P11"
     },
     {
       "id": "samara",
@@ -243,13 +247,15 @@ window.PROJECT = {
       "ropPayment": 4072060,
       "beforeExpenses": 16288240,
       "operatingExpenses": 4249563,
-      "paybackMonths": null,
+      "paybackMonths": 11,
       "afterEnteredExpenses": 12038677,
       "paybackCalendarMonth": null,
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R25",
       "paybackSourceValue": 5054677,
-      "paybackSourceFormula": "=R24-O25"
+      "paybackSourceFormula": "=R24-O25",
+      "paybackBasis": "source_note",
+      "paybackNoteCell": "P19"
     },
     {
       "id": "rostov",
@@ -325,14 +331,16 @@ window.PROJECT = {
       "ropPayment": 4040575,
       "beforeExpenses": 16162300,
       "operatingExpenses": 4054563,
-      "paybackMonths": null,
+      "paybackMonths": 10,
       "afterEnteredExpenses": 12107737,
       "paybackCalendarMonth": null,
       "sourcePeriodNote": "За 10 месяцев",
       "paybackSourceCell": "R33",
       "paybackSourceValue": 345985,
       "paybackSourceFormula": "=R32-O32-N33-M33",
-      "landmark": "Кафедральный собор Рождества Пресвятой Богородицы"
+      "landmark": "Кафедральный собор Рождества Пресвятой Богородицы",
+      "paybackBasis": "source_note",
+      "paybackNoteCell": "P27"
     },
     {
       "id": "ufa",
@@ -408,14 +416,16 @@ window.PROJECT = {
       "ropPayment": 4596810,
       "beforeExpenses": 18387240,
       "operatingExpenses": 3794563,
-      "paybackMonths": null,
+      "paybackMonths": 10,
       "afterEnteredExpenses": 14592677,
       "paybackCalendarMonth": null,
       "sourcePeriodNote": "За 10 месяцев",
       "paybackSourceCell": "R41",
       "paybackSourceValue": 1211775,
       "paybackSourceFormula": "=R40-O40-N41-M41",
-      "landmark": "Памятник Салавату Юлаеву"
+      "landmark": "Памятник Салавату Юлаеву",
+      "paybackBasis": "source_note",
+      "paybackNoteCell": "P35"
     }
   ],
   "months": [
@@ -1988,11 +1998,11 @@ window.PROJECT = {
   },
   "payback": {
     "asOf": "04.11.2026",
-    "sourceRange": "P2:R41",
+    "sourceRange": "P3:P35",
     "computedCities": 0,
     "months": null,
-    "minMonths": null,
-    "maxMonths": null,
+    "minMonths": 10,
+    "maxMonths": 11,
     "manualMonths": null,
     "sourcePeriodNotes": {
       "ekaterinburg": "За 11 месяцев",
@@ -2002,17 +2012,33 @@ window.PROJECT = {
       "ufa": "За 10 месяцев"
     },
     "sourceCells": {
+      "ekaterinburg": "P3",
+      "nizhny": "P11",
+      "samara": "P19",
+      "rostov": "P27",
+      "ufa": "P35"
+    },
+    "status": "10–11 месяцев по пометкам таблицы.",
+    "sourceReturnsMonths": false,
+    "costsComplete": true,
+    "scenarioAdvertising": true,
+    "method": "Сроки из пометок P3, P11, P19, P27 и P35 используются в презентации по указанию представителя компании.",
+    "reportedCities": 5,
+    "displaySource": "source_notes",
+    "formulaCells": {
       "ekaterinburg": "R9",
       "nizhny": "R17",
       "samara": "R25",
       "rostov": "R33",
       "ufa": "R41"
     },
-    "status": "Срок в месяцах требует проверки. Формулы в строках «Окупаемость» возвращают суммы, а не число месяцев.",
-    "sourceReturnsMonths": false,
-    "costsComplete": true,
-    "scenarioAdvertising": true,
-    "method": "На сайте срок не указан, пока исходная формула не будет рассчитывать число месяцев."
+    "manualMonthsByCity": {
+      "ekaterinburg": 11,
+      "nizhny": 11,
+      "samara": 11,
+      "rostov": 10,
+      "ufa": 10
+    }
   },
   "advertising2027": {
     "gid": 2027110201,

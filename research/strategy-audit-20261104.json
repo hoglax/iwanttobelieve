@@ -171,7 +171,15 @@
         "value": 1211775
       }
     },
-    "note": "Manual period notes are not treated as a calculated payback period; all five formulas still return amounts."
+    "note": "The audited formulas still return amounts. At the company representative's request, the website and PDF now display the 10- and 11-month periods from the source notes in column P.",
+    "displaySource": "Manual notes in column P, selected for display by the company representative.",
+    "displayMonthsByCity": {
+      "Екатеринбург": 11,
+      "Нижний Новгород": 11,
+      "Самара": 11,
+      "Ростов-на-Дону": 10,
+      "Уфа": 10
+    }
   },
   "slideConsistency": {
     "cisPopulationLabels": 15,

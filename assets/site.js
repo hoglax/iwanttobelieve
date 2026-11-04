@@ -224,9 +224,10 @@
 
   $('#payback-months').textContent=p.payback.minMonths==null?'Уточняется':`${p.payback.minMonths}–${p.payback.maxMonths}`;
   $('#payback-months').classList.toggle('pending',p.payback.minMonths==null);
+  $('#payback-unit').textContent=p.payback.minMonths==null?'':'месяцев';
   $('#payback-cities').hidden=p.cities.every(c=>c.paybackMonths==null);
   $('#payback-cities').innerHTML=p.cities.map(c=>`<li><span>${esc(c.name)}</span><strong${c.paybackMonths==null?' class="pending"':''}>${c.paybackMonths==null?'Уточняется':`${number(c.paybackMonths)} мес.`}</strong></li>`).join('');
-  $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">Срок в месяцах</th><th scope="col">Ячейка</th><th scope="col">Результат исходной формулы</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>Уточняется</td><td>${esc(c.paybackSourceCell)}</td><td>${number(c.paybackSourceValue)} · не число месяцев</td></tr>`).join('')}</tbody></table>`;
+  $('#payback-source-table').innerHTML=`<table><thead><tr><th scope="col">Город</th><th scope="col">Срок окупаемости</th><th scope="col">Пометка в таблице</th><th scope="col">Ячейка</th></tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.paybackMonths)} мес.</td><td>${esc(c.sourcePeriodNote)}</td><td>${esc(c.paybackNoteCell)}</td></tr>`).join('')}</tbody></table>`;
 
   // Financial version 2.0 remains separate from the primary 3 → 18 strategy.
   const f=p.money;
