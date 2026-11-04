@@ -278,7 +278,7 @@
     const canvas=presentationCanvases[activeScene];
     if(!canvas)return;
     const edge=stage.clientWidth<=520?10:20;
-    canvas.style.width=`${Math.max(240,Math.min(['vision','cis','world'].includes(scenes[activeScene].id)?1680:1360,stage.clientWidth-edge*2))}px`;
+    canvas.style.width=`${Math.max(240,Math.min(1400,stage.clientWidth-edge*2))}px`;
     const width=canvas.offsetWidth;
     const height=canvas.offsetHeight;
     const scale=Math.min(1,(stage.clientWidth-edge*2)/width,(stage.clientHeight-edge*2)/height);

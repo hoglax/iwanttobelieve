@@ -1,0 +1,130 @@
+/* Shared visual language for the complete keynote. Screen-only: print keeps its paper palette. */
+:root{
+ --cc-bg:#08090c;
+ --cc-surface:#121315;
+ --cc-raised:#19191c;
+ --cc-text:#f2eeea;
+ --cc-muted:#b3a89e;
+ --cc-quiet:#95877b;
+ --cc-accent:#d6ad87;
+ --cc-accent-soft:#ebc9aa;
+ --cc-border:#b8926845;
+ --cc-rule:#b8926829;
+ --cc-radius:20px;
+ --cc-card-radius:16px;
+ --cc-metal:linear-gradient(110deg,#f6e6d6 5%,#b87851 33%,#eec29e 57%,#fbebde 75%,#ac7450);
+ --cc-selection:linear-gradient(135deg,#e2bd99,#c99b73);
+}
+#main .scene .display-heading,.presenting #main .scene .display-heading{
+ font-size:clamp(34px,4.6vw,66px);font-weight:650;line-height:1.08;letter-spacing:-.05em;color:var(--cc-text);
+}
+#main #cis .display-heading,.presenting #main #cis .display-heading{font-size:clamp(25px,4.6vw,66px);white-space:nowrap}
+#main .scene :is(.metal-text,.silver-text,.blue-text,.display-heading .muted-text){
+ background:var(--cc-metal);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+}
+#main .scene .chapter-label,.presenting #main .scene .chapter-label{
+ color:#ad9782;font-size:10px;font-weight:600;line-height:1.4;letter-spacing:1.8px;margin-bottom:26px;
+}
+#main .scene .chapter-label>span{color:#b69a80;border-color:var(--cc-border);font-weight:500}
+#main .scene .section-lead{color:var(--cc-muted);line-height:1.6}
+#main .scene :is(.phase-point p,.phase-point>div>b,.decision-requests p,.finale-copy){color:var(--cc-muted)}
+#main .scene :is(.phase-point>div>b,.decision-requests h3){color:#e1d2c5}
+#main :is(.growth-lab,.city-theatre,.voronezh-map-panel,.international-map-frame,.map-viewport){
+ border:1px solid var(--cc-border);border-radius:var(--cc-radius);background:var(--cc-surface);box-shadow:0 16px 56px #0003;
+}
+#main :is(.expansion-pillar,.franchise-pillar,.market-card){
+ border-color:var(--cc-border);border-radius:var(--cc-card-radius);background:linear-gradient(140deg,#251d1757,#121315b3);box-shadow:inset 0 1px #f4d2b40a;
+}
+#main .market-card:hover,#main .market-card[aria-pressed="true"]{border-color:#dbb18dba;background:linear-gradient(140deg,#4e35267d,#211c18)}
+#main .market-card strong,#main .franchise-pillar h3{color:var(--cc-accent-soft)}
+#main .market-card span,#main .franchise-pillar p{color:#bdb0a4}
+#main .franchise-index,#main .system-principles p span{color:#b18c6d}
+#main .city-tabs,#main .team .segmented{background:#111214;border-color:var(--cc-border)}
+#main .city-tabs button[aria-selected="true"],#main .team .segmented button[aria-pressed="true"],#main .economy-city-selector button[aria-pressed="true"]{
+ background:var(--cc-selection);border-color:#e8c6a4;color:#20170f;box-shadow:0 2px 12px #0002;
+}
+#main .city-tabs button:not([aria-selected="true"]),#main .team .segmented button:not([aria-pressed="true"]){color:#b5a89c}
+#main .economy-city-selector button{border-color:var(--cc-border);border-radius:var(--cc-card-radius);color:var(--cc-muted);background:#151516}
+#main .launch-tabs button{border-color:var(--cc-rule);color:var(--cc-quiet)}
+#main .launch-tabs button[aria-selected="true"]{border-color:var(--cc-accent);color:var(--cc-accent-soft)}
+#main .phase-point{border-color:var(--cc-rule)}
+#main :is(.round-button,.average-arrow){width:40px;height:40px;border:1px solid var(--cc-border);background:#1b1816;color:var(--cc-accent-soft)}
+#main :is(.round-button,.average-arrow):hover{background:#39291e;border-color:#d6ad8790}
+#main .pill-button.light-button,.site-header .presentation-toggle[aria-pressed="true"]{
+ background:var(--cc-selection);color:#20170f;border-color:#e8c6a4;
+}
+#main .finale-actions .text-button,#main .cis-analysis-action a,#main .map-tools button{color:var(--cc-accent-soft)}
+#main .cis-analysis-action a,#main .map-tools button{border-color:var(--cc-border);background:#201a1573}
+#main .map-tools button{border-radius:10px}
+#main .team .team-bar-column{background:linear-gradient(0deg,#916b4c,#d5ab85)}
+#main .team .team-bar-column.final-bar{background:linear-gradient(0deg,#b4845d,#f0d2b5)}
+#main .team :is(.team-bar-value,.live-metric strong){color:var(--cc-accent-soft)}
+#main .team .team-bar-month{color:#a69b91}
+#main .payback-cities strong.pending{color:#b6a79a}
+#main .decision-bottom,#main .decision-intro{color:#a99b8e}
+#main .cis .cis-layout,.presenting #main .cis .cis-layout{grid-template-columns:minmax(0,2fr) minmax(330px,1fr)}
+#main .cis .cis-countries li{border-color:var(--cc-rule)}
+#main .cis .cis-countries strong{color:var(--cc-accent-soft)}
+#main .cis .cis-countries .cis-city-pop{color:#c3b9af}
+#main .cis .cis-countries .cis-why,#main .cis .cis-countries .cis-tier{color:#a7998b}
+#main .cis .international-map-frame,#main .world .international-map-frame{background:radial-gradient(ellipse at 55% 45%,#25282d,#101215)}
+#main .cis .international-land{fill:#30353b;stroke:#70747b}
+#main .cis .cis-priority-land{fill:#78583e;stroke:#c09a73}
+#main .cis .cis-partner-land{fill:#4b4037;stroke:#a1907e}
+#main .world .international-land{fill:#373c43;stroke:#7c8086}
+#main .world .world-market-land{fill:#8c6745;stroke:#d1ae86}
+#main .world .world-market-land.is-selected{fill:#bb8958;stroke:#f0c594}
+#main .world .world-label{fill:#f1d8be}
+#main .world .world-grid{stroke:#b5b2af1c}
+#main #full-russia-land stop:nth-child(1){stop-color:#3b3028}
+#main #full-russia-land stop:nth-child(2){stop-color:#2c3036}
+#main #full-russia-land stop:nth-child(3){stop-color:#20262c}
+#main .voronezh-map-panel{background:linear-gradient(145deg,#241d18,#111418)}
+#main .voronezh-map>g>rect:first-child{fill:#15191d}
+#main .voronezh-map path[fill="#253a49"]{fill:#293942}
+#main .map-legend{color:#b3a69a}
+#main #russia .monolith{border-radius:12px;border-color:var(--cc-border)}
+#main #russia .monolith figcaption{font-size:13px;color:#fff4e9}
+#main .city-photo-credit{font-size:9px;color:#eee3d8b3}
+.site-header .brand-caption{color:#a3978c;border-color:var(--cc-rule)}
+.presentation-controls{border-color:var(--cc-border);background:#161517ed;color:#b8a99b;box-shadow:0 10px 40px #0003}
+.presentation-controls button{color:var(--cc-accent-soft)}
+.presentation-controls button:not(:disabled):hover{background:#4b342557}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid #efc59f;outline-offset:4px}
+/* Sources, budgets and photo credits belong to the same visual system. */
+.detail-dialog{color-scheme:dark;background:#131416;color:var(--cc-text);border:1px solid #b892686b;border-radius:var(--cc-radius);box-shadow:0 28px 140px #000a}
+.detail-dialog::backdrop{background:#050507c7;backdrop-filter:blur(14px)}
+.detail-dialog h2{color:#f1e7dd;letter-spacing:-.04em}
+.detail-dialog h3{color:var(--cc-accent-soft)}
+.detail-dialog :is(.dialog-lead,.dialog-note,.budget-caveat){color:#b7aca2;line-height:1.65}
+.detail-dialog .dialog-note{font-size:12px}
+.detail-dialog .budget-caveat{background:#231e18;border:1px solid var(--cc-border);border-radius:12px;color:#c6b5a4}
+.detail-dialog .dialog-header .eyebrow{color:#b39a83}
+.detail-dialog [data-close]{background:#26201b;border-color:var(--cc-border);color:var(--cc-accent-soft);border-radius:50%}
+.detail-dialog .finance-cell{background:#1d1d20;border:1px solid var(--cc-rule);border-radius:var(--cc-card-radius)}
+.detail-dialog .finance-cell>strong{color:var(--cc-accent-soft)}
+.detail-dialog .finance-cell>span,.detail-dialog .finance-cell>strong>small{color:#b1a59a}
+.detail-dialog table th,.detail-dialog table td{color:#d8cec4;border-color:var(--cc-rule);font-size:12px}
+.detail-dialog table thead th{color:#d6b291;background:#211e1a}
+.detail-dialog table tbody tr:last-child{background:#1f1c19}
+.detail-dialog :is(.dialog-source,.photo-credit a,.market-sources a){color:var(--cc-accent-soft)}
+.detail-dialog .photo-credit{border-color:var(--cc-rule);color:#c2b5aa}
+.detail-dialog .photo-credit strong{color:#ead4bf}
+.detail-dialog select{color:#ebded2;background:#211e1b;border-color:var(--cc-border);border-radius:10px}
+.detail-dialog .table-scroll{scrollbar-color:#9e7c5e #171719}
+@media(max-width:1100px){
+ #main .cis .cis-layout,.presenting #main .cis .cis-layout{grid-template-columns:minmax(0,1.4fr) minmax(290px,1fr)}
+}
+@media(max-width:780px){
+ #main .cis .cis-layout,.presenting #main .cis .cis-layout{grid-template-columns:1fr}
+ #main .scene .chapter-label,.presenting #main .scene .chapter-label{margin-bottom:22px}
+}
+@media(max-width:520px){
+ #main .scene .display-heading,.presenting #main .scene .display-heading{font-size:clamp(34px,10vw,44px);line-height:1.1}
+ #main #cis .display-heading,.presenting #main #cis .display-heading{font-size:clamp(23px,6.5vw,34px);line-height:1.15}
+ #main .scene .chapter-label,.presenting #main .scene .chapter-label{font-size:9px;letter-spacing:1.5px;margin-bottom:20px}
+ #main #russia .monolith figcaption{font-size:8px}
+ #main .city-photo-credit{font-size:8px}
+ #main :is(.round-button,.average-arrow){width:36px;height:36px}
+ .detail-dialog .dialog-note,.detail-dialog table th,.detail-dialog table td{font-size:11px}
+}
