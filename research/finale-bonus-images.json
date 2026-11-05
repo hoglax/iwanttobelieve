@@ -3,6 +3,40 @@
   "images": [
     {
       "slide": 19,
+      "asset": "assets/finale-earth-team-20261105.jpg",
+      "source": "User-provided replacement attachment, 2026-11-05",
+      "sourceFilename": "1-Фото-1.jpg",
+      "width": 1280,
+      "height": 720,
+      "adaptation": "Original JPEG bytes preserved. Full 16:9 frame, CSS object-fit:contain. No cropping, recoloring, regeneration or face changes.",
+      "sha256": "bc105aba4ed0ac2fa369bc6f033d9a99d46c621c1500b70f6c2e410763949214",
+      "cssCrop": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "slide": 20,
+      "asset": "assets/finale-interplanetary-team-20261105.jpg",
+      "source": "User-provided replacement attachment, 2026-11-05",
+      "sourceFilename": "2-Фото-2.jpg",
+      "width": 1280,
+      "height": 720,
+      "adaptation": "Original JPEG bytes preserved. Full 16:9 frame, CSS object-fit:contain. No cropping, recoloring, regeneration or face changes.",
+      "sha256": "5855220e7862e26417560b16cc66a7e88b5bc956295b7339ed8de60cab3f9ffe",
+      "cssCrop": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      }
+    }
+  ],
+  "previousImages": [
+    {
+      "slide": 19,
       "asset": "assets/finale-earth-negotiations.jpg",
       "source": "User-provided attachment, 2026-11-05",
       "sourceFilename": "1-Фото-1.jpg",
@@ -29,5 +63,6 @@
         "right": 0
       }
     }
-  ]
+  ],
+  "updatedAt": "2026-11-05"
 }
