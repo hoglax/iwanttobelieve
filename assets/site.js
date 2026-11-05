@@ -58,13 +58,13 @@
   const budget=p.budget2027;
   const expenseMoney=value=>value==null?'Не заполнено':`${number(value)} ₽`;
   $('#budget-city-select').innerHTML=budget.cities.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('');
-  $('#budget-overview').innerHTML=`<div class="finance-cell"><span>Пять новых офисов · без Воронежа</span><strong>${million(budget.reportedTotal)} <small>млн ₽ / год</small></strong></div><div class="finance-cell"><span>Первый месяц · пять новых офисов</span><strong>${million(budget.reportedMonths[0])} <small>млн ₽</small></strong></div>`;
-  $('#budget-city-totals').innerHTML=`<table><thead><tr>${['Город','Январь, ₽','Декабрь, ₽','Итог за 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${budget.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${expenseMoney(c.months[0])}</td><td>${expenseMoney(c.months[11])}</td><td>${expenseMoney(c.annual)}</td></tr>`).join('')}</tbody></table>`;
+  $('#budget-overview').innerHTML=`<div class="finance-cell"><span>Пять новых офисов · без Воронежа</span><strong>${million(budget.reportedTotal)} <small>млн ₽ / год</small></strong></div><div class="finance-cell"><span>Январь · пять новых офисов</span><strong>${million(budget.reportedMonths[0])} <small>млн ₽</small></strong></div>`;
+  $('#budget-city-totals').innerHTML=`<table><thead><tr>${['Город','Январь, ₽','Декабрь, ₽','За 2027 год, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${budget.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${expenseMoney(c.months[0])}</td><td>${expenseMoney(c.months[11])}</td><td>${expenseMoney(c.annual)}</td></tr>`).join('')}</tbody></table>`;
   function renderBudget(id){
     const c=budget.cities.find(c=>c.id===id);
     $('#budget-city-select').value=id;
     const monthRange=item=>{const values=item.months.slice(1);const lo=Math.min(...values),hi=Math.max(...values);return lo===hi?expenseMoney(lo):`${number(lo)}–${number(hi)} ₽`;};
-    $('#budget-line-items').innerHTML=`<table><caption class="budget-caption">${esc(c.name)} · ${esc(c.sourceRows)}</caption><thead><tr>${['Статья','Разово, ₽','Январь, ₽','Фев–дек, ₽/мес','За 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${c.items.map(item=>`<tr><th scope="row">${esc(item.label)}</th><td>${expenseMoney(item.launch)}</td><td>${expenseMoney(item.months[0])}</td><td>${monthRange(item)}</td><td>${expenseMoney(item.annual)}</td></tr>`).join('')}</tbody></table>`;
+    $('#budget-line-items').innerHTML=`<table><caption class="budget-caption">${esc(c.name)} · ${esc(c.sourceRows)}</caption><thead><tr>${['Статья','Разовые затраты, ₽','Январь, ₽','Фев–дек, ₽/мес','За 2027, ₽'].map(v=>`<th scope="col">${v}</th>`).join('')}</tr></thead><tbody>${c.items.map(item=>`<tr><th scope="row">${esc(item.label)}</th><td>${expenseMoney(item.launch)}</td><td>${expenseMoney(item.months[0])}</td><td>${monthRange(item)}</td><td>${expenseMoney(item.annual)}</td></tr>`).join('')}</tbody></table>`;
   }
   $('#budget-city-select').addEventListener('change',event=>showCity(event.target.value));
   function showCity(id) {
@@ -148,7 +148,7 @@
   }
   document.addEventListener('visibilitychange',scheduleEconomyRotation);
   const productivity=p.cities[0].productivity;
-  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>план сделок на офис за год<br><small>без Воронежа</small></span></div><div><strong>${number(p.annual.deals,1)}</strong><span>план сделок на всю сеть за год<br><small>без Воронежа</small></span></div>`;
+  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>сделок на офис за 2027 год<br><small>без Воронежа</small></span></div><div><strong>${number(p.annual.deals,1)}</strong><span>сделок на пять офисов за 2027 год<br><small>без Воронежа</small></span></div>`;
   const px=i=>34+i/11*1050;
   const py=value=>138-value/2*92;
   $('#productivity-chart').innerHTML=`<svg class="productivity-graph" viewBox="0 0 1120 185" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">Производительность по месяцам, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${longMonths[i]}: ${number(v,1)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#8b7945"/><stop offset="1" stop-color="#efd788"/></linearGradient></defs><line x1="34" x2="1084" y1="138" y2="138" stroke="#ffffff12"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2.5"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="4" fill="#e8cd78"/><text class="productivity-value" x="${px(i)}" y="${py(v)-16}" text-anchor="middle">${number(v,Number.isInteger(v)?0:1)}</text><text class="productivity-month" x="${px(i)}" y="174" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg><div class="productivity-months" role="list" aria-label="Сделки на агента в месяц">${productivity.map((v,i)=>`<div role="listitem"><span>${p.months[i]}</span><strong>${number(v,Number.isInteger(v)?0:1)}</strong></div>`).join('')}</div>`;
@@ -160,15 +160,15 @@
     "points": [
       [
         "Назначить руководителя",
-        "Команда и сроки найма."
+        "Согласовать состав команды и сроки найма."
       ],
       [
         "Утвердить бюджет",
-        "Аренда, оборудование, сервисы, реклама."
+        "Аренда, оборудование, CRM и реклама."
       ],
       [
         "Подготовить офис",
-        "Договоры, CRM и телефония."
+        "Заключить договоры, подключить CRM и телефонию."
       ]
     ]
   },
@@ -178,15 +178,15 @@
     "points": [
       [
         "Обучить команду",
-        "Сервисы, работа с клиентом, документы."
+        "Работа с клиентами, CRM и документы по сделкам."
       ],
       [
         "Запустить рекламу",
-        "Каналы, бюджет, распределение обращений."
+        "Определить каналы и порядок передачи заявок агентам."
       ],
       [
         "Провести первые сделки",
-        "Поддержка агентов и проверка документов."
+        "Проверить документы и поддержать агентов."
       ]
     ]
   },
@@ -195,16 +195,16 @@
     "lead": "",
     "points": [
       [
-        "Сверить план и факт",
-        "Команда, сделки, выручка, расходы."
+        "Оценить результаты",
+        "Сопоставить план и факт по команде, продажам и расходам."
       ],
       [
-        "Обновить расчёты",
-        "По результатам первого запуска."
+        "Уточнить бюджет",
+        "Учесть расходы и результаты первого офиса."
       ],
       [
-        "Утвердить следующий запуск",
-        "Город, руководитель, бюджет, дата."
+        "Выбрать следующий город",
+        "Утвердить руководителя, бюджет и дату открытия."
       ]
     ]
   }
@@ -240,10 +240,10 @@
 
   // Financial version 2.0 remains separate from the primary 3 → 18 strategy.
   const f=p.money;
-  $('#finance-summary').innerHTML=[['Финансирование с резервом',f.financing],['Максимальный дефицит',f.deficit],['Дополнительный резерв',f.reserve],['Денежный поток 2027',f.cash2027],['Подготовка в 2026',f.preparation2026],['Денежный поток декабря 2029',f.december2029]].map(([title,value])=>`<div class="finance-cell"><span>${esc(title)}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('')+`<div class="finance-cell" style="grid-column:1/-1"><span>Денежная окупаемость</span><strong style="font-size:19px;letter-spacing:-.5px">${esc(f.payback)}</strong></div>`;
-  $('#strategy-summary').innerHTML=`<table><caption style="text-align:left;font-size:10px;color:#999;margin-bottom:10px">Основная стратегия, план на 2027 · точные суммы в ₽</caption><thead><tr>${['Город','Январь, агенты','Декабрь, агенты','Средний чек, ₽','ВВ за год, ₽','Агентам 50%, ₽','РОПу 10%, ₽','До расходов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.agents[0])}</td><td>${number(c.agents[11])}</td><td>${number(c.average)}</td><td>${number(c.annualRevenue)}</td><td>${number(c.agentPayment)}</td><td>${number(c.ropPayment)}</td><td>${number(c.beforeExpenses)}</td></tr>`).join('')}<tr><th scope="row">Сеть – всего</th><td>${number(p.totalAgents[0])}</td><td>${number(p.totalAgents[11])}</td><td>–</td><td>${number(p.annual.revenue)}</td><td>${number(p.annual.agentPayment)}</td><td>${number(p.annual.ropPayment)}</td><td>${number(p.annual.beforeExpenses)}</td></tr></tbody></table>`;
-  $('#strategy-months').innerHTML=`<table><thead><tr>${['Месяц 2027','Агенты / офис','Агенты / пять новых офисов','Сделки / агент, план','Сделки / офис','Сделки / пять новых офисов','ВВ / пять новых офисов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.months.map((m,i)=>`<tr><th scope="row">${longMonths[i]}</th><td>${number(p.cities[0].agents[i])}</td><td>${number(p.totalAgents[i])}</td><td>${number(productivity[i],2)}</td><td>${number(p.cities[0].deals[i],1)}</td><td>${number(p.totalDeals[i],1)}</td><td>${number(p.totalRevenue[i])}</td></tr>`).join('')}</tbody></table>`;
-  $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}${c.usage?` · ${esc(c.usage)}`:''}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Оригинал на Wikimedia Commons</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p></article>`).join('');
+  $('#finance-summary').innerHTML=[['Финансирование, включая резерв',f.financing],['Максимальный дефицит денежных средств',f.deficit],['Дополнительный резерв',f.reserve],['Денежный поток 2027',f.cash2027],['Подготовка в 2026 году',f.preparation2026],['Денежный поток за декабрь 2029',f.december2029]].map(([title,value])=>`<div class="finance-cell"><span>${esc(title)}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('')+`<div class="finance-cell" style="grid-column:1/-1"><span>Денежная окупаемость</span><strong style="font-size:19px;letter-spacing:-.5px">${esc(f.payback)}</strong></div>`;
+  $('#strategy-summary').innerHTML=`<table><caption style="text-align:left;font-size:10px;color:#999;margin-bottom:10px">План на 2027 год · суммы в ₽</caption><thead><tr>${['Город','Агенты в январе','Агенты в декабре','Средний доход за сделку, ₽','Валовая выручка за год, ₽','Агентам 50%, ₽','РОПу 10%, ₽','До расходов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.agents[0])}</td><td>${number(c.agents[11])}</td><td>${number(c.average)}</td><td>${number(c.annualRevenue)}</td><td>${number(c.agentPayment)}</td><td>${number(c.ropPayment)}</td><td>${number(c.beforeExpenses)}</td></tr>`).join('')}<tr><th scope="row">Пять офисов - всего</th><td>${number(p.totalAgents[0])}</td><td>${number(p.totalAgents[11])}</td><td>–</td><td>${number(p.annual.revenue)}</td><td>${number(p.annual.agentPayment)}</td><td>${number(p.annual.ropPayment)}</td><td>${number(p.annual.beforeExpenses)}</td></tr></tbody></table>`;
+  $('#strategy-months').innerHTML=`<table><thead><tr>${['Месяц','Агенты на офис','Агенты на пять офисов','Сделки на агента','Сделки на офис','Сделки на пять офисов','Выручка пяти офисов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.months.map((m,i)=>`<tr><th scope="row">${longMonths[i]}</th><td>${number(p.cities[0].agents[i])}</td><td>${number(p.totalAgents[i])}</td><td>${number(productivity[i],2)}</td><td>${number(p.cities[0].deals[i],1)}</td><td>${number(p.totalDeals[i],1)}</td><td>${number(p.totalRevenue[i])}</td></tr>`).join('')}</tbody></table>`;
+  $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}${c.usage?` · ${esc(c.usage)}`:''}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Источник фотографии</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p></article>`).join('');
   document.addEventListener('click',event=>{
     const control=event.target.closest('[data-world-market]');if(!control)return;
     event.preventDefault();const market=window.MARKETS.find(m=>m.id===control.dataset.worldMarket);if(!market)return;
@@ -368,7 +368,7 @@
     scheduleEconomyRotation();
     document.documentElement.classList.toggle('presenting',enabled);
     $('#presentation-toggle').setAttribute('aria-pressed',enabled);
-    $('#presentation-toggle>span').textContent=enabled?'Выйти из показа':'Презентация';
+    $('#presentation-toggle>span').textContent=enabled?'Завершить показ':'Презентация';
     $('#presentation-controls').hidden=!enabled;
     closeMenu();
     if(enabled){
