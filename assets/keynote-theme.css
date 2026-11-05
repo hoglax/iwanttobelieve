@@ -77,6 +77,12 @@
 #main .cis .international-land{fill:#30353b;stroke:#70747b}
 #main .cis .cis-priority-land{fill:#78583e;stroke:#c09a73}
 #main .cis .cis-partner-land{fill:#4b4037;stroke:#a1907e}
+/* Explicit content rows keep Safari button sizing in sync with wrapped text. */
+.presenting #main{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+#main .world .market-cards{align-items:stretch;grid-auto-rows:auto}
+#main .world .market-card{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:max-content max-content;gap:8px;height:auto;min-width:0;max-height:none;align-content:start;-webkit-appearance:none;appearance:none;white-space:normal;overflow-wrap:break-word}
+#main .world .market-card strong{display:block}
+#main .world .market-card span{display:block;margin:0}
 #main .world .international-land{fill:#373c43;stroke:#7c8086}
 #main .world .world-market-land{fill:#8c6745;stroke:#d1ae86}
 #main .world .world-market-land.is-selected{fill:#bb8958;stroke:#f0c594}
