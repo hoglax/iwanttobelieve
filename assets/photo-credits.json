@@ -33,25 +33,27 @@
   },
   {
     "city": "Ростов-на-Дону",
-    "file": "assets/rostov-city-panorama.webp",
-    "cardFile": "assets/rostov-city-panorama-card.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0_%D0%A2%D0%B5%D0%B0%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B8_%D1%81_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%BC,_%D1%82%D0%B5%D0%B0%D1%82%D1%80%D0%BE%D0%BC_%D0%B8_%D1%84%D0%BE%D0%BD%D1%82%D0%B0%D0%BD%D0%BE%D0%BC_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B_%D0%BF%D1%82%D0%B8%D1%87%D1%8C%D0%B5%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%B5%D1%82%D0%B0.jpg",
-    "author": "Rost.galis",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modifications": "Resized and converted to WebP; framed only by the website layout.",
-    "landmark": "Панорама Ростова-на-Дону: Театральная площадь и городские кварталы"
+    "file": "assets/rostov-company-panorama.jpg",
+    "cardFile": "assets/rostov-company-panorama.jpg",
+    "source": "https://hoglax.github.io/iwanttobelieve/assets/rostov-company-panorama.jpg",
+    "author": null,
+    "license": null,
+    "licenseUrl": null,
+    "providedByCompany": true,
+    "modifications": "Original user-provided JPEG preserved. Responsive framing only.",
+    "landmark": "Железнодорожный мост через Дон и панорама Ростова-на-Дону"
   },
   {
     "city": "Уфа",
-    "file": "assets/ufa-city-panorama.webp",
-    "cardFile": "assets/ufa-city-panorama-card.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Ufa_Russia_aerial_oktyabrskaya_001.jpg",
-    "author": "Rakoon",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "modifications": "Resized and converted to WebP; framed only by the website layout.",
-    "landmark": "Панорама Уфы и проспект Октября"
+    "file": "assets/ufa-company-panorama.jpg",
+    "cardFile": "assets/ufa-company-panorama.jpg",
+    "source": "https://hoglax.github.io/iwanttobelieve/assets/ufa-company-panorama.jpg",
+    "author": null,
+    "license": null,
+    "licenseUrl": null,
+    "providedByCompany": true,
+    "modifications": "Original user-provided JPEG preserved. Responsive framing only.",
+    "landmark": "Памятник Салавату Юлаеву и панорама центра Уфы"
   },
   {
     "city": "Нижний Новгород",

@@ -1,0 +1,29 @@
+{
+  "note": "First attachment confirmed by user as the replacement for Rostov-on-Don. Yekaterinburg remains unchanged.",
+  "images": [
+    {
+      "city": "Ростов-на-Дону",
+      "asset": "assets/rostov-company-panorama.jpg",
+      "source": "User-provided attachment, 2026-11-05",
+      "sourceFilename": "1-Фото-1.jpg",
+      "sha256": "e2391fbb60ef0984d0fe5420d3bfeaffe51de792d2f023d10e6839590de88bb1",
+      "dimensions": [
+        1280,
+        719
+      ],
+      "adaptation": "Original JPEG bytes preserved. Used in both overview and city gallery."
+    },
+    {
+      "city": "Уфа",
+      "asset": "assets/ufa-company-panorama.jpg",
+      "source": "User-provided attachment, 2026-11-05",
+      "sourceFilename": "2-Фото-2.jpg",
+      "sha256": "52280f7b77146f48e046ca95d80136ead950ec756cda986e0f653e98b4536518",
+      "dimensions": [
+        1280,
+        781
+      ],
+      "adaptation": "Original JPEG bytes preserved. Used in both overview and city gallery."
+    }
+  ]
+}

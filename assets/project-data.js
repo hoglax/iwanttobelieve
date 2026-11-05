@@ -292,7 +292,7 @@ window.PROJECT = {
       "secondary": 140000,
       "primary": 245000,
       "average": 192500,
-      "image": "assets/rostov-city-panorama.webp?v=20261105-reference-update",
+      "image": "assets/rostov-company-panorama.jpg?v=20261105-company-photos",
       "deals": [
         0,
         4.2,
@@ -334,13 +334,13 @@ window.PROJECT = {
       "paybackSourceCell": "R33",
       "paybackSourceValue": 345985,
       "paybackSourceFormula": "=R32-O32-N33-M33",
-      "landmark": "Панорама Ростова-на-Дону: Театральная площадь и городские кварталы",
+      "landmark": "Железнодорожный мост через Дон и панорама Ростова-на-Дону",
       "paybackBasis": "source_note",
       "paybackNoteCell": "P27",
       "imagePosition": "50% 50%",
       "cardPosition": "50% 50%",
-      "cardImage": "assets/rostov-city-panorama-card.webp?v=20261105-reference-update",
-      "cardLandmark": "Панорама Ростова-на-Дону: Театральная площадь и городские кварталы"
+      "cardImage": "assets/rostov-company-panorama.jpg?v=20261105-company-photos",
+      "cardLandmark": "Железнодорожный мост через Дон и панорама Ростова-на-Дону"
     },
     {
       "id": "ufa",
@@ -377,7 +377,7 @@ window.PROJECT = {
       "secondary": 145000,
       "primary": 293000,
       "average": 219000,
-      "image": "assets/ufa-city-panorama.webp?v=20261105-reference-update",
+      "image": "assets/ufa-company-panorama.jpg?v=20261105-company-photos",
       "deals": [
         0,
         4.2,
@@ -419,13 +419,13 @@ window.PROJECT = {
       "paybackSourceCell": "R41",
       "paybackSourceValue": 1211775,
       "paybackSourceFormula": "=R40-O40-N41-M41",
-      "landmark": "Панорама Уфы и проспект Октября",
+      "landmark": "Памятник Салавату Юлаеву и панорама центра Уфы",
       "paybackBasis": "source_note",
       "paybackNoteCell": "P35",
       "imagePosition": "50% 50%",
       "cardPosition": "50% 50%",
-      "cardImage": "assets/ufa-city-panorama-card.webp?v=20261105-reference-update",
-      "cardLandmark": "Панорама Уфы и проспект Октября"
+      "cardImage": "assets/ufa-company-panorama.jpg?v=20261105-company-photos",
+      "cardLandmark": "Памятник Салавату Юлаеву и панорама центра Уфы"
     }
   ],
   "months": [
@@ -500,25 +500,27 @@ window.PROJECT = {
     },
     {
       "city": "Ростов-на-Дону",
-      "file": "assets/rostov-city-panorama.webp",
-      "cardFile": "assets/rostov-city-panorama-card.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0_%D0%A2%D0%B5%D0%B0%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B8_%D1%81_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%BC,_%D1%82%D0%B5%D0%B0%D1%82%D1%80%D0%BE%D0%BC_%D0%B8_%D1%84%D0%BE%D0%BD%D1%82%D0%B0%D0%BD%D0%BE%D0%BC_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B_%D0%BF%D1%82%D0%B8%D1%87%D1%8C%D0%B5%D0%B3%D0%BE_%D0%BF%D0%BE%D0%BB%D0%B5%D1%82%D0%B0.jpg",
-      "author": "Rost.galis",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "modifications": "Resized and converted to WebP; framed only by the website layout.",
-      "landmark": "Панорама Ростова-на-Дону: Театральная площадь и городские кварталы"
+      "file": "assets/rostov-company-panorama.jpg",
+      "cardFile": "assets/rostov-company-panorama.jpg",
+      "source": "https://hoglax.github.io/iwanttobelieve/assets/rostov-company-panorama.jpg",
+      "author": null,
+      "license": null,
+      "licenseUrl": null,
+      "providedByCompany": true,
+      "modifications": "Original user-provided JPEG preserved. Responsive framing only.",
+      "landmark": "Железнодорожный мост через Дон и панорама Ростова-на-Дону"
     },
     {
       "city": "Уфа",
-      "file": "assets/ufa-city-panorama.webp",
-      "cardFile": "assets/ufa-city-panorama-card.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Ufa_Russia_aerial_oktyabrskaya_001.jpg",
-      "author": "Rakoon",
-      "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "modifications": "Resized and converted to WebP; framed only by the website layout.",
-      "landmark": "Панорама Уфы и проспект Октября"
+      "file": "assets/ufa-company-panorama.jpg",
+      "cardFile": "assets/ufa-company-panorama.jpg",
+      "source": "https://hoglax.github.io/iwanttobelieve/assets/ufa-company-panorama.jpg",
+      "author": null,
+      "license": null,
+      "licenseUrl": null,
+      "providedByCompany": true,
+      "modifications": "Original user-provided JPEG preserved. Responsive framing only.",
+      "landmark": "Памятник Салавату Юлаеву и панорама центра Уфы"
     },
     {
       "city": "Нижний Новгород",

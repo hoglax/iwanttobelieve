@@ -456,8 +456,10 @@ body,#main{background:var(--cc-bg)}
 #main .bonus-finale .bonus-glow{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 68% 75%,#8c6a3526,transparent 64%)}
 #main .bonus-finale .bonus-composition{width:100%;max-width:1280px}
 #main .bonus-finale .display-heading{margin:0;max-width:1160px;font-size:clamp(34px,5vw,72px);line-height:1.06}
-#main .bonus-finale .bonus-photo{position:relative;margin:36px 0 0;width:100%;border:1px solid var(--cc-border);border-radius:var(--cc-radius);overflow:hidden;background:var(--cc-bg);box-shadow:0 22px 70px #0007,0 0 65px #aa864616}
-#main .bonus-finale .bonus-photo img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;filter:none;transform:none}
+#main .bonus-finale .bonus-photo{position:relative;box-sizing:content-box;margin:36px 0 0;width:calc(100% - 2px);aspect-ratio:1280/353;border:1px solid var(--cc-border);border-radius:var(--cc-radius);overflow:hidden;background:var(--cc-bg);box-shadow:0 22px 70px #0007,0 0 65px #aa864616}
+#main #interplanetary-negotiations .bonus-photo{aspect-ratio:1280/354}
+/* Trim three source pixels at the top and bottom to hide the supplied white edges. */
+#main .bonus-finale .bonus-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:center;filter:none;transform:none}
 @media(max-width:780px){
  #main .bonus-finale .bonus-photo{margin-top:28px;border-radius:14px}
 }

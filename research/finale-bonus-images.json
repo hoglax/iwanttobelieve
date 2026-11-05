@@ -6,16 +6,28 @@
       "asset": "assets/finale-earth-negotiations.jpg",
       "source": "User-provided attachment, 2026-11-05",
       "sourceFilename": "1-Фото-1.jpg",
-      "adaptation": "Original image bytes preserved; responsive full-width frame without cropping or recoloring",
-      "sha256": "d058d08f3fc187e790c980b9e213de21521ed64ec8ce61e3c0eff66c6c1c7ca9"
+      "adaptation": "Original image bytes preserved; CSS frame trims three source pixels from the top and bottom to remove the white edges. No recoloring.",
+      "sha256": "d058d08f3fc187e790c980b9e213de21521ed64ec8ce61e3c0eff66c6c1c7ca9",
+      "cssCrop": {
+        "top": 3,
+        "bottom": 3,
+        "left": 0,
+        "right": 0
+      }
     },
     {
       "slide": 20,
       "asset": "assets/finale-interplanetary-negotiations.jpg",
       "source": "User-provided attachment, 2026-11-05",
       "sourceFilename": "2-Фото-2.jpg",
-      "adaptation": "Original image bytes preserved; responsive full-width frame without cropping or recoloring",
-      "sha256": "07d872a08dc389c8101b25bc6cc1a415666705f56448f853e2ac06de4360bfd5"
+      "adaptation": "Original image bytes preserved; CSS frame trims three source pixels from the top and bottom to remove the white edges. No recoloring.",
+      "sha256": "07d872a08dc389c8101b25bc6cc1a415666705f56448f853e2ac06de4360bfd5",
+      "cssCrop": {
+        "top": 3,
+        "bottom": 3,
+        "left": 0,
+        "right": 0
+      }
     }
   ]
 }
