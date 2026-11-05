@@ -150,7 +150,7 @@
   }
   document.addEventListener('visibilitychange',scheduleEconomyRotation);
   const productivity=p.cities[0].productivity;
-  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>сделок на офис за 2027 год<br><small>без Воронежа</small></span></div><div><strong>${number(p.annual.deals,1)}</strong><span>сделок на пять офисов за 2027 год<br><small>без Воронежа</small></span></div>`;
+  $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals)}</strong><span>сделок на офис за 2027 год<br><small>без Воронежа</small></span></div><div><strong>${number(p.annual.deals)}</strong><span>сделок на пять офисов за 2027 год<br><small>без Воронежа</small></span></div>`;
   const px=i=>34+i/11*1050;
   const py=value=>138-value/2*92;
   $('#productivity-chart').innerHTML=`<div class="productivity-plot"><svg class="productivity-graph" viewBox="0 0 1120 185" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">Производительность по месяцам, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${longMonths[i]}: ${number(v,1)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#85775d"/><stop offset="1" stop-color="#d6c49e"/></linearGradient></defs><line x1="34" x2="1084" y1="138" y2="138" stroke="#ffffff12"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2.5"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="4" fill="#ceba93"/><text class="productivity-value" x="${px(i)}" y="${py(v)-16}" text-anchor="middle">${number(v,Number.isInteger(v)?0:1)}</text><text class="productivity-month" x="${px(i)}" y="174" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg><div class="productivity-months" role="list" aria-label="Сделки на агента в месяц">${productivity.map((v,i)=>`<div role="listitem"><span>${p.months[i]}</span><strong>${number(v,Number.isInteger(v)?0:1)}</strong></div>`).join('')}</div></div><div class="productivity-end-state"><strong class="metal-text">${number(productivity.at(-1),Number.isInteger(productivity.at(-1))?0:1)}</strong><p>производительность<br>на конец года</p><span>сделки на агента в месяц</span></div>`;
@@ -233,7 +233,8 @@
     event.preventDefault();const ids=Object.keys(phases);const i=ids.indexOf(phase);const id=event.key==='Home'?ids[0]:event.key==='End'?ids.at(-1):ids[(i+(event.key==='ArrowRight'?1:-1)+ids.length)%ids.length];showPhase(id);$(`#phase-tab-${id}`).focus();
   });
 
-  $('#payback-months').textContent=p.payback.minMonths==null?'Уточняется':`${p.payback.minMonths}–${p.payback.maxMonths}`;
+  $('#payback-months').innerHTML=p.payback.minMonths==null?'Уточняется':`<span class="payback-value metal-text">${number(p.payback.minMonths)}</span><span class="payback-range-separator" aria-hidden="true">-</span><span class="payback-value metal-text">${number(p.payback.maxMonths)}</span>`;
+  $('#payback-months').setAttribute('aria-label',p.payback.minMonths==null?'Срок уточняется':`От ${number(p.payback.minMonths)} до ${number(p.payback.maxMonths)}`);
   $('#payback-months').classList.toggle('pending',p.payback.minMonths==null);
   $('#payback-unit').textContent=p.payback.minMonths==null?'':'месяцев';
   $('#payback-cities').hidden=p.cities.every(c=>c.paybackMonths==null);
