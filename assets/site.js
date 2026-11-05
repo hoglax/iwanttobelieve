@@ -53,6 +53,7 @@
       target.classList.add('map-city-dot-hit-area');link.prepend(target);
     }
   });
+  const averageCheckRows={ekaterinburg:5,nizhny:13,samara:21,rostov:29,ufa:37};
   let selectedCity=p.cities[0].id;
   $('#city-tabs').innerHTML=p.cities.map((c,i)=>`<button id="city-tab-${c.id}" role="tab" aria-selected="${i===0}" aria-controls="city-theatre" tabindex="${i===0?0:-1}" data-city-tab="${c.id}">${esc(c.name)}</button>`).join('');
   $('#economy-city-selector').innerHTML=p.cities.map((c,i)=>`<button data-economy-city="${c.id}" aria-pressed="${i===0}">${esc(c.name)}</button>`).join('');
@@ -80,6 +81,10 @@
     $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)}: ${esc(c.landmark)}" style="object-position:${c.imagePosition||'50% 50%'}" width="1920" height="1080"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">${credit.providedByCompany?'Фото предоставлено компанией':`Фото: ${esc(credit.author)} · ${esc(credit.license)}`}</a>`;
     $('#city-counter').textContent=`0${i+1} / 05`;
     $('#average-value').innerHTML=`${number(c.average)}<span>₽</span><sup aria-label="источник в примечании">*</sup>`;
+    const sourceRow=averageCheckRows[id];
+    const sourceRange=`C${sourceRow}:C${sourceRow+2}`;
+    $('#average-source').innerHTML=`* Расчёт Сити-Центра: (${number(c.secondary)} + ${number(c.primary)}) / 2.<br><a href="${safeURL(p.sourceUrl)}#gid=${p.strategyGid}&range=${sourceRange}" target="_blank" rel="noopener">Источник: «Базовая стратегия», ${sourceRange}</a>.`;
+
     renderBudget(id);
     if(presenting)updateControls();
   }
@@ -152,7 +157,7 @@
   $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>сделок на офис за 2027 год<br><small>без Воронежа</small></span></div><div><strong>${number(p.annual.deals,1)}</strong><span>сделок на пять офисов за 2027 год<br><small>без Воронежа</small></span></div>`;
   const px=i=>34+i/11*1050;
   const py=value=>138-value/2*92;
-  $('#productivity-chart').innerHTML=`<svg class="productivity-graph" viewBox="0 0 1120 185" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">Производительность по месяцам, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${longMonths[i]}: ${number(v,1)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#85775d"/><stop offset="1" stop-color="#d6c49e"/></linearGradient></defs><line x1="34" x2="1084" y1="138" y2="138" stroke="#ffffff12"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2.5"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="4" fill="#ceba93"/><text class="productivity-value" x="${px(i)}" y="${py(v)-16}" text-anchor="middle">${number(v,Number.isInteger(v)?0:1)}</text><text class="productivity-month" x="${px(i)}" y="174" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg><div class="productivity-months" role="list" aria-label="Сделки на агента в месяц">${productivity.map((v,i)=>`<div role="listitem"><span>${p.months[i]}</span><strong>${number(v,Number.isInteger(v)?0:1)}</strong></div>`).join('')}</div>`;
+  $('#productivity-chart').innerHTML=`<div class="productivity-plot"><svg class="productivity-graph" viewBox="0 0 1120 185" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">Производительность по месяцам, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${longMonths[i]}: ${number(v,1)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#85775d"/><stop offset="1" stop-color="#d6c49e"/></linearGradient></defs><line x1="34" x2="1084" y1="138" y2="138" stroke="#ffffff12"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2.5"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="4" fill="#ceba93"/><text class="productivity-value" x="${px(i)}" y="${py(v)-16}" text-anchor="middle">${number(v,Number.isInteger(v)?0:1)}</text><text class="productivity-month" x="${px(i)}" y="174" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg><div class="productivity-months" role="list" aria-label="Сделки на агента в месяц">${productivity.map((v,i)=>`<div role="listitem"><span>${p.months[i]}</span><strong>${number(v,Number.isInteger(v)?0:1)}</strong></div>`).join('')}</div></div><div class="productivity-end-state"><strong class="metal-text">${number(productivity.at(-1),Number.isInteger(productivity.at(-1))?0:1)}</strong><p>производительность<br>на конец года</p><span>сделки на агента в месяц</span></div>`;
 
   const phases={
   "prepare": {
@@ -160,12 +165,12 @@
     "lead": "",
     "points": [
       [
-        "Назначить руководителя",
+        "Найти руководителя",
         "Согласовать состав команды и сроки найма."
       ],
       [
-        "Утвердить бюджет",
-        "Аренда, оборудование, CRM и реклама."
+        "Утвердить бюджет и финмодель",
+        "Согласовать расходы на запуск и срок окупаемости офиса."
       ],
       [
         "Подготовить офис",
@@ -200,8 +205,8 @@
         "Сопоставить план и факт по команде, продажам и расходам."
       ],
       [
-        "Уточнить бюджет",
-        "Учесть расходы и результаты первого офиса."
+        "Уточнить бюджет и финмодель",
+        "Пересчитать расходы и срок окупаемости по результатам первого офиса."
       ],
       [
         "Выбрать следующий город",

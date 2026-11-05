@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-03",
+  "checkedAt": "2026-11-05",
   "officialContactsUrl": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/contacts/",
   "coordinateReference": "WGS84 building centres; Yandex house pages",
   "basemap": "OpenStreetMap contributors, ODbL",
@@ -26,11 +26,12 @@
       "source": "https://yandex.com/maps/193/voronezh/house/ulitsa_vladimira_nevskogo_24a/Z0AYdwJhTE0OQFtrfXtxeHlqYA==/"
     },
     {
-      "name": "Ленинский",
+      "name": "Левобережный",
       "address": "Ленинский проспект, 96А",
       "lat": 51.663155,
       "lon": 39.248482,
-      "source": "https://yandex.com/maps/193/voronezh/house/leninskiy_prospekt_96a/Z0AYdANoTU0FQFtrfXp3cn1mYQ==/"
+      "source": "https://yandex.com/maps/193/voronezh/house/leninskiy_prospekt_96a/Z0AYdANoTU0FQFtrfXp3cn1mYQ==/",
+      "nameSource": "Company representative correction, 2026-11-05; official street address remains Leninskiy 96A"
     },
     {
       "name": "Московский",
@@ -45,6 +46,84 @@
       "lat": 51.708947,
       "lon": 39.179347,
       "source": "https://yandex.com/maps/193/voronezh/house/moskovskiy_prospekt_109d/Z0AYdwBpSkEAQFtrfXtxeXVnYw==/"
+    }
+  ],
+  "coordinateCheckedAt": "2026-11-03",
+  "centralOfficeIndex": 1,
+  "moscowOffice": {
+    "confirmedBy": "Company representative, 2026-11-05",
+    "streetAddress": null,
+    "representation": "Off-map callout; route from central Voronezh office"
+  },
+  "networkRoutes": [
+    {
+      "from": 1,
+      "to": 2,
+      "origin": [
+        260.7,
+        267.5
+      ],
+      "destination": [
+        292.4,
+        222.8
+      ]
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "origin": [
+        260.7,
+        267.5
+      ],
+      "destination": [
+        209.5,
+        116.6
+      ]
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "origin": [
+        260.7,
+        267.5
+      ],
+      "destination": [
+        413.8,
+        274.5
+      ]
+    },
+    {
+      "from": 1,
+      "to": 5,
+      "origin": [
+        260.7,
+        267.5
+      ],
+      "destination": [
+        272.7,
+        84.9
+      ]
+    },
+    {
+      "from": 1,
+      "to": 6,
+      "origin": [
+        260.7,
+        267.5
+      ],
+      "destination": [
+        268.0,
+        118.8
+      ]
+    },
+    {
+      "from": 1,
+      "to": "moscow",
+      "origin": [
+        260.7,
+        267.5
+      ],
+      "representation": "off-map callout; Moscow office confirmed by company representative"
     }
   ]
 }
