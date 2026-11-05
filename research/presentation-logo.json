@@ -4,18 +4,18 @@
   "source_asset": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/local/templates/czebra_newproject/front/img/footer/logo-footer.svg",
   "source_header_asset": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/local/templates/czebra_newproject/front/img/header/logo.png",
   "reference_checked": "2026-11-05",
-  "new_asset": "assets/citycenter-logo-bronze.svg",
-  "method": "Official SVG from the company website. Its original embedded raster, alpha mask and geometry are unchanged. Only the white fill of the existing masked rectangle is replaced with a light-bronze gradient.",
+  "new_asset": "assets/citycenter-logo.svg",
+  "method": "Official SVG from the company website. Its original embedded raster, alpha mask and geometry are unchanged. Only the white fill of the existing masked rectangle is replaced with a muted antique-gold gradient from the supplied palette references.",
   "original_embedded_raster_sha256": "52eabe4a9dfe7e7d1e25751520b7d8fe5f33a1ecb9f2a220d779dbde165c0fa4",
-  "current_asset_sha256": "a7c78742b53a7d3de42dbb1f8c473a6da85447366d3a4050567dbc080bdd1e3a",
+  "current_asset_sha256": "10f71ee550efa7c588d3830dc137f8e93c4c26600dcdb4ad9e8f2652f2540a57",
   "adaptation": {
     "date": "2026-11-05",
-    "material": "light bronze",
+    "material": "muted antique gold matched to the supplied palette references",
     "palette": [
-      "#f3e3d6",
-      "#d8b89d",
-      "#ae8468",
-      "#ead2bf"
+      "#eee0bc",
+      "#c2a36b",
+      "#8e6b3b",
+      "#dfcea4"
     ],
     "preserved": "exact original raster, contours, lettering, alpha channel and aspect ratio"
   },

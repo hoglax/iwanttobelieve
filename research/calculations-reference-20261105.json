@@ -1,0 +1,88 @@
+{
+  "reference": "User-provided third image, 2026-11-05",
+  "valuesMatchCurrentFinancialPlan": true,
+  "year": 2027,
+  "currency": "RUB",
+  "excludes": "Воронеж",
+  "rows": [
+    "annualRevenue",
+    "agentPayment",
+    "ropPayment",
+    "beforeExpenses",
+    "operatingExpenses",
+    "afterEnteredExpenses",
+    "paybackSourceValue"
+  ],
+  "cities": [
+    {
+      "id": "ekaterinburg",
+      "name": "Екатеринбург",
+      "values": {
+        "annualRevenue": 42609700,
+        "agentPayment": 21304850,
+        "ropPayment": 4260970,
+        "beforeExpenses": 17043880,
+        "operatingExpenses": 3729563,
+        "afterEnteredExpenses": 13314317,
+        "paybackSourceValue": 6006317
+      },
+      "paybackMonths": 11
+    },
+    {
+      "id": "nizhny",
+      "name": "Нижний Новгород",
+      "values": {
+        "annualRevenue": 37782000,
+        "agentPayment": 18891000,
+        "ropPayment": 3778200,
+        "beforeExpenses": 15112800,
+        "operatingExpenses": 4028563,
+        "afterEnteredExpenses": 11084237,
+        "paybackSourceValue": 4604237
+      },
+      "paybackMonths": 11
+    },
+    {
+      "id": "samara",
+      "name": "Самара",
+      "values": {
+        "annualRevenue": 40720600,
+        "agentPayment": 20360300,
+        "ropPayment": 4072060,
+        "beforeExpenses": 16288240,
+        "operatingExpenses": 4249563,
+        "afterEnteredExpenses": 12038677,
+        "paybackSourceValue": 5054677
+      },
+      "paybackMonths": 11
+    },
+    {
+      "id": "rostov",
+      "name": "Ростов-на-Дону",
+      "values": {
+        "annualRevenue": 40405750,
+        "agentPayment": 20202875,
+        "ropPayment": 4040575,
+        "beforeExpenses": 16162300,
+        "operatingExpenses": 4054563,
+        "afterEnteredExpenses": 12107737,
+        "paybackSourceValue": 345985
+      },
+      "paybackMonths": 10
+    },
+    {
+      "id": "ufa",
+      "name": "Уфа",
+      "values": {
+        "annualRevenue": 45968100,
+        "agentPayment": 22984050,
+        "ropPayment": 4596810,
+        "beforeExpenses": 18387240,
+        "operatingExpenses": 3794563,
+        "afterEnteredExpenses": 14592677,
+        "paybackSourceValue": 1211775
+      },
+      "paybackMonths": 10
+    }
+  ]
+}
