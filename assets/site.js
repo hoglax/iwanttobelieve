@@ -53,7 +53,6 @@
       target.classList.add('map-city-dot-hit-area');link.prepend(target);
     }
   });
-  const averageCheckRows={ekaterinburg:5,nizhny:13,samara:21,rostov:29,ufa:37};
   let selectedCity=p.cities[0].id;
   $('#city-tabs').innerHTML=p.cities.map((c,i)=>`<button id="city-tab-${c.id}" role="tab" aria-selected="${i===0}" aria-controls="city-theatre" tabindex="${i===0?0:-1}" data-city-tab="${c.id}">${esc(c.name)}</button>`).join('');
   $('#economy-city-selector').innerHTML=p.cities.map((c,i)=>`<button data-economy-city="${c.id}" aria-pressed="${i===0}">${esc(c.name)}</button>`).join('');
@@ -80,10 +79,7 @@
     $('#city-theatre').setAttribute('aria-labelledby',`city-tab-${id}`);
     $('#city-theatre').innerHTML=`<img class="city-image city-${id}" src="${c.image}" alt="${esc(c.name)}: ${esc(c.landmark)}" style="object-position:${c.imagePosition||'50% 50%'}" width="1920" height="1080"><div class="city-shade" aria-hidden="true"></div><div class="city-slide-copy"><div class="city-slide-top"><span>${esc(c.region.toUpperCase())}</span><h3>${esc(c.name)}</h3></div><div class="city-slide-bottom"><div class="city-plan-metric"><span>К ДЕКАБРЮ 2027</span><b>${number(c.agents[11])}</b><small>агентов</small></div></div></div><a class="city-photo-credit" href="${safeURL(credit.source)}" target="_blank" rel="noopener">${credit.providedByCompany?'Фото предоставлено компанией':`Фото: ${esc(credit.author)} · ${esc(credit.license)}`}</a>`;
     $('#city-counter').textContent=`0${i+1} / 05`;
-    $('#average-value').innerHTML=`${number(c.average)}<span>₽</span><sup aria-label="источник в примечании">*</sup>`;
-    const sourceRow=averageCheckRows[id];
-    const sourceRange=`C${sourceRow}:C${sourceRow+2}`;
-    $('#average-source').innerHTML=`* Средний чек - <a href="${safeURL(p.sourceUrl)}#gid=${p.strategyGid}&range=${sourceRange}" target="_blank" rel="noopener">расчёт Сити-Центра</a>.<br>Справочно: цены за м² - по версии Циан (<a href="https://corp.cian.ru/news/itogi-3-kvartala-na-vtorichnom-rynke-spros-vyros-na-18-tseny-na-3" target="_blank" rel="noopener" title="Циан: вторичный рынок, III квартал 2026">вторичка</a> · <a href="https://corp.cian.ru/news/itogi-2-kvartala-v-novostroykakh-spros-snizilsya-na-22-tseny-perestali-rasti-vpervye-za-3-goda" target="_blank" rel="noopener" title="Циан: новостройки, II квартал 2026">новостройки</a>).`;
+    $('#average-value').innerHTML=`${number(c.average)}<span>₽</span>`;
 
     renderBudget(id);
     if(presenting)updateControls();
