@@ -153,26 +153,6 @@
   const py=value=>138-value/2*92;
   $('#productivity-chart').innerHTML=`<svg class="productivity-graph" viewBox="0 0 1120 185" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">Производительность по месяцам, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${longMonths[i]}: ${number(v,1)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#85775d"/><stop offset="1" stop-color="#d6c49e"/></linearGradient></defs><line x1="34" x2="1084" y1="138" y2="138" stroke="#ffffff12"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2.5"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="4" fill="#ceba93"/><text class="productivity-value" x="${px(i)}" y="${py(v)-16}" text-anchor="middle">${number(v,Number.isInteger(v)?0:1)}</text><text class="productivity-month" x="${px(i)}" y="174" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg><div class="productivity-months" role="list" aria-label="Сделки на агента в месяц">${productivity.map((v,i)=>`<div role="listitem"><span>${p.months[i]}</span><strong>${number(v,Number.isInteger(v)?0:1)}</strong></div>`).join('')}</div>`;
 
-  const calculationRows=[
-    ['Валовая выручка','annualRevenue'],
-    ['Агентам · 50%','agentPayment'],
-    ['РОПу · 10%','ropPayment'],
-    ['После выплат','beforeExpenses'],
-    ['Расходы офиса','operatingExpenses'],
-    ['После расходов','afterEnteredExpenses'],
-    ['Окупаемость, ₽','paybackSourceValue']
-  ];
-  $('#calculation-matrix').innerHTML=`<table><thead><tr><th scope="col">Показатель</th>${p.cities.map(c=>`<th scope="col">${esc(c.name)}</th>`).join('')}</tr></thead><tbody>${calculationRows.map(([label,key],i)=>`<tr class="${i===5?'calculation-result':i===6?'calculation-source-result':''}"><th scope="row">${label}</th>${p.cities.map(c=>`<td>${number(c[key])}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-  $('#calculation-city-select').innerHTML=p.cities.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('');
-  let calculationCity=p.cities[0].id;
-  function renderCalculationCity(id){
-    const c=p.cities.find(c=>c.id===id);if(!c)return;calculationCity=id;
-    $('#calculation-city-select').value=id;
-    $('#calculation-city-values').innerHTML=calculationRows.map(([label,key],i)=>`<div class="${i===5?'calculation-result':i===6?'calculation-source-result':''}"><dt>${label}</dt><dd>${number(c[key])}</dd></div>`).join('');
-    if(presenting)schedulePresentationFit();
-  }
-  $('#calculation-city-select').addEventListener('change',event=>renderCalculationCity(event.target.value));
-  for(const [id,delta] of [['previous-calculation-city',-1],['next-calculation-city',1]])$('#'+id).addEventListener('click',()=>{const i=p.cities.findIndex(c=>c.id===calculationCity);renderCalculationCity(p.cities[(i+delta+p.cities.length)%p.cities.length].id);});
   const phases={
   "prepare": {
     "title": "Подготовка",
@@ -444,5 +424,5 @@
     $$('[data-reveal]').forEach(element=>reveal.observe(element));
     reduced.addEventListener('change',event=>{if(event.matches)document.documentElement.classList.remove('motion-ready');});
   }
-  showCity(selectedCity);renderTeam();showPhase(phase);renderCalculationCity(calculationCity);updateControls();onScroll();
+  showCity(selectedCity);renderTeam();showPhase(phase);updateControls();onScroll();
 })();

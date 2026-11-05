@@ -84,5 +84,16 @@
       },
       "paybackMonths": 10
     }
-  ]
+  ],
+  "presentationImage": {
+    "asset": "assets/calculations-source-2027.jpg",
+    "source": "User-provided attachment, 2026-11-05",
+    "sourceFilename": "1-Фото-1.jpg",
+    "sha256": "d40b58c6900f4d17f0a43f56e326507377f58d11d7da8903ca31981ef2b0197c",
+    "dimensions": [
+      1280,
+      541
+    ],
+    "adaptation": "Original bytes, colors and numbers preserved. Full image in a dark-and-gold frame; click opens a scrollable enlarged image."
+  }
 }
