@@ -1,0 +1,149 @@
+{
+  "method": "Each label and leader is grouped with its geographic marker, using one local transform. Country outlines and city marker coordinates unchanged.",
+  "markers": [
+    {
+      "id": "uae",
+      "name": "ОАЭ",
+      "point": [
+        888.8,
+        208.2
+      ],
+      "offset": [
+        0,
+        34
+      ]
+    },
+    {
+      "id": "cyprus",
+      "name": "Кипр",
+      "point": [
+        804.8,
+        174.7
+      ],
+      "offset": [
+        -16,
+        28
+      ]
+    },
+    {
+      "id": "turkey",
+      "name": "Турция",
+      "point": [
+        789.5,
+        152.3
+      ],
+      "offset": [
+        0,
+        -22
+      ]
+    },
+    {
+      "id": "thailand",
+      "name": "Таиланд",
+      "point": [
+        1051.7,
+        269.6
+      ],
+      "offset": [
+        -18,
+        26
+      ]
+    },
+    {
+      "id": "indonesia",
+      "name": "Индонезия · Бали",
+      "point": [
+        1115.3,
+        328.1
+      ],
+      "offset": [
+        0,
+        35
+      ]
+    },
+    {
+      "id": "china",
+      "name": "Китай",
+      "point": [
+        1138.9,
+        186.9
+      ],
+      "offset": [
+        18,
+        -10
+      ]
+    },
+    {
+      "id": "india",
+      "name": "Индия",
+      "point": [
+        955.3,
+        229.9
+      ],
+      "offset": [
+        20,
+        5
+      ]
+    },
+    {
+      "id": "usa",
+      "name": "США",
+      "point": [
+        377.1,
+        206.3
+      ],
+      "offset": [
+        -18,
+        -8
+      ]
+    },
+    {
+      "id": "spain",
+      "name": "Испания",
+      "point": [
+        666,
+        154.4
+      ],
+      "offset": [
+        -16,
+        -8
+      ]
+    },
+    {
+      "id": "south-africa",
+      "name": "ЮАР",
+      "point": [
+        786,
+        390.3
+      ],
+      "offset": [
+        18,
+        8
+      ]
+    },
+    {
+      "id": "brazil",
+      "name": "Бразилия",
+      "point": [
+        499.1,
+        353.4
+      ],
+      "offset": [
+        0,
+        34
+      ]
+    },
+    {
+      "id": "australia",
+      "name": "Австралия",
+      "point": [
+        1243.4,
+        422.4
+      ],
+      "offset": [
+        -8,
+        34
+      ]
+    }
+  ]
+}

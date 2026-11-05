@@ -477,7 +477,7 @@ body,#main{background:var(--cc-bg)}
 .calculation-image-dialog{width:min(1440px,calc(100vw - 24px));max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:24px;box-sizing:border-box}
 .calculation-image-dialog h2{font-size:28px;margin:0 0 20px}
 .calculation-image-scroll{max-height:calc(100dvh - 180px);overflow:auto;border:1px solid var(--cc-border);border-radius:10px;background:var(--cc-bg);overscroll-behavior:contain;scrollbar-color:var(--cc-accent) var(--cc-surface)}
-.calculation-image-scroll img{display:block;width:2560px;max-width:none;height:auto;object-fit:contain}
+.calculation-image-scroll img{display:block;width:1280px;max-width:none;height:541px;object-fit:contain}
 .calculation-image-dialog .dialog-note{margin:16px 0 0}
 @media(max-width:520px){
  #main .calculation-image-frame{margin-top:22px;padding:5px;border-radius:12px}
@@ -485,3 +485,30 @@ body,#main{background:var(--cc-bg)}
  .calculation-image-dialog{padding:16px}
  .calculation-image-dialog h2{font-size:23px}
 }
+
+/* Keep original worksheet pixels; small screens scroll rather than resample the table. */
+#main .calculations .section-inner{min-width:0}
+#main .calculation-image-frame{max-width:1302px;margin-left:auto;margin-right:auto}
+#main .calculation-native-viewport{overflow:auto;width:100%;max-height:541px;overscroll-behavior:contain;scrollbar-color:var(--cc-accent) var(--cc-surface)}
+#main .calculation-native-viewport .calculation-image-button{width:1280px;max-width:none;margin:0 auto;border-radius:0}
+#main .calculation-native-viewport .calculation-image-button img{width:1280px;max-width:none;height:541px;object-fit:contain}
+#main .calculations .calculation-image-button:hover{box-shadow:none}
+#main .vision .display-heading,.presenting #main .vision .display-heading{font-size:clamp(32px,3.5vw,50px)}
+#main .vision .full-russia-map{width:calc(max(100%,1100px) * var(--map-zoom,1));min-width:0}
+#main .vision .map-viewport{aspect-ratio:1440/620}
+#main .world-presence>div{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+#main .world-presence span{min-height:2.7em;width:100%;line-height:1.35;white-space:normal;overflow-wrap:normal}
+#main .world-presence strong{margin-top:3px;max-width:100%;white-space:normal;overflow-wrap:normal}
+#main .bonus-finale .display-heading .metal-text{display:inline-block;max-width:100%;box-sizing:border-box;padding:0 .14em .12em .025em;margin-left:-.025em;line-height:1.16;overflow:visible;vertical-align:top}
+@media(max-width:780px){
+ #main .vision .map-viewport{height:300px;aspect-ratio:auto}
+ #main .world .international-map-frame{height:240px;overflow:auto;overscroll-behavior:contain;scrollbar-color:var(--cc-accent) var(--cc-surface)}
+ #main .world .world-map{min-width:960px}
+}
+@media(max-width:520px){
+ #main .vision .map-viewport{height:260px}
+ #main .world .international-map-frame{height:210px}
+}
+
+.presenting #calculations .presentation-canvas{transform:translate(calc(-50% + var(--native-pixel-x,0px)),calc(-50% + var(--native-pixel-y,0px))) scale(var(--presentation-scale,1))}
+.calculation-image-dialog .calculation-image-scroll{border-radius:0}

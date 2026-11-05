@@ -22,7 +22,7 @@
 .full-russia-map .map-project-city:hover text,.full-russia-map .map-project-city:focus-visible text{fill:#f8f4ec}
 .full-russia-map .map-project-city:hover .map-city-halo{fill:#bfab8333;stroke:#dfd1b5}
 </style>
-<defs><linearGradient id="full-russia-land" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#34312e"/><stop offset=".45" stop-color="#25303b"/><stop offset="1" stop-color="#192330"/></linearGradient><radialGradient id="full-russia-glow"><stop stop-color="#8b7a572b"/><stop offset="1" stop-color="#8b7a5700"/></radialGradient><clipPath id="full-russia-clip"><rect x="1" y="1" width="1438" height="618" rx="20"/></clipPath></defs><rect x="1" y="1" width="1438" height="618" rx="20" fill="#0b1017" stroke="#a0947d33"/><g clip-path="url(#full-russia-clip)"><ellipse cx="440" cy="350" rx="400" ry="310" fill="url(#full-russia-glow)"/>
+<style id="map-label-density-style">.full-russia-map:not(.show-detail-labels) .map-detail-city text,.full-russia-map:not(.show-detail-labels) .map-detail-leader{display:none}.full-russia-map:not(.show-detail-labels) .map-detail-city:hover text,.full-russia-map:not(.show-detail-labels) .map-detail-city:hover .map-detail-leader{display:block}</style><defs><linearGradient id="full-russia-land" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#34312e"/><stop offset=".45" stop-color="#25303b"/><stop offset="1" stop-color="#192330"/></linearGradient><radialGradient id="full-russia-glow"><stop stop-color="#8b7a572b"/><stop offset="1" stop-color="#8b7a5700"/></radialGradient><clipPath id="full-russia-clip"><rect x="1" y="1" width="1438" height="618" rx="20"/></clipPath></defs><rect x="1" y="1" width="1438" height="618" rx="20" fill="#0b1017" stroke="#a0947d33"/><g clip-path="url(#full-russia-clip)"><ellipse cx="440" cy="350" rx="400" ry="310" fill="url(#full-russia-glow)"/>
 <path class="map-neighbour" d="M714.57 540.27L706.00 548.05L698.24 547.81L694.95 561.38L688.48 566.44L671.20 557.70L658.30 580.24L652.64 581.98L632.25 582.04L634.15 608.05L626.33 609.62L624.85 617.58L619.28 613.75L615.79 607.36L601.63 601.24L585.58 595.23L581.51 595.41L569.89 584.64L563.39 585.21L558.78 592.35L544.87 581.26L537.81 580.35L533.16 585.07L526.59 584.98L509.75 588.01L501.09 595.13L497.43 593.43L497.79 586.08L485.88 579.47L489.37 568.17L484.88 565.67L492.26 553.53L486.41 538.60L470.71 530.87L459.39 526.46L457.88 510.57L453.85 501.68L446.63 484.83L445.81 482.79L420.32 474.81L389.66 516.88L384.86 514.16L385.68 500.81L382.51 493.32L371.36 488.21L364.77 488.92L366.50 485.87L372.24 482.94L373.82 477.87L367.71 466.50L372.44 453.88L370.56 447.54L373.32 443.87L379.82 451.25L386.76 443.68L394.65 447.32L399.98 454.40L409.92 444.86L414.01 437.06L406.19 431.52L402.19 423.70L389.81 421.09L381.17 417.29L379.09 412.32L384.66 407.69L386.58 396.77L381.26 392.28L382.15 380.00L393.28 376.12L393.34 372.25L409.03 366.19L410.22 378.30L417.88 371.59L441.28 372.27L451.74 380.63L460.64 400.00L465.50 410.72L476.44 411.50L487.87 419.22L493.14 431.43L497.53 429.40L507.55 436.53L512.87 432.12L506.25 416.62L516.73 415.36L517.43 411.34L526.12 412.56L526.10 401.39L531.76 399.39L560.25 410.55L565.32 409.44L585.34 414.09L594.21 412.05L605.77 420.69L602.24 434.78L611.30 435.05L619.08 443.36L615.63 450.10L623.24 452.27L646.81 447.06L642.60 450.17L648.97 463.64L656.52 502.82L663.00 497.17L672.40 508.06L685.42 507.72L689.52 511.27L691.82 520.03L697.29 524.01L699.76 530.57L711.44 531.04L714.57 540.27Z"/>
 <path class="map-neighbour" d="M389.66 516.88L420.32 474.81L445.81 482.79L446.63 484.83L453.85 501.68L457.88 510.57L459.39 526.46L470.71 530.87L486.41 538.60L492.26 553.53L484.88 565.67L489.37 568.17L485.88 579.47L497.79 586.08L497.43 593.43L501.09 595.13L509.75 588.01L526.59 584.98L533.16 585.07L535.44 587.61L523.59 592.36L528.57 600.46L536.96 600.27L545.76 612.10L528.98 616.17L521.95 611.54L517.69 610.03L517.92 605.78L522.69 600.69L508.24 597.64L501.17 604.40L493.02 609.23L485.07 604.53L479.66 608.86L485.43 615.59L482.86 626.27L470.60 636.49L464.25 629.83L458.61 626.78L463.00 619.11L452.66 606.54L445.87 594.66L442.95 585.18L437.18 570.26L440.29 554.94L438.60 550.86L428.48 545.23L426.64 540.57L431.88 530.47L424.34 516.44L412.43 518.21L402.27 516.98L399.52 523.81L389.66 516.88Z"/>
 <path class="map-neighbour" d="M645.88 -10.88L651.29 -11.71L653.21 -8.15L649.40 -2.89L642.55 10.46L633.92 6.00L622.83 8.73L619.09 7.17L606.81 10.29L604.79 6.61L611.08 -3.32L617.16 -2.26L619.81 -8.23L630.46 -17.81L641.55 -23.35L649.12 -17.75L644.37 -14.59L645.88 -10.88ZM539.65 110.64L530.27 106.45L527.03 103.62L536.69 100.30L538.38 92.00L530.44 87.77L520.09 90.61L512.25 89.25L512.79 82.78L509.21 77.09L513.61 68.79L508.94 67.59L507.13 64.95L498.27 68.00L496.57 58.09L488.73 59.74L486.92 54.99L476.27 55.23L459.72 55.35L438.15 53.22L434.32 56.80L428.41 56.56L426.77 50.73L413.11 50.76L395.59 56.53L390.13 62.64L373.94 65.38L363.18 62.60L354.66 61.85L361.51 54.96L342.46 45.43L337.05 36.75L341.77 25.46L355.81 19.98L386.72 11.60L396.66 15.62L411.80 29.20L428.82 37.14L450.57 41.88L480.55 45.96L493.57 50.59L515.30 56.84L525.36 64.10L528.10 71.61L541.97 72.72L545.44 80.54L552.08 86.39L550.90 104.47L544.34 101.29L539.65 110.64ZM665.47 17.37L656.09 17.89L650.64 11.38L649.46 2.66L653.21 0.48L651.92 -3.29L657.52 -8.74L664.74 -2.97L662.86 2.08L668.29 2.41L667.78 10.09L665.47 17.37ZM631.70 26.78L622.86 23.07L623.62 16.34L628.13 16.72L631.79 12.95L637.31 17.46L632.69 21.12L631.70 26.78Z"/>
@@ -62,443 +62,394 @@
 <path class="map-grid" d="M378.27 83.57L383.08 96.54L388.26 109.36L393.81 122.02L399.73 134.52L406.00 146.85L412.63 158.98L419.61 170.92L426.92 182.65L434.58 194.17L442.57 205.46L450.87 216.51L459.50 227.32L468.43 237.87L477.67 248.16L487.20 258.18L497.02 267.92L507.11 277.37L517.47 286.53L528.10 295.38L538.97 303.92L550.09 312.14L561.44 320.04L573.02 327.60L584.81 334.83L596.80 341.71L608.99 348.25L621.36 354.42L633.91 360.24L646.61 365.69L659.47 370.77L672.48 375.48L685.61 379.81L698.86 383.75L712.22 387.32L725.68 390.49L739.23 393.27L752.85 395.66L766.53 397.66L780.27 399.25L794.04 400.45L807.85 401.25L821.67 401.65L835.50 401.65L849.32 401.25L863.12 400.45L876.90 399.25L890.64 397.66L904.32 395.66L917.94 393.27L931.48 390.49L944.94 387.32L958.30 383.75L971.56 379.81L984.69 375.48L997.69 370.77L1010.55 365.69L1023.26 360.24L1035.81 354.42L1048.18 348.25L1060.37 341.71L1072.36 334.83L1084.15 327.60L1095.72 320.04L1107.08 312.14L1118.19 303.92L1129.07 295.38L1139.69 286.53L1150.06 277.37L1160.15 267.92L1169.97 258.18L1179.50 248.16L1188.73 237.87L1197.67 227.32L1206.29 216.51L1214.60 205.46L1222.59 194.17L1230.24 182.65L1237.56 170.92L1244.54 158.98L1251.17 146.85L1257.44 134.52L1263.36 122.02L1268.91 109.36L1274.09 96.54L1278.90 83.57L1283.33 70.48L1287.38 57.25L1291.05 43.92L1294.32 30.49L1297.21 16.96L1299.71 3.36L1301.81 -10.30L1303.52 -24.03"/>
 <path class="map-grid" d="M510.29 36.77L513.69 45.93L517.35 54.99L521.28 63.95L525.46 72.78L529.89 81.49L534.58 90.07L539.51 98.51L544.68 106.80L550.09 114.94L555.74 122.92L561.61 130.73L567.71 138.37L574.02 145.83L580.55 153.11L587.29 160.19L594.22 167.07L601.36 173.75L608.68 180.22L616.19 186.48L623.88 192.52L631.74 198.33L639.76 203.91L647.94 209.26L656.28 214.36L664.75 219.23L673.37 223.85L682.11 228.21L690.98 232.32L699.96 236.18L709.05 239.77L718.24 243.10L727.53 246.15L736.89 248.94L746.34 251.46L755.85 253.70L765.42 255.67L775.05 257.36L784.72 258.77L794.43 259.90L804.17 260.75L813.93 261.31L823.70 261.59L833.47 261.59L843.24 261.31L853.00 260.75L862.74 259.90L872.44 258.77L882.12 257.36L891.74 255.67L901.32 253.70L910.83 251.46L920.27 248.94L929.64 246.15L938.92 243.10L948.11 239.77L957.20 236.18L966.19 232.32L975.05 228.21L983.80 223.85L992.41 219.23L1000.89 214.36L1009.22 209.26L1017.41 203.91L1025.43 198.33L1033.29 192.52L1040.97 186.48L1048.48 180.22L1055.81 173.75L1062.94 167.07L1069.88 160.19L1076.62 153.11L1083.15 145.83L1089.46 138.37L1095.56 130.73L1101.43 122.92L1107.08 114.94L1112.49 106.80L1117.66 98.51L1122.59 90.07L1127.28 81.49L1131.71 72.78L1135.89 63.95L1139.82 54.99L1143.48 45.93L1146.88 36.77L1150.01 27.51L1152.87 18.17L1155.46 8.74L1157.78 -0.75L1159.82 -10.31L1161.59 -19.93L1163.07 -29.59L1164.28 -39.29"/>
 <path class="map-grid" d="M650.57 -12.96L652.47 -7.84L654.52 -2.77L656.71 2.24L659.05 7.18L661.53 12.05L664.15 16.85L666.91 21.57L669.80 26.20L672.83 30.76L675.99 35.22L679.27 39.59L682.68 43.86L686.21 48.03L689.86 52.10L693.63 56.06L697.51 59.91L701.50 63.65L705.60 67.27L709.80 70.77L714.10 74.14L718.49 77.39L722.98 80.51L727.56 83.51L732.22 86.36L736.96 89.08L741.77 91.67L746.67 94.11L751.62 96.41L756.65 98.56L761.73 100.57L766.87 102.43L772.06 104.14L777.30 105.70L782.59 107.11L787.91 108.36L793.26 109.46L798.64 110.41L804.05 111.20L809.48 111.83L814.93 112.30L820.39 112.62L825.85 112.78L831.32 112.78L836.78 112.62L842.24 112.30L847.68 111.83L853.11 111.20L858.52 110.41L863.91 109.46L869.26 108.36L874.58 107.11L879.86 105.70L885.10 104.14L890.29 102.43L895.43 100.57L900.52 98.56L905.54 96.41L910.50 94.11L915.39 91.67L920.21 89.08L924.95 86.36L929.61 83.51L934.19 80.51L938.68 77.39L943.07 74.14L947.37 70.77L951.57 67.27L955.67 63.65L959.66 59.91L963.54 56.06L967.30 52.10L970.96 48.03L974.49 43.86L977.90 39.59L981.18 35.22L984.34 30.76L987.36 26.20L990.26 21.57L993.02 16.85L995.64 12.05L998.12 7.18L1000.45 2.24L1002.65 -2.77L1004.70 -7.84L1006.60 -12.96L1008.35 -18.14L1009.95 -23.37L1011.40 -28.64L1012.70 -33.95L1013.84 -39.29L1014.83 -44.67L1015.66 -50.07L1016.33 -55.50"/>
-<path class="map-city-leader project" d="M547.11 362.85 L571.00 352.00"/>
-<path class="map-city-leader project" d="M445.69 288.19 L461.00 280.00"/>
-<path class="map-city-leader project" d="M451.01 353.19 L451.01 389.20"/>
-<path class="map-city-leader project" d="M327.48 344.71 L295.41 344.71"/>
-<path class="map-city-leader project" d="M501.06 366.26 L506.00 384.20"/>
-<path class="map-city-leader reference" d="M407.51 256.16 L376.91 256.16"/>
-<path class="map-city-leader reference" d="M371.65 301.75 L317.22 301.75"/>
-<path class="map-city-leader context" d="M325.58 148.32 L236.09 148.32"/>
-<path class="map-city-leader context" d="M423.66 179.11 L288.75 179.84"/>
-<path class="map-city-leader context" d="M299.17 358.79 L325.81 338.58"/>
-<path class="map-city-leader context" d="M438.35 253.16 L471.94 244.98"/>
-<path class="map-city-leader context" d="M390.70 269.42 L390.70 215.84"/>
-<path class="map-city-leader context" d="M405.85 278.81 L405.85 171.06"/>
-<path class="map-city-leader context" d="M383.89 295.99 L331.51 280.97"/>
-<path class="map-city-leader context" d="M345.97 293.16 L270.09 269.59"/>
-<path class="map-city-leader context" d="M356.41 280.93 L417.52 231.80"/>
-<path class="map-city-leader context" d="M420.19 324.00 L381.69 382.45"/>
-<path class="map-city-leader context" d="M450.76 332.18 L504.26 416.62"/>
-<path class="map-city-leader context" d="M502.01 330.17 L535.60 321.99"/>
-<path class="map-city-leader context" d="M497.70 294.86 L558.82 245.72"/>
-<path class="map-city-leader context" d="M487.61 337.96 L591.68 304.13"/>
-<path class="map-city-leader context" d="M461.37 307.51 L461.37 440.07"/>
-<path class="map-city-leader context" d="M409.95 346.27 L409.95 444.37"/>
-<path class="map-city-leader context" d="M470.75 394.81 L470.75 463.36"/>
-<path class="map-city-leader context" d="M288.30 377.61 L306.85 374.90"/>
-<path class="map-city-leader context" d="M655.67 350.64 L682.31 361.19"/>
-<path class="map-city-leader context" d="M673.98 362.24 L726.37 347.22"/>
-<path class="map-city-leader context" d="M720.21 454.87 L746.85 465.42"/>
-<path class="map-city-leader context" d="M695.97 477.88 L722.61 488.43"/>
-<path class="map-city-leader context" d="M364.13 256.15 L348.13 227.01"/>
-<path class="map-city-leader context" d="M369.39 269.77 L293.51 246.20"/>
-<path class="map-city-leader context" d="M387.39 258.18 L348.89 190.07"/>
-<path class="map-city-leader context" d="M370.93 228.61 L432.04 179.47"/>
-<path class="map-city-leader context" d="M411.60 236.52 L411.60 128.77"/>
-<path class="map-city-leader context" d="M425.17 269.54 L354.17 145.14"/>
-<path class="map-city-leader context" d="M437.07 264.94 L547.98 174.02"/>
-<path class="map-city-leader context" d="M444.84 257.73 L444.84 149.97"/>
-<path class="map-city-leader context" d="M430.87 315.41 L521.87 464.79"/>
-<path class="map-city-leader context" d="M469.69 306.11 L644.23 246.62"/>
-<path class="map-city-leader context" d="M395.19 306.74 L209.19 306.74"/>
-<path class="map-city-leader context" d="M455.20 239.01 L455.20 96.78"/>
-<path class="map-city-leader context" d="M410.81 195.34 L357.31 101.25"/>
-<path class="map-city-leader context" d="M391.30 182.28 L475.39 113.86"/>
-<path class="map-city-leader context" d="M261.73 319.10 L200.62 269.97"/>
-<path class="map-city-leader context" d="M287.33 336.57 L287.33 405.12"/>
-<path class="map-city-leader context" d="M264.03 325.30 L179.93 384.06"/>
-<path class="map-city-leader context" d="M288.23 352.21 L249.73 410.66"/>
-<path class="map-city-leader context" d="M287.33 347.17 L150.38 301.37"/>
-<path class="map-city-leader context" d="M326.83 425.24 L326.83 469.17"/>
-<g class="map-context-city map-kaliningrad" data-map-name="Калининград">
+<path class="map-city-leader context" d="M539.97 385.74 L539.97 436.51"/><path class="map-city-leader context" d="M372.58 364.17 L350.58 393.16"/><path class="map-city-leader context" d="M299.17 358.79 L255.33 393.52"/><path class="map-city-leader context" d="M622.97 430.75 L622.97 440.95"/><path class="map-city-leader context" d="M694.91 453.70 L679.91 470.57"/><path class="map-city-leader context" d="M773.57 453.86 L773.57 443.66"/><path class="map-city-leader context" d="M514.14 194.37 L514.14 159.48"/><path class="map-city-leader context" d="M438.35 253.16 L469.46 231.16"/><path class="map-city-leader context" d="M373.11 410.84 L373.11 430.70"/><path class="map-city-leader context" d="M318.62 381.26 L280.51 368.37"/><path class="map-city-leader context" d="M288.30 377.61 L305.62 376.72"/><path class="map-city-leader context" d="M336.86 441.60 L298.75 454.49"/><path class="map-city-leader context" d="M581.23 378.02 L589.72 378.02"/><path class="map-city-leader context" d="M715.09 437.62 L704.70 437.62"/><path class="map-city-leader context" d="M720.21 454.87 L689.21 499.45"/><path class="map-city-leader context" d="M695.97 477.88 L705.97 486.09"/><path class="map-city-leader context" d="M268.90 321.09 L226.90 257.46"/><path class="map-city-leader context" d="M261.73 319.10 L261.73 419.99"/><path class="map-city-leader context" d="M288.23 352.21 L257.12 330.21"/><path class="map-city-leader context" d="M326.83 425.24 L326.83 458.63"/><path class="map-city-leader reference" d="M407.51 256.16 L407.51 225.62"/><path class="map-city-leader reference" d="M371.65 301.75 L340.65 260.02"/><path class="map-city-leader project" d="M547.11 362.85 L569.11 388.99"/><path class="map-city-leader project" d="M445.69 288.19 L455.69 282.83"/><path class="map-city-leader project" d="M451.01 353.19 L451.01 361.23"/><path class="map-city-leader project" d="M327.48 344.71 L296.48 302.98"/><path class="map-city-leader project" d="M501.06 366.26 L501.06 396.80"/><g class="map-context-city map-kaliningrad" data-map-name="Калининград">
 <title>Калининград</title>
-<circle cx="325.58" cy="148.32" r="3.3"/>
-<text x="130.00" y="150.00" text-anchor="start">Калининград</text>
+<circle cx="325.58" cy="148.32" r="2.5"/>
+<text x="211.62" y="144.19" text-anchor="start" style="font:400 18px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Калининград</text>
 </g>
 <g class="map-context-city" data-map-name="Санкт-Петербург">
 <title>Санкт-Петербург</title>
-<circle cx="423.66" cy="179.11" r="3.3"/>
-<text x="175.00" y="195.00" text-anchor="start">Санкт-Петербург</text>
+<circle cx="423.66" cy="179.11" r="2.5"/>
+<text x="292.29" y="174.41" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Санкт-Петербург</text>
 </g>
 <g class="map-context-city" data-map-name="Казань">
 <title>Казань</title>
-<circle cx="468.67" cy="320.86" r="3.3"/>
-<text x="481.67" y="320.86" text-anchor="start">Казань</text>
+<circle cx="468.67" cy="320.86" r="2.5"/>
+<text x="474.67" y="316.16" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Казань</text>
 </g>
 <g class="map-context-city" data-map-name="Пермь">
 <title>Пермь</title>
-<circle cx="529.51" cy="331.16" r="3.3"/>
-<text x="531.77" y="343.97" text-anchor="middle">Пермь</text>
+<circle cx="529.51" cy="331.16" r="2.5"/>
+<text x="535.51" y="347.25" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Пермь</text>
 </g>
 <g class="map-context-city" data-map-name="Челябинск">
 <title>Челябинск</title>
-<circle cx="539.97" cy="385.74" r="3.3"/>
-<text x="558.35" y="401.17" text-anchor="start">Челябинск</text>
+<circle cx="539.97" cy="385.74" r="2.5"/>
+<text x="516.08" y="451.32" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Челябинск</text>
 </g>
 <g class="map-context-city" data-map-name="Волгоград">
 <title>Волгоград</title>
-<circle cx="372.58" cy="364.17" r="3.3"/>
-<text x="382.53" y="372.52" text-anchor="start">Волгоград</text>
+<circle cx="372.58" cy="364.17" r="2.5"/>
+<text x="274.73" y="407.97" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Волгоград</text>
 </g>
 <g class="map-context-city" data-map-name="Краснодар">
 <title>Краснодар</title>
-<circle cx="299.17" cy="358.79" r="3.3"/>
-<text x="329.81" y="333.08" text-anchor="start">Краснодар</text>
+<circle cx="299.17" cy="358.79" r="2.5"/>
+<text x="175.55" y="408.33" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Краснодар</text>
 </g>
 <g class="map-context-city" data-map-name="Омск">
 <title>Омск</title>
-<circle cx="622.97" cy="430.75" r="3.3"/>
-<text x="635.97" y="430.75" text-anchor="start">Омск</text>
+<circle cx="622.97" cy="430.75" r="2.5"/>
+<text x="608.45" y="455.76" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Омск</text>
 </g>
 <g class="map-context-city" data-map-name="Новосибирск">
 <title>Новосибирск</title>
-<circle cx="694.91" cy="453.70" r="3.3"/>
-<text x="681.91" y="453.70" text-anchor="end">Новосибирск</text>
+<circle cx="694.91" cy="453.70" r="2.5"/>
+<text x="582.41" y="485.38" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Новосибирск</text>
 </g>
 <g class="map-context-city" data-map-name="Красноярск">
 <title>Красноярск</title>
-<circle cx="773.57" cy="453.86" r="3.3"/>
-<text x="786.57" y="453.86" text-anchor="start">Красноярск</text>
+<circle cx="773.57" cy="453.86" r="2.5"/>
+<text x="725.24" y="440.24" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Красноярск</text>
 </g>
 <g class="map-context-city" data-map-name="Мурманск">
 <title>Мурманск</title>
-<circle cx="538.24" cy="123.58" r="3.3"/>
-<text x="551.24" y="123.58" text-anchor="start">Мурманск</text>
+<circle cx="538.24" cy="123.58" r="2.5"/>
+<text x="457.37" y="118.88" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Мурманск</text>
 </g>
 <g class="map-context-city" data-map-name="Архангельск">
 <title>Архангельск</title>
-<circle cx="514.14" cy="194.37" r="3.3"/>
-<text x="527.14" y="194.37" text-anchor="start">Архангельск</text>
+<circle cx="514.14" cy="194.37" r="2.5"/>
+<text x="467.96" y="156.07" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Архангельск</text>
 </g>
 <g class="map-context-city" data-map-name="Петрозаводск">
 <title>Петрозаводск</title>
-<circle cx="460.03" cy="187.42" r="3.3"/>
-<text x="462.29" y="200.22" text-anchor="middle">Петрозаводск</text>
+<circle cx="460.03" cy="187.42" r="2.5"/>
+<text x="466.03" y="182.72" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Петрозаводск</text>
 </g>
 <g class="map-context-city" data-map-name="Ярославль">
 <title>Ярославль</title>
-<circle cx="438.35" cy="253.16" r="3.3"/>
-<text x="475.94" y="239.48" text-anchor="start">Ярославль</text>
+<circle cx="438.35" cy="253.16" r="2.5"/>
+<text x="469.46" y="227.74" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Ярославль</text>
 </g>
-<g class="map-context-city" data-map-name="Тула">
+<g class="map-context-city map-detail-city" data-map-name="Тула">
 <title>Тула</title>
-<circle cx="390.70" cy="269.42" r="3.3"/>
-<text x="380.28" y="210.34" text-anchor="middle">Тула</text>
+<path class="map-city-leader context map-detail-leader" d="M390.70 269.42 L267.72 207.53"/><circle cx="390.70" cy="269.42" r="2.5"/>
+<text x="232.78" y="204.12" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Тула</text>
 </g>
-<g class="map-context-city" data-map-name="Рязань">
+<g class="map-context-city map-detail-city" data-map-name="Рязань">
 <title>Рязань</title>
-<circle cx="405.85" cy="278.81" r="3.3"/>
-<text x="385.88" y="165.56" text-anchor="middle">Рязань</text>
+<path class="map-city-leader context map-detail-leader" d="M405.85 278.81 L579.72 241.34"/><circle cx="405.85" cy="278.81" r="2.5"/>
+<text x="579.72" y="237.92" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Рязань</text>
 </g>
-<g class="map-context-city" data-map-name="Липецк">
+<g class="map-context-city map-detail-city" data-map-name="Липецк">
 <title>Липецк</title>
-<circle cx="383.89" cy="295.99" r="3.3"/>
-<text x="327.51" y="275.47" text-anchor="end">Липецк</text>
+<path class="map-city-leader context map-detail-leader" d="M383.89 295.99 L352.70 87.77"/><circle cx="383.89" cy="295.99" r="2.5"/>
+<text x="298.61" y="84.35" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Липецк</text>
 </g>
-<g class="map-context-city" data-map-name="Белгород">
+<g class="map-context-city map-detail-city" data-map-name="Белгород">
 <title>Белгород</title>
-<circle cx="345.97" cy="293.16" r="3.3"/>
-<text x="266.09" y="264.09" text-anchor="end">Белгород</text>
+<path class="map-city-leader context map-detail-leader" d="M345.97 293.16 L274.97 179.30"/><circle cx="345.97" cy="293.16" r="2.5"/>
+<text x="205.65" y="175.88" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Белгород</text>
 </g>
-<g class="map-context-city" data-map-name="Курск">
+<g class="map-context-city map-detail-city" data-map-name="Курск">
 <title>Курск</title>
-<circle cx="356.41" cy="280.93" r="3.3"/>
-<text x="421.52" y="226.30" text-anchor="start">Курск</text>
+<path class="map-city-leader context map-detail-leader" d="M356.41 280.93 L330.81 116.18"/><circle cx="356.41" cy="280.93" r="2.5"/>
+<text x="288.83" y="112.76" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Курск</text>
 </g>
-<g class="map-context-city" data-map-name="Пенза">
+<g class="map-context-city map-detail-city" data-map-name="Пенза">
 <title>Пенза</title>
-<circle cx="420.19" cy="324.00" r="3.3"/>
-<text x="377.69" y="397.61" text-anchor="end">Пенза</text>
+<path class="map-city-leader context map-detail-leader" d="M420.19 324.00 L360.30 317.07"/><circle cx="420.19" cy="324.00" r="2.5"/>
+<text x="314.65" y="313.65" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Пенза</text>
 </g>
-<g class="map-context-city" data-map-name="Ульяновск">
+<g class="map-context-city map-detail-city" data-map-name="Ульяновск">
 <title>Ульяновск</title>
-<circle cx="450.76" cy="332.18" r="3.3"/>
-<text x="508.26" y="431.78" text-anchor="start">Ульяновск</text>
+<path class="map-city-leader context map-detail-leader" d="M450.76 332.18 L450.76 503.07"/><circle cx="450.76" cy="332.18" r="2.5"/>
+<text x="412.06" y="517.88" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Ульяновск</text>
 </g>
-<g class="map-context-city" data-map-name="Ижевск">
+<g class="map-context-city map-detail-city" data-map-name="Ижевск">
 <title>Ижевск</title>
-<circle cx="502.01" cy="330.17" r="3.3"/>
-<text x="539.60" y="316.49" text-anchor="start">Ижевск</text>
+<path class="map-city-leader context map-detail-leader" d="M502.01 330.17 L657.89 249.28"/><circle cx="502.01" cy="330.17" r="2.5"/>
+<text x="657.89" y="245.87" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Ижевск</text>
 </g>
-<g class="map-context-city" data-map-name="Киров">
+<g class="map-context-city map-detail-city" data-map-name="Киров">
 <title>Киров</title>
-<circle cx="497.70" cy="294.86" r="3.3"/>
-<text x="562.82" y="240.22" text-anchor="start">Киров</text>
+<path class="map-city-leader context map-detail-leader" d="M497.70 294.86 L587.70 148.09"/><circle cx="497.70" cy="294.86" r="2.5"/>
+<text x="587.70" y="144.67" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Киров</text>
 </g>
-<g class="map-context-city" data-map-name="Набережные Челны">
+<g class="map-context-city map-detail-city" data-map-name="Набережные Челны">
 <title>Набережные Челны</title>
-<circle cx="487.61" cy="337.96" r="3.3"/>
-<text x="595.68" y="298.63" text-anchor="start">Набережные Челны</text>
+<path class="map-city-leader context map-detail-leader" d="M487.61 337.96 L667.61 337.96"/><circle cx="487.61" cy="337.96" r="2.5"/>
+<text x="667.61" y="343.66" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Набережные Челны</text>
 </g>
-<g class="map-context-city" data-map-name="Чебоксары">
+<g class="map-context-city map-detail-city" data-map-name="Чебоксары">
 <title>Чебоксары</title>
-<circle cx="461.37" cy="307.51" r="3.3"/>
-<text x="487.41" y="455.23" text-anchor="middle">Чебоксары</text>
+<path class="map-city-leader context map-detail-leader" d="M461.37 307.51 L641.37 307.51"/><circle cx="461.37" cy="307.51" r="2.5"/>
+<text x="641.37" y="313.21" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Чебоксары</text>
 </g>
 <g class="map-context-city" data-map-name="Саратов">
 <title>Саратов</title>
-<circle cx="409.95" cy="346.27" r="3.3"/>
-<text x="389.98" y="459.53" text-anchor="middle">Саратов</text>
+<circle cx="409.95" cy="346.27" r="2.5"/>
+<text x="341.38" y="341.57" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Саратов</text>
 </g>
 <g class="map-context-city" data-map-name="Оренбург">
 <title>Оренбург</title>
-<circle cx="470.75" cy="394.81" r="3.3"/>
-<text x="485.51" y="478.52" text-anchor="middle">Оренбург</text>
+<circle cx="470.75" cy="394.81" r="2.5"/>
+<text x="394.37" y="410.90" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Оренбург</text>
 </g>
 <g class="map-context-city" data-map-name="Астрахань">
 <title>Астрахань</title>
-<circle cx="373.11" cy="410.84" r="3.3"/>
-<text x="377.28" y="434.48" text-anchor="middle">Астрахань</text>
+<circle cx="373.11" cy="410.84" r="2.5"/>
+<text x="342.06" y="445.51" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Астрахань</text>
 </g>
 <g class="map-context-city" data-map-name="Ставрополь">
 <title>Ставрополь</title>
-<circle cx="318.62" cy="381.26" r="3.3"/>
-<text x="300.23" y="396.69" text-anchor="end">Ставрополь</text>
+<circle cx="318.62" cy="381.26" r="2.5"/>
+<text x="191.81" y="364.96" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Ставрополь</text>
 </g>
 <g class="map-context-city" data-map-name="Сочи">
 <title>Сочи</title>
-<circle cx="288.30" cy="377.61" r="3.3"/>
-<text x="310.85" y="369.40" text-anchor="start">Сочи</text>
+<circle cx="288.30" cy="377.61" r="2.5"/>
+<text x="305.62" y="373.31" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Сочи</text>
 </g>
 <g class="map-context-city" data-map-name="Махачкала">
 <title>Махачкала</title>
-<circle cx="336.86" cy="441.60" r="3.3"/>
-<text x="324.64" y="446.05" text-anchor="end">Махачкала</text>
+<circle cx="336.86" cy="441.60" r="2.5"/>
+<text x="217.01" y="469.30" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Махачкала</text>
 </g>
 <g class="map-context-city" data-map-name="Тюмень">
 <title>Тюмень</title>
-<circle cx="581.23" cy="378.02" r="3.3"/>
-<text x="594.23" y="378.02" text-anchor="start">Тюмень</text>
+<circle cx="581.23" cy="378.02" r="2.5"/>
+<text x="589.72" y="375.23" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Тюмень</text>
 </g>
 <g class="map-context-city" data-map-name="Сургут">
 <title>Сургут</title>
-<circle cx="655.67" cy="350.64" r="3.3"/>
-<text x="686.31" y="376.35" text-anchor="start">Сургут</text>
+<circle cx="655.67" cy="350.64" r="2.5"/>
+<text x="599.63" y="345.94" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Сургут</text>
 </g>
-<g class="map-context-city" data-map-name="Нижневартовск">
+<g class="map-context-city map-detail-city" data-map-name="Нижневартовск">
 <title>Нижневартовск</title>
-<circle cx="673.98" cy="362.24" r="3.3"/>
-<text x="730.37" y="341.72" text-anchor="start">Нижневартовск</text>
+<path class="map-city-leader context map-detail-leader" d="M673.98 362.24 L682.47 362.24"/><circle cx="673.98" cy="362.24" r="2.5"/>
+<text x="682.47" y="376.42" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Нижневартовск</text>
 </g>
 <g class="map-context-city" data-map-name="Норильск">
 <title>Норильск</title>
-<circle cx="769.71" cy="265.80" r="3.3"/>
-<text x="782.71" y="265.80" text-anchor="start">Норильск</text>
+<circle cx="769.71" cy="265.80" r="2.5"/>
+<text x="775.71" y="281.89" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Норильск</text>
 </g>
 <g class="map-context-city" data-map-name="Томск">
 <title>Томск</title>
-<circle cx="715.09" cy="437.62" r="3.3"/>
-<text x="728.09" y="437.62" text-anchor="start">Томск</text>
+<circle cx="715.09" cy="437.62" r="2.5"/>
+<text x="660.34" y="437.32" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Томск</text>
 </g>
 <g class="map-context-city" data-map-name="Кемерово">
 <title>Кемерово</title>
-<circle cx="720.21" cy="454.87" r="3.3"/>
-<text x="750.85" y="480.58" text-anchor="start">Кемерово</text>
+<circle cx="720.21" cy="454.87" r="2.5"/>
+<text x="615.92" y="514.26" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Кемерово</text>
 </g>
 <g class="map-context-city" data-map-name="Новокузнецк">
 <title>Новокузнецк</title>
-<circle cx="724.01" cy="478.12" r="3.3"/>
-<text x="712.01" y="498.90" text-anchor="end">Новокузнецк</text>
+<circle cx="724.01" cy="478.12" r="2.5"/>
+<text x="730.01" y="473.42" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Новокузнецк</text>
 </g>
 <g class="map-context-city" data-map-name="Барнаул">
 <title>Барнаул</title>
-<circle cx="695.97" cy="477.88" r="3.3"/>
-<text x="726.61" y="503.59" text-anchor="start">Барнаул</text>
+<circle cx="695.97" cy="477.88" r="2.5"/>
+<text x="705.97" y="500.90" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Барнаул</text>
 </g>
 <g class="map-context-city" data-map-name="Иркутск">
 <title>Иркутск</title>
-<circle cx="864.89" cy="507.05" r="3.3"/>
-<text x="851.89" y="507.05" text-anchor="end">Иркутск</text>
+<circle cx="864.89" cy="507.05" r="2.5"/>
+<text x="800.24" y="523.14" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Иркутск</text>
 </g>
 <g class="map-context-city" data-map-name="Улан-Удэ">
 <title>Улан-Удэ</title>
-<circle cx="893.27" cy="510.87" r="3.3"/>
-<text x="903.23" y="519.23" text-anchor="start">Улан-Удэ</text>
+<circle cx="893.27" cy="510.87" r="2.5"/>
+<text x="899.27" y="526.96" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Улан-Удэ</text>
 </g>
 <g class="map-context-city" data-map-name="Чита">
 <title>Чита</title>
-<circle cx="942.67" cy="500.49" r="3.3"/>
-<text x="930.46" y="496.05" text-anchor="end">Чита</text>
+<circle cx="942.67" cy="500.49" r="2.5"/>
+<text x="900.83" y="495.79" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Чита</text>
 </g>
 <g class="map-context-city" data-map-name="Якутск">
 <title>Якутск</title>
-<circle cx="1016.12" cy="332.53" r="3.3"/>
-<text x="1029.12" y="332.53" text-anchor="start">Якутск</text>
+<circle cx="1016.12" cy="332.53" r="2.5"/>
+<text x="1022.12" y="348.62" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Якутск</text>
 </g>
 <g class="map-context-city" data-map-name="Благовещенск">
 <title>Благовещенск</title>
-<circle cx="1066.05" cy="487.84" r="3.3"/>
-<text x="1053.05" y="487.84" text-anchor="end">Благовещенск</text>
+<circle cx="1066.05" cy="487.84" r="2.5"/>
+<text x="953.29" y="483.14" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Благовещенск</text>
 </g>
 <g class="map-context-city" data-map-name="Хабаровск">
 <title>Хабаровск</title>
-<circle cx="1138.19" cy="480.63" r="3.3"/>
-<text x="1151.19" y="480.63" text-anchor="start">Хабаровск</text>
+<circle cx="1138.19" cy="480.63" r="2.5"/>
+<text x="1144.19" y="496.72" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Хабаровск</text>
 </g>
 <g class="map-context-city" data-map-name="Владивосток">
 <title>Владивосток</title>
-<circle cx="1145.65" cy="561.58" r="3.3"/>
-<text x="1158.65" y="561.58" text-anchor="start">Владивосток</text>
+<circle cx="1145.65" cy="561.58" r="2.5"/>
+<text x="1151.65" y="577.67" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Владивосток</text>
 </g>
 <g class="map-context-city" data-map-name="Южно-Сахалинск">
 <title>Южно-Сахалинск</title>
-<circle cx="1210.21" cy="460.20" r="3.3"/>
-<text x="1198.00" y="455.75" text-anchor="end">Южно-Сахалинск</text>
+<circle cx="1210.21" cy="460.20" r="2.5"/>
+<text x="1073.96" y="455.50" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Южно-Сахалинск</text>
 </g>
 <g class="map-context-city" data-map-name="Магадан">
 <title>Магадан</title>
-<circle cx="1153.08" cy="282.69" r="3.3"/>
-<text x="1166.08" y="282.69" text-anchor="start">Магадан</text>
+<circle cx="1153.08" cy="282.69" r="2.5"/>
+<text x="1083.26" y="277.99" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Магадан</text>
 </g>
 <g class="map-context-city" data-map-name="Петропавловск-Камчатский">
 <title>Петропавловск-Камчатский</title>
-<circle cx="1259.18" cy="303.14" r="3.3"/>
-<text x="1246.96" y="307.58" text-anchor="end">Петропавловск-Камчатский</text>
+<circle cx="1259.18" cy="303.14" r="2.5"/>
+<text x="1049.49" y="319.23" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Петропавловск-Камчатский</text>
 </g>
 <g class="map-context-city" data-map-name="Анадырь">
 <title>Анадырь</title>
-<circle cx="1199.77" cy="102.77" r="3.3"/>
-<text x="1212.77" y="102.77" text-anchor="start">Анадырь</text>
+<circle cx="1199.77" cy="102.77" r="2.5"/>
+<text x="1205.77" y="118.86" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Анадырь</text>
 </g>
-<g class="map-context-city" data-map-name="Брянск">
+<g class="map-context-city map-detail-city" data-map-name="Брянск">
 <title>Брянск</title>
-<circle cx="364.13" cy="256.15" r="3.3"/>
-<text x="344.13" y="221.51" text-anchor="end">Брянск</text>
+<path class="map-city-leader context map-detail-leader" d="M364.13 256.15 L274.13 109.38"/><circle cx="364.13" cy="256.15" r="2.5"/>
+<text x="221.48" y="105.96" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Брянск</text>
 </g>
-<g class="map-context-city" data-map-name="Орёл">
+<g class="map-context-city map-detail-city" data-map-name="Орёл">
 <title>Орёл</title>
-<circle cx="369.39" cy="269.77" r="3.3"/>
-<text x="289.51" y="240.70" text-anchor="end">Орёл</text>
+<path class="map-city-leader context map-detail-leader" d="M369.39 269.77 L352.07 270.66"/><circle cx="369.39" cy="269.77" r="2.5"/>
+<text x="312.52" y="285.47" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Орёл</text>
 </g>
-<g class="map-context-city" data-map-name="Калуга">
+<g class="map-context-city map-detail-city" data-map-name="Калуга">
 <title>Калуга</title>
-<circle cx="387.39" cy="258.18" r="3.3"/>
-<text x="344.89" y="184.57" text-anchor="end">Калуга</text>
+<path class="map-city-leader context map-detail-leader" d="M387.39 258.18 L213.52 220.71"/><circle cx="387.39" cy="258.18" r="2.5"/>
+<text x="163.41" y="217.29" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Калуга</text>
 </g>
-<g class="map-context-city" data-map-name="Смоленск">
+<g class="map-context-city map-detail-city" data-map-name="Смоленск">
 <title>Смоленск</title>
-<circle cx="370.93" cy="228.61" r="3.3"/>
-<text x="436.04" y="173.97" text-anchor="start">Смоленск</text>
+<path class="map-city-leader context map-detail-leader" d="M370.93 228.61 L197.06 191.14"/><circle cx="370.93" cy="228.61" r="2.5"/>
+<text x="122.98" y="187.72" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Смоленск</text>
 </g>
-<g class="map-context-city" data-map-name="Тверь">
+<g class="map-context-city map-detail-city" data-map-name="Тверь">
 <title>Тверь</title>
-<circle cx="411.60" cy="236.52" r="3.3"/>
-<text x="391.63" y="123.27" text-anchor="middle">Тверь</text>
+<path class="map-city-leader context map-detail-leader" d="M411.60 236.52 L411.60 103.63"/><circle cx="411.60" cy="236.52" r="2.5"/>
+<text x="389.86" y="100.22" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Тверь</text>
 </g>
-<g class="map-context-city" data-map-name="Владимир">
+<g class="map-context-city map-detail-city" data-map-name="Владимир">
 <title>Владимир</title>
-<circle cx="425.17" cy="269.54" r="3.3"/>
-<text x="350.17" y="139.64" text-anchor="end">Владимир</text>
+<path class="map-city-leader context map-detail-leader" d="M425.17 269.54 L365.77 219.26"/><circle cx="425.17" cy="269.54" r="2.5"/>
+<text x="289.60" y="215.84" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Владимир</text>
 </g>
-<g class="map-context-city" data-map-name="Иваново">
+<g class="map-context-city map-detail-city" data-map-name="Иваново">
 <title>Иваново</title>
-<circle cx="437.07" cy="264.94" r="3.3"/>
-<text x="551.98" y="168.52" text-anchor="start">Иваново</text>
+<path class="map-city-leader context map-detail-leader" d="M437.07 264.94 L432.24 136.89"/><circle cx="437.07" cy="264.94" r="2.5"/>
+<text x="368.40" y="133.47" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Иваново</text>
 </g>
-<g class="map-context-city" data-map-name="Кострома">
+<g class="map-context-city map-detail-city" data-map-name="Кострома">
 <title>Кострома</title>
-<circle cx="444.84" cy="257.73" r="3.3"/>
-<text x="464.81" y="144.47" text-anchor="middle">Кострома</text>
+<path class="map-city-leader context map-detail-leader" d="M444.84 257.73 L540.10 303.62"/><circle cx="444.84" cy="257.73" r="2.5"/>
+<text x="540.10" y="318.43" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Кострома</text>
 </g>
-<g class="map-context-city" data-map-name="Саранск">
+<g class="map-context-city map-detail-city" data-map-name="Саранск">
 <title>Саранск</title>
-<circle cx="430.87" cy="315.41" r="3.3"/>
-<text x="525.87" y="479.95" text-anchor="start">Саранск</text>
+<path class="map-city-leader context map-detail-leader" d="M430.87 315.41 L436.03 443.46"/><circle cx="430.87" cy="315.41" r="2.5"/>
+<text x="436.03" y="458.27" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Саранск</text>
 </g>
-<g class="map-context-city" data-map-name="Йошкар-Ола">
+<g class="map-context-city map-detail-city" data-map-name="Йошкар-Ола">
 <title>Йошкар-Ола</title>
-<circle cx="469.69" cy="306.11" r="3.3"/>
-<text x="648.23" y="241.12" text-anchor="start">Йошкар-Ола</text>
+<path class="map-city-leader context map-detail-leader" d="M469.69 306.11 L596.97 188.51"/><circle cx="469.69" cy="306.11" r="2.5"/>
+<text x="596.97" y="185.10" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Йошкар-Ола</text>
 </g>
-<g class="map-context-city" data-map-name="Тамбов">
+<g class="map-context-city map-detail-city" data-map-name="Тамбов">
 <title>Тамбов</title>
-<circle cx="395.19" cy="306.74" r="3.3"/>
-<text x="205.19" y="306.74" text-anchor="end">Тамбов</text>
+<path class="map-city-leader context map-detail-leader" d="M395.19 306.74 L414.13 471.49"/><circle cx="395.19" cy="306.74" r="2.5"/>
+<text x="414.13" y="486.30" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Тамбов</text>
 </g>
-<g class="map-context-city" data-map-name="Вологда">
+<g class="map-context-city map-detail-city" data-map-name="Вологда">
 <title>Вологда</title>
-<circle cx="455.20" cy="239.01" r="3.3"/>
-<text x="429.16" y="91.28" text-anchor="middle">Вологда</text>
+<path class="map-city-leader context map-detail-leader" d="M455.20 239.01 L439.19 74.26"/><circle cx="455.20" cy="239.01" r="2.5"/>
+<text x="378.04" y="70.84" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Вологда</text>
 </g>
-<g class="map-context-city" data-map-name="Великий Новгород">
+<g class="map-context-city map-detail-city" data-map-name="Великий Новгород">
 <title>Великий Новгород</title>
-<circle cx="410.81" cy="195.34" r="3.3"/>
-<text x="353.31" y="95.75" text-anchor="end">Великий Новгород</text>
+<path class="map-city-leader context map-detail-leader" d="M410.81 195.34 L481.81 81.48"/><circle cx="410.81" cy="195.34" r="2.5"/>
+<text x="481.81" y="78.06" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Великий Новгород</text>
 </g>
-<g class="map-context-city" data-map-name="Псков">
+<g class="map-context-city map-detail-city" data-map-name="Псков">
 <title>Псков</title>
-<circle cx="391.30" cy="182.28" r="3.3"/>
-<text x="479.39" y="108.36" text-anchor="start">Псков</text>
+<path class="map-city-leader context map-detail-leader" d="M391.30 182.28 L264.02 64.11"/><circle cx="391.30" cy="182.28" r="2.5"/>
+<text x="219.98" y="60.70" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Псков</text>
 </g>
 <g class="map-context-city" data-map-name="Симферополь · Крым">
 <title>Симферополь · Крым</title>
-<circle cx="268.90" cy="321.09" r="3.3"/>
-<text x="250.51" y="336.52" text-anchor="end">Симферополь · Крым</text>
+<circle cx="268.90" cy="321.09" r="2.5"/>
+<text x="65.87" y="254.04" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Симферополь · Крым</text>
 </g>
 <g class="map-context-city" data-map-name="Севастополь">
 <title>Севастополь</title>
-<circle cx="261.73" cy="319.10" r="3.3"/>
-<text x="196.62" y="264.47" text-anchor="end">Севастополь</text>
+<circle cx="261.73" cy="319.10" r="2.5"/>
+<text x="213.47" y="434.80" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Севастополь</text>
 </g>
-<g class="map-context-city" data-map-name="Керчь">
+<g class="map-context-city map-detail-city" data-map-name="Керчь">
 <title>Керчь</title>
-<circle cx="287.33" cy="336.57" r="3.3"/>
-<text x="302.09" y="420.28" text-anchor="middle">Керчь</text>
+<path class="map-city-leader context map-detail-leader" d="M287.33 336.57 L164.35 398.46"/><circle cx="287.33" cy="336.57" r="2.5"/>
+<text x="120.96" y="413.27" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Керчь</text>
 </g>
-<g class="map-context-city" data-map-name="Ялта">
+<g class="map-context-city map-detail-city" data-map-name="Ялта">
 <title>Ялта</title>
-<circle cx="264.03" cy="325.30" r="3.3"/>
-<text x="175.93" y="399.22" text-anchor="end">Ялта</text>
+<path class="map-city-leader context map-detail-leader" d="M264.03 325.30 L126.87 352.94"/><circle cx="264.03" cy="325.30" r="2.5"/>
+<text x="89.74" y="367.75" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Ялта</text>
 </g>
 <g class="map-context-city" data-map-name="Новороссийск">
 <title>Новороссийск</title>
-<circle cx="288.23" cy="352.21" r="3.3"/>
-<text x="245.73" y="425.82" text-anchor="end">Новороссийск</text>
+<circle cx="288.23" cy="352.21" r="2.5"/>
+<text x="151.89" y="326.79" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Новороссийск</text>
 </g>
-<g class="map-context-city" data-map-name="Анапа">
+<g class="map-context-city map-detail-city" data-map-name="Анапа">
 <title>Анапа</title>
-<circle cx="287.33" cy="347.17" r="3.3"/>
-<text x="146.38" y="295.87" text-anchor="end">Анапа</text>
+<path class="map-city-leader context map-detail-leader" d="M287.33 347.17 L181.08 366.53"/><circle cx="287.33" cy="347.17" r="2.5"/>
+<text x="134.93" y="381.34" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Анапа</text>
 </g>
 <g class="map-context-city" data-map-name="Грозный">
 <title>Грозный</title>
-<circle cx="326.83" cy="425.24" r="3.3"/>
-<text x="337.24" y="484.33" text-anchor="middle">Грозный</text>
+<circle cx="326.83" cy="425.24" r="2.5"/>
+<text x="307.24" y="473.44" text-anchor="start" style="font:400 16px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Грозный</text>
 </g>
 <g class="map-reference-city" data-map-name="Москва">
 <title>Москва</title>
 <circle class="map-city-halo" cx="407.51" cy="256.16" r="11"/><circle class="map-city-dot" cx="407.51" cy="256.16" r="4.5"/>
-<text x="300.00" y="250.00" text-anchor="start">Москва</text>
+<text x="380.22" y="221.06" text-anchor="start" style="font:600 21px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Москва</text>
 </g>
 <g class="map-reference-city" data-map-name="Воронеж">
 <title>Воронеж</title>
 <circle class="map-city-halo" cx="371.65" cy="301.75" r="11"/><circle class="map-city-dot" cx="371.65" cy="301.75" r="4.5"/>
-<text x="225.00" y="305.00" text-anchor="start">Воронеж</text>
+<text x="247.01" y="255.46" text-anchor="start" style="font:600 21px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Воронеж</text>
 </g>
 <a class="map-project-city" href="#cities" data-city="ekaterinburg" aria-label="Екатеринбург: открыть город проекта">
 <title>Екатеринбург</title>
 <circle class="map-city-halo" cx="547.11" cy="362.85" r="11"/><circle class="map-city-dot" cx="547.11" cy="362.85" r="4.5"/>
-<text x="575.00" y="345.00" text-anchor="start">Екатеринбург</text>
+<text x="569.11" y="408.36" text-anchor="start" style="font:600 22px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Екатеринбург</text>
 </a>
 <a class="map-project-city" href="#cities" data-city="nizhny" aria-label="Нижний Новгород: открыть город проекта">
 <title>Нижний Новгород</title>
 <circle class="map-city-halo" cx="445.69" cy="288.19" r="11"/><circle class="map-city-dot" cx="445.69" cy="288.19" r="4.5"/>
-<text x="465.00" y="273.00" text-anchor="start">Нижний Новгород</text>
+<text x="455.69" y="278.27" text-anchor="start" style="font:600 22px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Нижний Новгород</text>
 </a>
 <a class="map-project-city" href="#cities" data-city="samara" aria-label="Самара: открыть город проекта">
 <title>Самара</title>
 <circle class="map-city-halo" cx="451.01" cy="353.19" r="11"/><circle class="map-city-dot" cx="451.01" cy="353.19" r="4.5"/>
-<text x="400.00" y="410.00" text-anchor="start">Самара</text>
+<text x="409.74" y="380.60" text-anchor="start" style="font:600 22px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Самара</text>
 </a>
 <a class="map-project-city" href="#cities" data-city="rostov" aria-label="Ростов-на-Дону: открыть город проекта">
 <title>Ростов-на-Дону</title>
 <circle class="map-city-halo" cx="327.48" cy="344.71" r="11"/><circle class="map-city-dot" cx="327.48" cy="344.71" r="4.5"/>
-<text x="135.00" y="365.00" text-anchor="start">Ростов-на-Дону</text>
+<text x="124.26" y="298.42" text-anchor="start" style="font:600 22px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Ростов-на-Дону</text>
 </a>
 <a class="map-project-city" href="#cities" data-city="ufa" aria-label="Уфа: открыть город проекта">
 <title>Уфа</title>
 <circle class="map-city-halo" cx="501.06" cy="366.26" r="11"/><circle class="map-city-dot" cx="501.06" cy="366.26" r="4.5"/>
-<text x="510.00" y="405.00" text-anchor="start">Уфа</text>
+<text x="489.73" y="416.17" text-anchor="start" style="font:600 22px Arial,sans-serif;letter-spacing:0;stroke:#0b1017;stroke-width:2.5px;paint-order:stroke;text-anchor:start">Уфа</text>
 </a>
 </g></svg>

@@ -33,6 +33,7 @@
     const cy=(mapViewport.scrollTop+mapViewport.clientHeight/2)/Math.max(1,mapViewport.scrollHeight);
     mapZoom=button.dataset.mapZoom==='reset'?1:Math.max(1,Math.min(3,mapZoom+Number(button.dataset.mapZoom)*.5));
     mapViewport.style.setProperty('--map-zoom',String(mapZoom));
+    mapViewport.querySelector('.full-russia-map').classList.toggle('show-detail-labels',mapZoom>1);
     mapViewport.scrollLeft=mapZoom===1?0:cx*mapViewport.scrollWidth-mapViewport.clientWidth/2;
     mapViewport.scrollTop=mapZoom===1?0:cy*mapViewport.scrollHeight-mapViewport.clientHeight/2;
     $('[data-map-zoom="-1"]').disabled=mapZoom===1;
@@ -291,10 +292,25 @@
     if(!canvas)return;
     const edge=stage.clientWidth<=520?10:20;
     canvas.style.width=`${Math.max(240,Math.min(1400,stage.clientWidth-edge*2))}px`;
+    const nativeViewport=canvas.querySelector('[data-native-image-viewport]');
+    if(nativeViewport){
+      canvas.style.setProperty('--native-pixel-x','0px');
+      canvas.style.setProperty('--native-pixel-y','0px');
+      const surroundingHeight=canvas.offsetHeight-nativeViewport.offsetHeight;
+      nativeViewport.style.maxHeight=`${Math.max(64,stage.clientHeight-edge*2-surroundingHeight-2)}px`;
+    }
     const width=canvas.offsetWidth;
     const height=canvas.offsetHeight;
     const scale=Math.min(1,(stage.clientWidth-edge*2)/width,(stage.clientHeight-edge*2)/height);
-    canvas.style.setProperty('--presentation-scale',String(Math.max(.05,scale)));
+    const finalScale=Math.max(.05,scale);
+    canvas.style.setProperty('--presentation-scale',String(finalScale));
+    if(nativeViewport&&Math.abs(finalScale-1)<.0001){
+      const image=nativeViewport.querySelector('img');
+      const rect=image.getBoundingClientRect();
+      const dpr=window.devicePixelRatio||1;
+      canvas.style.setProperty('--native-pixel-x',`${(Math.round(rect.left*dpr)/dpr-rect.left).toFixed(4)}px`);
+      canvas.style.setProperty('--native-pixel-y',`${(Math.round(rect.top*dpr)/dpr-rect.top).toFixed(4)}px`);
+    }
   }
   function mountPresentation(){
     presentationCanvases=scenes.map(scene=>{
@@ -309,6 +325,7 @@
     presentationFitFrame=0;
     presentationCanvases.forEach(canvas=>canvas.replaceWith(...canvas.childNodes));
     presentationCanvases=[];
+    $$('[data-native-image-viewport]').forEach(viewport=>viewport.style.removeProperty('max-height'));
     scenes.forEach(scene=>scene.classList.remove('presentation-active'));
     ['--presentation-viewport-height','--presentation-top','--presentation-bottom'].forEach(property=>document.documentElement.style.removeProperty(property));
   }
