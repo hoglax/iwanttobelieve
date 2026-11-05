@@ -83,7 +83,7 @@
     $('#average-value').innerHTML=`${number(c.average)}<span>₽</span><sup aria-label="источник в примечании">*</sup>`;
     const sourceRow=averageCheckRows[id];
     const sourceRange=`C${sourceRow}:C${sourceRow+2}`;
-    $('#average-source').innerHTML=`* Расчёт Сити-Центра: (${number(c.secondary)} + ${number(c.primary)}) / 2.<br><a href="${safeURL(p.sourceUrl)}#gid=${p.strategyGid}&range=${sourceRange}" target="_blank" rel="noopener">Источник: «Базовая стратегия», ${sourceRange}</a>.`;
+    $('#average-source').innerHTML=`* Средний чек - <a href="${safeURL(p.sourceUrl)}#gid=${p.strategyGid}&range=${sourceRange}" target="_blank" rel="noopener">расчёт Сити-Центра</a>.<br>Справочно: цены за м² - по версии Циан (<a href="https://corp.cian.ru/news/itogi-3-kvartala-na-vtorichnom-rynke-spros-vyros-na-18-tseny-na-3" target="_blank" rel="noopener" title="Циан: вторичный рынок, III квартал 2026">вторичка</a> · <a href="https://corp.cian.ru/news/itogi-2-kvartala-v-novostroykakh-spros-snizilsya-na-22-tseny-perestali-rasti-vpervye-za-3-goda" target="_blank" rel="noopener" title="Циан: новостройки, II квартал 2026">новостройки</a>).`;
 
     renderBudget(id);
     if(presenting)updateControls();
