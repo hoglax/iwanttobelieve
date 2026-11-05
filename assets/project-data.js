@@ -88,8 +88,9 @@ window.PROJECT = {
       "paybackBasis": "source_note",
       "paybackNoteCell": "P3",
       "imagePosition": "50% 12%",
-      "cardPosition": "50% 12%",
-      "cardImage": "assets/ekaterinburg-card.webp?v=20261104-postcards-43"
+      "cardPosition": "50% 60%",
+      "cardImage": "assets/ekaterinburg-card.webp?v=20261105-gold-network",
+      "cardLandmark": "Городской пруд, Дом Севастьянова и панорама Екатеринбурга"
     },
     {
       "id": "nizhny",
@@ -176,8 +177,9 @@ window.PROJECT = {
       "paybackBasis": "source_note",
       "paybackNoteCell": "P11",
       "imagePosition": "62% 0%",
-      "cardPosition": "62% 0%",
-      "cardImage": "assets/nizhny-card.webp?v=20261104-postcards-43"
+      "cardPosition": "50% 50%",
+      "cardImage": "assets/nizhny-card.webp?v=20261105-gold-network",
+      "cardLandmark": "Нижегородский кремль, набережная и центр города с высоты"
     },
     {
       "id": "samara",
@@ -352,8 +354,9 @@ window.PROJECT = {
       "paybackBasis": "source_note",
       "paybackNoteCell": "P27",
       "imagePosition": "50% 35%",
-      "cardPosition": "50% 35%",
-      "cardImage": "assets/rostov-card.webp?v=20261104-postcards-43"
+      "cardPosition": "50% 53%",
+      "cardImage": "assets/rostov-card.webp?v=20261105-gold-network",
+      "cardLandmark": "Набережная Дона и панорама центра Ростова-на-Дону"
     },
     {
       "id": "ufa",
@@ -440,8 +443,9 @@ window.PROJECT = {
       "paybackBasis": "source_note",
       "paybackNoteCell": "P35",
       "imagePosition": "62% 20%",
-      "cardPosition": "62% 20%",
-      "cardImage": "assets/ufa-card.webp?v=20261104-postcards-43"
+      "cardPosition": "50% 46%",
+      "cardImage": "assets/ufa-card.webp?v=20261105-gold-network",
+      "cardLandmark": "Памятник Салавату Юлаеву и панорама Уфы"
     }
   ],
   "months": [
@@ -490,8 +494,7 @@ window.PROJECT = {
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "modifications": "Resized and converted to WebP; cropped only by the website layout.",
-      "landmark": "Дом Севастьянова",
-      "cardFile": "assets/ekaterinburg-card.webp"
+      "landmark": "Дом Севастьянова"
     },
     {
       "city": "Нижний Новгород",
@@ -501,8 +504,7 @@ window.PROJECT = {
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "modifications": "Resized and converted to WebP; cropped only by the website layout.",
-      "landmark": "Чкаловская лестница и Нижегородский кремль",
-      "cardFile": "assets/nizhny-card.webp"
+      "landmark": "Чкаловская лестница и Нижегородский кремль"
     },
     {
       "city": "Самара",
@@ -523,8 +525,7 @@ window.PROJECT = {
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
       "modifications": "Resized and converted to WebP; cropped only by the website layout.",
-      "landmark": "Ворошиловский мост и набережная Дона",
-      "cardFile": "assets/rostov-card.webp"
+      "landmark": "Ворошиловский мост и набережная Дона"
     },
     {
       "city": "Уфа",
@@ -534,8 +535,51 @@ window.PROJECT = {
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
       "modifications": "Resized and converted to WebP; cropped only by the website layout.",
-      "landmark": "Памятник Салавату Юлаеву",
-      "cardFile": "assets/ufa-card.webp"
+      "landmark": "Памятник Салавату Юлаеву"
+    },
+    {
+      "city": "Екатеринбург",
+      "usage": "Общий вид · слайд 2",
+      "file": "assets/ekaterinburg-card.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:City_Pond_in_Yekaterinburg_(August_2022)_-_6.jpg",
+      "author": "Vyacheslav Bukharov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; framed only by the website layout.",
+      "landmark": "Городской пруд, Дом Севастьянова и панорама Екатеринбурга"
+    },
+    {
+      "city": "Нижний Новгород",
+      "usage": "Общий вид · слайд 2",
+      "file": "assets/nizhny-card.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B.jpg",
+      "author": "WildPea",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; framed only by the website layout.",
+      "landmark": "Нижегородский кремль, набережная и центр города с высоты"
+    },
+    {
+      "city": "Ростов-на-Дону",
+      "usage": "Общий вид · слайд 2",
+      "file": "assets/rostov-card.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Rostov-on-Don,_Skyline,_Russia.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; framed only by the website layout.",
+      "landmark": "Набережная Дона и панорама центра Ростова-на-Дону"
+    },
+    {
+      "city": "Уфа",
+      "usage": "Общий вид · слайд 2",
+      "file": "assets/ufa-card.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Salavat_Yulaev_Square-23.jpg",
+      "author": "Vyacheslav Bukharov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; framed only by the website layout.",
+      "landmark": "Памятник Салавату Юлаеву и панорама Уфы"
     }
   ],
   "totalDeals": [

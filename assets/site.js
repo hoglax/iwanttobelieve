@@ -8,6 +8,15 @@
   const million = value => number(value / 1e6,2);
   const safeURL = value => {try {const u=new URL(value);return ['https:','http:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // Only explicit deep links select a later chapter; a normal URL always opens at the title.
+  const entryHash=location.hash;
+  let entryInteracted=false;
+  ['pointerdown','touchstart','wheel','keydown'].forEach(type=>window.addEventListener(type,()=>{entryInteracted=true;},{once:true,passive:true}));
+  const resetEntryPosition=()=>{if(!entryHash&&!entryInteracted&&!document.documentElement.classList.contains('presenting'))window.scrollTo({top:0,left:0,behavior:'instant'});};
+  resetEntryPosition();
+  window.addEventListener('pageshow',resetEntryPosition);
+  window.addEventListener('load',resetEntryPosition,{once:true});
+
   const longMonths = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
   $$('[data-source]').forEach(link => link.href=p.sourceUrl);
   $$('[data-strategy]').forEach(link => link.href=`${p.sourceUrl}#gid=${p.strategyGid}`);
@@ -15,7 +24,7 @@
   $$('[data-budget-source]').forEach(link=>link.href=`${p.sourceUrl}#gid=${p.budget2027.gid}`);
 
   // Each image is a local, attributed city photograph, not an office rendering.
-  $('#city-monoliths').innerHTML=p.cities.map(c=>`<figure class="monolith"><a href="#cities" data-city="${c.id}" aria-label="Посмотреть ${esc(c.name)}"><img src="${c.cardImage||c.image}" alt="${esc(c.landmark)}" style="object-position:${c.cardPosition||'50% 50%'}" width="640" height="400"></a><figcaption>${esc(c.name)}</figcaption></figure>`).join('');
+  $('#city-monoliths').innerHTML=p.cities.map(c=>`<figure class="monolith"><a href="#cities" data-city="${c.id}" aria-label="Посмотреть ${esc(c.name)}"><img src="${c.cardImage||c.image}" alt="${esc(c.cardLandmark||c.landmark)}" style="object-position:${c.cardPosition||'50% 50%'}" width="640" height="400"></a><figcaption>${esc(c.name)}</figcaption></figure>`).join('');
   const mapViewport=$('#russia-map-viewport');
   let mapZoom=1;
   $$('[data-map-zoom]').forEach(button=>button.addEventListener('click',()=>{
@@ -140,9 +149,9 @@
   document.addEventListener('visibilitychange',scheduleEconomyRotation);
   const productivity=p.cities[0].productivity;
   $('#deal-plan-summary').innerHTML=`<div><strong>${number(p.cities[0].annualDeals,1)}</strong><span>план сделок на офис за год<br><small>без Воронежа</small></span></div><div><strong>${number(p.annual.deals,1)}</strong><span>план сделок на всю сеть за год<br><small>без Воронежа</small></span></div>`;
-  const px=i=>24+i/11*1070;
-  const py=value=>115-value/2*90;
-  $('#productivity-chart').innerHTML=`<svg viewBox="0 0 1120 158" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">План продуктивности, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${p.months[i]}: ${number(v,2)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#5c514a"/><stop offset="1" stop-color="#efc3a0"/></linearGradient></defs><line x1="24" x2="1094" y1="115" y2="115" stroke="#ffffff0d"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="${i===11?4:2}" fill="${i===11?'#efc3a0':'#625348'}"/>`).join('')}${[0,2,5,8,11].map(i=>`<text x="${px(i)}" y="146" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg>`;
+  const px=i=>34+i/11*1050;
+  const py=value=>138-value/2*92;
+  $('#productivity-chart').innerHTML=`<svg class="productivity-graph" viewBox="0 0 1120 185" role="img" aria-labelledby="pace-svg-title pace-svg-desc"><title id="pace-svg-title">Производительность по месяцам, 2027</title><desc id="pace-svg-desc">${productivity.map((v,i)=>`${longMonths[i]}: ${number(v,1)}`).join('; ')} сделки на агента в месяц.</desc><defs><linearGradient id="pace-gradient"><stop stop-color="#8b7945"/><stop offset="1" stop-color="#efd788"/></linearGradient></defs><line x1="34" x2="1084" y1="138" y2="138" stroke="#ffffff12"/><path d="${productivity.map((v,i)=>`${i?'L':'M'}${px(i)},${py(v)}`).join(' ')}" fill="none" stroke="url(#pace-gradient)" stroke-width="2.5"/>${productivity.map((v,i)=>`<circle cx="${px(i)}" cy="${py(v)}" r="4" fill="#e8cd78"/><text class="productivity-value" x="${px(i)}" y="${py(v)-16}" text-anchor="middle">${number(v,Number.isInteger(v)?0:1)}</text><text class="productivity-month" x="${px(i)}" y="174" text-anchor="middle">${p.months[i]}</text>`).join('')}</svg><div class="productivity-months" role="list" aria-label="Сделки на агента в месяц">${productivity.map((v,i)=>`<div role="listitem"><span>${p.months[i]}</span><strong>${number(v,Number.isInteger(v)?0:1)}</strong></div>`).join('')}</div>`;
 
   const phases={
   "prepare": {
@@ -234,7 +243,7 @@
   $('#finance-summary').innerHTML=[['Финансирование с резервом',f.financing],['Максимальный дефицит',f.deficit],['Дополнительный резерв',f.reserve],['Денежный поток 2027',f.cash2027],['Подготовка в 2026',f.preparation2026],['Денежный поток декабря 2029',f.december2029]].map(([title,value])=>`<div class="finance-cell"><span>${esc(title)}</span><strong>${million(value)} <small>млн ₽</small></strong></div>`).join('')+`<div class="finance-cell" style="grid-column:1/-1"><span>Денежная окупаемость</span><strong style="font-size:19px;letter-spacing:-.5px">${esc(f.payback)}</strong></div>`;
   $('#strategy-summary').innerHTML=`<table><caption style="text-align:left;font-size:10px;color:#999;margin-bottom:10px">Основная стратегия, план на 2027 · точные суммы в ₽</caption><thead><tr>${['Город','Январь, агенты','Декабрь, агенты','Средний чек, ₽','ВВ за год, ₽','Агентам 50%, ₽','РОПу 10%, ₽','До расходов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.cities.map(c=>`<tr><th scope="row">${esc(c.name)}</th><td>${number(c.agents[0])}</td><td>${number(c.agents[11])}</td><td>${number(c.average)}</td><td>${number(c.annualRevenue)}</td><td>${number(c.agentPayment)}</td><td>${number(c.ropPayment)}</td><td>${number(c.beforeExpenses)}</td></tr>`).join('')}<tr><th scope="row">Сеть – всего</th><td>${number(p.totalAgents[0])}</td><td>${number(p.totalAgents[11])}</td><td>–</td><td>${number(p.annual.revenue)}</td><td>${number(p.annual.agentPayment)}</td><td>${number(p.annual.ropPayment)}</td><td>${number(p.annual.beforeExpenses)}</td></tr></tbody></table>`;
   $('#strategy-months').innerHTML=`<table><thead><tr>${['Месяц 2027','Агенты / офис','Агенты / пять новых офисов','Сделки / агент, план','Сделки / офис','Сделки / пять новых офисов','ВВ / пять новых офисов, ₽'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${p.months.map((m,i)=>`<tr><th scope="row">${longMonths[i]}</th><td>${number(p.cities[0].agents[i])}</td><td>${number(p.totalAgents[i])}</td><td>${number(productivity[i],2)}</td><td>${number(p.cities[0].deals[i],1)}</td><td>${number(p.totalDeals[i],1)}</td><td>${number(p.totalRevenue[i])}</td></tr>`).join('')}</tbody></table>`;
-  $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Оригинал на Wikimedia Commons</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p></article>`).join('');
+  $('#photo-credits').innerHTML=p.photoCredits.map(c=>`<article class="photo-credit"><h3>${esc(c.city)}${c.usage?` · ${esc(c.usage)}`:''}</h3><p>Автор: ${esc(c.author)} · <a href="${safeURL(c.source)}" target="_blank" rel="noopener">Оригинал на Wikimedia Commons</a> · <a href="${safeURL(c.licenseUrl)}" target="_blank" rel="noopener">${esc(c.license)}</a></p></article>`).join('');
   document.addEventListener('click',event=>{
     const control=event.target.closest('[data-world-market]');if(!control)return;
     event.preventDefault();const market=window.MARKETS.find(m=>m.id===control.dataset.worldMarket);if(!market)return;
