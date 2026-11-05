@@ -9,15 +9,16 @@
   "selected_for_website_and_presentation": "2026-11-04",
   "adaptation": {
     "date": "2026-11-05",
-    "material": "gold",
-    "method": "imagegen edit of the existing approved real-estate mark",
+    "material": "light bronze",
+    "method": "imagegen edit of the original approved copper real-estate mark; slightly lighter and less saturated, without yellow gold",
     "palette": [
-      "#fff3ce",
-      "#d9b85c",
-      "#7e641f"
+      "#f3e3d6",
+      "#d8b89d",
+      "#ae8468",
+      "#775745"
     ],
     "preserved": "buildings, house, orbit and Cyrillic wordmark"
   },
   "base_approved_asset_sha256": "0e33a59ee192059efc63f4abc2cbfa4068122bc3db16370bcb82a70c9d362f92",
-  "current_asset_sha256": "f5c8d11102701c20ad87bc8412c9ffbc298aa3b2e5cb4897c687b8c84dc5bf36"
+  "current_asset_sha256": "6345e8dd9a31d3097aff9eac1ccef5987ca34e81876ce0569e932111455225ec"
 }

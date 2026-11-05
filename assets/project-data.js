@@ -38,7 +38,7 @@ window.PROJECT = {
       "secondary": 160000,
       "primary": 246000,
       "average": 203000,
-      "image": "assets/ekaterinburg.webp?v=20261104-postcards-43",
+      "image": "assets/ekaterinburg-church-on-blood.webp?v=20261105-bronze-landmarks",
       "deals": [
         0,
         4.2,
@@ -80,13 +80,13 @@ window.PROJECT = {
       "paybackSourceCell": "R9",
       "paybackSourceValue": 6006317,
       "paybackSourceFormula": "=R8-O9",
-      "landmark": "Дом Севастьянова",
+      "landmark": "Храм-на-Крови и панорама центра Екатеринбурга",
       "paybackBasis": "source_note",
       "paybackNoteCell": "P3",
-      "imagePosition": "50% 12%",
-      "cardPosition": "50% 60%",
-      "cardImage": "assets/ekaterinburg-card.webp?v=20261105-gold-network",
-      "cardLandmark": "Городской пруд, Дом Севастьянова и панорама Екатеринбурга"
+      "imagePosition": "42% 50%",
+      "cardPosition": "50% 50%",
+      "cardImage": "assets/ekaterinburg-church-on-blood-card.webp?v=20261105-bronze-landmarks",
+      "cardLandmark": "Храм-на-Крови и панорама центра Екатеринбурга"
     },
     {
       "id": "nizhny",
@@ -292,7 +292,7 @@ window.PROJECT = {
       "secondary": 140000,
       "primary": 245000,
       "average": 192500,
-      "image": "assets/rostov.webp?v=20261104-postcards-43",
+      "image": "assets/rostov-city-hall.webp?v=20261105-bronze-landmarks",
       "deals": [
         0,
         4.2,
@@ -334,13 +334,13 @@ window.PROJECT = {
       "paybackSourceCell": "R33",
       "paybackSourceValue": 345985,
       "paybackSourceFormula": "=R32-O32-N33-M33",
-      "landmark": "Ворошиловский мост и набережная Дона",
+      "landmark": "Здание городской думы на Большой Садовой",
       "paybackBasis": "source_note",
       "paybackNoteCell": "P27",
-      "imagePosition": "50% 35%",
-      "cardPosition": "50% 53%",
-      "cardImage": "assets/rostov-card.webp?v=20261105-gold-network",
-      "cardLandmark": "Набережная Дона и панорама центра Ростова-на-Дону"
+      "imagePosition": "62% 40%",
+      "cardPosition": "50% 30%",
+      "cardImage": "assets/rostov-city-hall-card.webp?v=20261105-bronze-landmarks",
+      "cardLandmark": "Здание городской думы на Большой Садовой"
     },
     {
       "id": "ufa",
@@ -377,7 +377,7 @@ window.PROJECT = {
       "secondary": 145000,
       "primary": 293000,
       "average": 219000,
-      "image": "assets/ufa.webp?v=20261104-postcards-43",
+      "image": "assets/ufa-lala-tulpan.webp?v=20261105-bronze-landmarks",
       "deals": [
         0,
         4.2,
@@ -419,13 +419,13 @@ window.PROJECT = {
       "paybackSourceCell": "R41",
       "paybackSourceValue": 1211775,
       "paybackSourceFormula": "=R40-O40-N41-M41",
-      "landmark": "Памятник Салавату Юлаеву",
+      "landmark": "Мечеть «Ляля-Тюльпан» и панорама Уфы",
       "paybackBasis": "source_note",
       "paybackNoteCell": "P35",
-      "imagePosition": "62% 20%",
-      "cardPosition": "50% 46%",
-      "cardImage": "assets/ufa-card.webp?v=20261105-gold-network",
-      "cardLandmark": "Памятник Салавату Юлаеву и панорама Уфы"
+      "imagePosition": "55% 50%",
+      "cardPosition": "50% 45%",
+      "cardImage": "assets/ufa-lala-tulpan-card.webp?v=20261105-bronze-landmarks",
+      "cardLandmark": "Мечеть «Ляля-Тюльпан» и панорама Уфы"
     }
   ],
   "months": [
@@ -468,13 +468,14 @@ window.PROJECT = {
   "photoCredits": [
     {
       "city": "Екатеринбург",
-      "file": "assets/ekaterinburg.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3_%D0%94%D0%BE%D0%BC_%D0%A1%D0%B5%D0%B2%D0%B0%D1%81%D1%82%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0_2025.jpg",
-      "author": "Serhiomatviavelli",
+      "file": "assets/ekaterinburg-church-on-blood.webp",
+      "cardFile": "assets/ekaterinburg-church-on-blood-card.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Voznesenskaya_Hill_(August_2022)_-_12.jpg",
+      "author": "Vyacheslav Bukharov",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "modifications": "Resized and converted to WebP; cropped only by the website layout.",
-      "landmark": "Дом Севастьянова"
+      "modifications": "Resized and converted to WebP; framed only by the website layout.",
+      "landmark": "Храм-на-Крови и панорама центра Екатеринбурга"
     },
     {
       "city": "Нижний Новгород",
@@ -499,34 +500,25 @@ window.PROJECT = {
     },
     {
       "city": "Ростов-на-Дону",
-      "file": "assets/rostov.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Rostov-on-Don,_New_Voroshilovsky_Bridge_at_dusk,_night,_Rostov-on-Don,_Russia.jpg",
-      "author": "Vyacheslav Argenberg",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "modifications": "Resized and converted to WebP; cropped only by the website layout.",
-      "landmark": "Ворошиловский мост и набережная Дона"
-    },
-    {
-      "city": "Уфа",
-      "file": "assets/ufa.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Monument_to_Salawat_Yulayev,_Ufa-4.jpg",
-      "author": "Lesnoy Volk",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "modifications": "Resized and converted to WebP; cropped only by the website layout.",
-      "landmark": "Памятник Салавату Юлаеву"
-    },
-    {
-      "city": "Екатеринбург",
-      "usage": "Общий вид · слайд 2",
-      "file": "assets/ekaterinburg-card.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:City_Pond_in_Yekaterinburg_(August_2022)_-_6.jpg",
-      "author": "Vyacheslav Bukharov",
+      "file": "assets/rostov-city-hall.webp",
+      "cardFile": "assets/rostov-city-hall-card.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Rostov_City_Hall_2021.jpg",
+      "author": "pavljenko",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "modifications": "Resized and converted to WebP; framed only by the website layout.",
-      "landmark": "Городской пруд, Дом Севастьянова и панорама Екатеринбурга"
+      "landmark": "Здание городской думы на Большой Садовой"
+    },
+    {
+      "city": "Уфа",
+      "file": "assets/ufa-lala-tulpan.webp",
+      "cardFile": "assets/ufa-lala-tulpan-card.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lal%C9%99-Tulpan_m%C9%99scidi4.jpg",
+      "author": "Elnur Neciyev",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; framed only by the website layout.",
+      "landmark": "Мечеть «Ляля-Тюльпан» и панорама Уфы"
     },
     {
       "city": "Нижний Новгород",
@@ -538,28 +530,6 @@ window.PROJECT = {
       "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "modifications": "Resized and converted to WebP; framed only by the website layout.",
       "landmark": "Нижегородский кремль, набережная и центр города с высоты"
-    },
-    {
-      "city": "Ростов-на-Дону",
-      "usage": "Общий вид · слайд 2",
-      "file": "assets/rostov-card.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Rostov-on-Don,_Skyline,_Russia.jpg",
-      "author": "Vyacheslav Argenberg",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "modifications": "Resized and converted to WebP; framed only by the website layout.",
-      "landmark": "Набережная Дона и панорама центра Ростова-на-Дону"
-    },
-    {
-      "city": "Уфа",
-      "usage": "Общий вид · слайд 2",
-      "file": "assets/ufa-card.webp",
-      "source": "https://commons.wikimedia.org/wiki/File:Salavat_Yulaev_Square-23.jpg",
-      "author": "Vyacheslav Bukharov",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "modifications": "Resized and converted to WebP; framed only by the website layout.",
-      "landmark": "Памятник Салавату Юлаеву и панорама Уфы"
     }
   ],
   "totalDeals": [

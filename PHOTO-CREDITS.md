@@ -1,12 +1,14 @@
 # Фотографии городов
 
-Фотографии показывают достопримечательности городов проекта. Они не изображают будущие офисы. Изображения подготовлены в WebP и кадрируются только в макете сайта.
+Реальные фотографии достопримечательностей городов проекта. Снимки уменьшены и преобразованы в WebP; кадрирование выполняется в макете. Цвета фотографий не изменены.
 
 ## Екатеринбург
 
-Дом Севастьянова.
+Храм-на-Крови и панорама центра Екатеринбурга.
 
-[assets/ekaterinburg.webp](https://commons.wikimedia.org/wiki/File:%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3_%D0%94%D0%BE%D0%BC_%D0%A1%D0%B5%D0%B2%D0%B0%D1%81%D1%82%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0_2025.jpg) · Serhiomatviavelli · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+[assets/ekaterinburg-church-on-blood.webp](https://commons.wikimedia.org/wiki/File:Voznesenskaya_Hill_(August_2022)_-_12.jpg) · Vyacheslav Bukharov · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+
+Обзорная карточка из того же снимка: `assets/ekaterinburg-church-on-blood-card.webp`. Авторство и лицензия те же.
 
 ## Нижний Новгород
 
@@ -20,23 +22,26 @@
 
 [assets/samara.webp](https://commons.wikimedia.org/wiki/File:%D0%9C%D0%BE%D0%BD%D1%83%D0%BC%D0%B5%D0%BD%D1%82_%D0%A1%D0%BB%D0%B0%D0%B2%D1%8B_%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0.jpg) · Michael live · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
 
+Обзорная карточка из того же снимка: `assets/samara-card.webp`. Авторство и лицензия те же.
+
 ## Ростов-на-Дону
 
-Ворошиловский мост и набережная Дона.
+Здание городской думы на Большой Садовой.
 
-[assets/rostov.webp](https://commons.wikimedia.org/wiki/File:Rostov-on-Don,_New_Voroshilovsky_Bridge_at_dusk,_night,_Rostov-on-Don,_Russia.jpg) · Vyacheslav Argenberg · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
+[assets/rostov-city-hall.webp](https://commons.wikimedia.org/wiki/File:Rostov_City_Hall_2021.jpg) · pavljenko · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+
+Обзорная карточка из того же снимка: `assets/rostov-city-hall-card.webp`. Авторство и лицензия те же.
 
 ## Уфа
 
-Памятник Салавату Юлаеву.
+Мечеть «Ляля-Тюльпан» и панорама Уфы.
 
-[assets/ufa.webp](https://commons.wikimedia.org/wiki/File:Monument_to_Salawat_Yulayev,_Ufa-4.jpg) · Lesnoy Volk · [CC BY 2.0](https://creativecommons.org/licenses/by/2.0).
+[assets/ufa-lala-tulpan.webp](https://commons.wikimedia.org/wiki/File:Lal%C9%99-Tulpan_m%C9%99scidi4.jpg) · Elnur Neciyev · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
 
-## Панорамы на втором слайде
+Обзорная карточка из того же снимка: `assets/ufa-lala-tulpan-card.webp`. Авторство и лицензия те же.
 
-Самара сохраняет исходную фотографию Монумента Славы. Для остальных обзорных карточек используются отдельные панорамы города с достопримечательностями. Все они уменьшены и преобразованы в WebP; кадрирование выполняется только макетом.
+## Нижний Новгород · Общий вид · слайд 2
 
-- **Екатеринбург**: Городской пруд, Дом Севастьянова и панорама Екатеринбурга. [assets/ekaterinburg-card.webp](https://commons.wikimedia.org/wiki/File:City_Pond_in_Yekaterinburg_(August_2022)_-_6.jpg) · Vyacheslav Bukharov · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
-- **Нижний Новгород**: Нижегородский кремль, набережная и центр города с высоты. [assets/nizhny-card.webp](https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B.jpg) · WildPea · [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en).
-- **Ростов-на-Дону**: Набережная Дона и панорама центра Ростова-на-Дону. [assets/rostov-card.webp](https://commons.wikimedia.org/wiki/File:Rostov-on-Don,_Skyline,_Russia.jpg) · Vyacheslav Argenberg · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
-- **Уфа**: Памятник Салавату Юлаеву и панорама Уфы. [assets/ufa-card.webp](https://commons.wikimedia.org/wiki/File:Salavat_Yulaev_Square-23.jpg) · Vyacheslav Bukharov · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+Нижегородский кремль, набережная и центр города с высоты.
+
+[assets/nizhny-card.webp](https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C_%D1%81_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B.jpg) · WildPea · [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en).
