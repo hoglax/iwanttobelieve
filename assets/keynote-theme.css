@@ -388,3 +388,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[t
 /* Keep the cathedral visible in the new Yekaterinburg photograph. */
 #main .cities .city-ekaterinburg~.city-slide-copy .city-slide-top{align-self:flex-end;text-align:right}
 #main .cities .city-rostov~.city-slide-copy .city-slide-top h3{max-width:min(6em,100%)}
+
+/* Official company wordmark: keep the original proportions. */
+.site-header .wordmark .brand-logo{width:78px;height:56px;object-fit:contain}
+#main .leadership-finale .finale-brand{width:160px;height:auto;aspect-ratio:144/103;object-fit:contain}
+@media(max-width:520px){
+ .site-header .wordmark .brand-logo{width:70px;height:50px}
+ #main .leadership-finale .finale-brand{width:116px;height:auto;aspect-ratio:144/103}
+}

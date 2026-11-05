@@ -1,24 +1,28 @@
 {
   "company": "АН «Сити-Центр», Воронеж",
   "source_page": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/",
-  "reference_logo": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/local/templates/czebra_newproject/front/img/header/logo.png",
-  "reference_checked": "2026-11-04",
-  "new_asset": "assets/citycenter-keynote-logo.png",
-  "method": "AI-generated original real estate and international-network concept: a house and apartment buildings inside a C-shaped orbit. Copper, champagne highlights and chocolate shadows follow the colour reference supplied by the company representative.",
-  "status": "Selected by the company representative for this website and presentation.",
-  "selected_for_website_and_presentation": "2026-11-04",
+  "source_asset": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/local/templates/czebra_newproject/front/img/footer/logo-footer.svg",
+  "source_header_asset": "https://xn-----flckcgia1cckawdfre3e.xn--p1ai/local/templates/czebra_newproject/front/img/header/logo.png",
+  "reference_checked": "2026-11-05",
+  "new_asset": "assets/citycenter-logo-bronze.svg",
+  "method": "Official SVG from the company website. Its original embedded raster, alpha mask and geometry are unchanged. Only the white fill of the existing masked rectangle is replaced with a light-bronze gradient.",
+  "original_embedded_raster_sha256": "52eabe4a9dfe7e7d1e25751520b7d8fe5f33a1ecb9f2a220d779dbde165c0fa4",
+  "current_asset_sha256": "a7c78742b53a7d3de42dbb1f8c473a6da85447366d3a4050567dbc080bdd1e3a",
   "adaptation": {
     "date": "2026-11-05",
     "material": "light bronze",
-    "method": "imagegen edit of the original approved copper real-estate mark; slightly lighter and less saturated, without yellow gold",
     "palette": [
       "#f3e3d6",
       "#d8b89d",
       "#ae8468",
-      "#775745"
+      "#ead2bf"
     ],
-    "preserved": "buildings, house, orbit and Cyrillic wordmark"
+    "preserved": "exact original raster, contours, lettering, alpha channel and aspect ratio"
   },
-  "base_approved_asset_sha256": "0e33a59ee192059efc63f4abc2cbfa4068122bc3db16370bcb82a70c9d362f92",
-  "current_asset_sha256": "6345e8dd9a31d3097aff9eac1ccef5987ca34e81876ce0569e932111455225ec"
+  "usage": [
+    "website header",
+    "final slide",
+    "favicon",
+    "PDF export"
+  ]
 }
