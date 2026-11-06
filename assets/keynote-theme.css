@@ -80,7 +80,7 @@
 /* Explicit content rows keep Safari button sizing in sync with wrapped text. */
 .presenting #main{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 #main .world .market-cards{align-items:stretch;grid-auto-rows:auto}
-#main .world .market-card{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:max-content max-content;gap:8px;height:auto;min-width:0;max-height:none;align-content:start;-webkit-appearance:none;appearance:none;white-space:normal;overflow-wrap:break-word}
+#main .world .market-card{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:max-content;gap:0;height:auto;min-height:0;min-width:0;max-height:none;align-content:center;-webkit-appearance:none;appearance:none;white-space:normal;overflow-wrap:break-word}
 #main .world .market-card strong{display:block}
 #main .world .market-card span{display:block;margin:0}
 #main .world .international-land{fill:#373c43;stroke:#7c8086}
