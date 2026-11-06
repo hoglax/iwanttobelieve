@@ -1,0 +1,3799 @@
+{
+  "asset": "assets/calculations-full-20261106.svg",
+  "sourceImage": "assets/calculations-source-20261106.jpg",
+  "sourceImageSha256": "56764cfe8a6b94ed3512e938313dd6620be3c5e861942cf30063ed7c19f0c9f4",
+  "dataSource": "assets/project-data.js",
+  "dataSourceSha256": "7b89073f44c4fb2bf6ba06c17bf0de68613407faa19774dbe3be08d9a1b21c69",
+  "viewBox": [
+    0,
+    0,
+    1280,
+    546
+  ],
+  "numericCells": 480,
+  "method": "Vector image of the same full table, generated from the frozen company plan. Monthly closed deals are displayed rounded to whole numbers, productivity to two decimals, exactly as in the supplied screenshot. Fact productivity is the mean of twelve monthly productivity values. Original JPEG retained for provenance. Updated financial summary follows the company screenshot from 2026-11-06. Expenses include ROP, after-agent balance is shown explicitly; all five payback periods are11months.",
+  "cells": [
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 0,
+      "value": 3,
+      "text": "3"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 1,
+      "value": 6,
+      "text": "6"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 2,
+      "value": 8,
+      "text": "8"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 4,
+      "value": 11,
+      "text": "11"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 5,
+      "value": 12,
+      "text": "12"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 6,
+      "value": 13,
+      "text": "13"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 7,
+      "value": 14,
+      "text": "14"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 8,
+      "value": 15,
+      "text": "15"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 9,
+      "value": 16,
+      "text": "16"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 10,
+      "value": 17,
+      "text": "17"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 11,
+      "value": 18,
+      "text": "18"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "annual",
+      "key": "annualRevenue",
+      "value": 42609700,
+      "text": "42 609 700"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 1,
+      "value": 4.2,
+      "text": "4"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 2,
+      "value": 6.4,
+      "text": "6"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 4,
+      "value": 13.2,
+      "text": "13"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 5,
+      "value": 15.6,
+      "text": "16"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 6,
+      "value": 16.9,
+      "text": "17"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 7,
+      "value": 21,
+      "text": "21"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 8,
+      "value": 25.5,
+      "text": "26"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 9,
+      "value": 28.8,
+      "text": "29"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 10,
+      "value": 32.3,
+      "text": "32"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 11,
+      "value": 36,
+      "text": "36"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "annual",
+      "key": "agentPayment",
+      "value": 21304850,
+      "text": "21 304 850"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "fact",
+      "key": "secondary",
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 0,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 1,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 2,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 3,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 4,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 5,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 6,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 7,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 8,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 9,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 10,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 11,
+      "value": 160000,
+      "text": "160 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "annual",
+      "key": "ropPayment",
+      "value": 4260970,
+      "text": "4 260 970"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "fact",
+      "key": "primary",
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 0,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 1,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 2,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 3,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 4,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 5,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 6,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 7,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 8,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 9,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 10,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 11,
+      "value": 246000,
+      "text": "246 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "annual",
+      "key": "afterAgentPayment",
+      "value": 21304850,
+      "text": "21 304 850"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "fact",
+      "key": "average",
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 0,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 1,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 2,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 3,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 4,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 5,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 6,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 7,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 8,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 9,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 10,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "average",
+      "month": 11,
+      "value": 203000,
+      "text": "203 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "annual",
+      "key": "expensesIncludingRop",
+      "value": 7990533,
+      "text": "7 990 533"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "fact",
+      "key": "productivity",
+      "value": 1.2666666666666666,
+      "text": "1,27"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 0,
+      "value": 0,
+      "text": "0,00"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 1,
+      "value": 0.7,
+      "text": "0,70"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 2,
+      "value": 0.8,
+      "text": "0,80"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 3,
+      "value": 1,
+      "text": "1,00"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 4,
+      "value": 1.2,
+      "text": "1,20"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 5,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 6,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 7,
+      "value": 1.5,
+      "text": "1,50"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 8,
+      "value": 1.7,
+      "text": "1,70"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 9,
+      "value": 1.8,
+      "text": "1,80"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 10,
+      "value": 1.9,
+      "text": "1,90"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 11,
+      "value": 2,
+      "text": "2,00"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "annual",
+      "key": "afterEnteredExpenses",
+      "value": 13314317,
+      "text": "13 314 317"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "fact",
+      "key": "revenue",
+      "value": 42609700,
+      "text": "42 609 700"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 1,
+      "value": 852600,
+      "text": "852 600"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 2,
+      "value": 1299200,
+      "text": "1 299 200"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 3,
+      "value": 2030000,
+      "text": "2 030 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 4,
+      "value": 2679600,
+      "text": "2 679 600"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 5,
+      "value": 3166800,
+      "text": "3 166 800"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 6,
+      "value": 3430700,
+      "text": "3 430 700"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 7,
+      "value": 4263000,
+      "text": "4 263 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 8,
+      "value": 5176500,
+      "text": "5 176 500"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 9,
+      "value": 5846400,
+      "text": "5 846 400"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 10,
+      "value": 6556900,
+      "text": "6 556 900"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 11,
+      "value": 7308000,
+      "text": "7 308 000"
+    },
+    {
+      "city": "ekaterinburg",
+      "kind": "annual",
+      "key": "paybackSourceValue",
+      "value": 6006317,
+      "text": "6 006 317"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 0,
+      "value": 3,
+      "text": "3"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 1,
+      "value": 6,
+      "text": "6"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 2,
+      "value": 8,
+      "text": "8"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 4,
+      "value": 11,
+      "text": "11"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 5,
+      "value": 12,
+      "text": "12"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 6,
+      "value": 13,
+      "text": "13"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 7,
+      "value": 14,
+      "text": "14"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 8,
+      "value": 15,
+      "text": "15"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 9,
+      "value": 16,
+      "text": "16"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 10,
+      "value": 17,
+      "text": "17"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 11,
+      "value": 18,
+      "text": "18"
+    },
+    {
+      "city": "nizhny",
+      "kind": "annual",
+      "key": "annualRevenue",
+      "value": 37782000,
+      "text": "37 782 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 1,
+      "value": 4.2,
+      "text": "4"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 2,
+      "value": 6.4,
+      "text": "6"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 4,
+      "value": 13.2,
+      "text": "13"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 5,
+      "value": 15.6,
+      "text": "16"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 6,
+      "value": 16.9,
+      "text": "17"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 7,
+      "value": 21,
+      "text": "21"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 8,
+      "value": 25.5,
+      "text": "26"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 9,
+      "value": 28.8,
+      "text": "29"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 10,
+      "value": 32.3,
+      "text": "32"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 11,
+      "value": 36,
+      "text": "36"
+    },
+    {
+      "city": "nizhny",
+      "kind": "annual",
+      "key": "agentPayment",
+      "value": 18891000,
+      "text": "18 891 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "fact",
+      "key": "secondary",
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 0,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 1,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 2,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 3,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 4,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 5,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 6,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 7,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 8,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 9,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 10,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 11,
+      "value": 170000,
+      "text": "170 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "annual",
+      "key": "ropPayment",
+      "value": 3778200,
+      "text": "3 778 200"
+    },
+    {
+      "city": "nizhny",
+      "kind": "fact",
+      "key": "primary",
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 0,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 1,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 2,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 3,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 4,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 5,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 6,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 7,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 8,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 9,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 10,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 11,
+      "value": 190000,
+      "text": "190 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "annual",
+      "key": "afterAgentPayment",
+      "value": 18891000,
+      "text": "18 891 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "fact",
+      "key": "average",
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 0,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 1,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 2,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 3,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 4,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 5,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 6,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 7,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 8,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 9,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 10,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "average",
+      "month": 11,
+      "value": 180000,
+      "text": "180 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "annual",
+      "key": "expensesIncludingRop",
+      "value": 7806763,
+      "text": "7 806 763"
+    },
+    {
+      "city": "nizhny",
+      "kind": "fact",
+      "key": "productivity",
+      "value": 1.2666666666666666,
+      "text": "1,27"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 0,
+      "value": 0,
+      "text": "0,00"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 1,
+      "value": 0.7,
+      "text": "0,70"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 2,
+      "value": 0.8,
+      "text": "0,80"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 3,
+      "value": 1,
+      "text": "1,00"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 4,
+      "value": 1.2,
+      "text": "1,20"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 5,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 6,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 7,
+      "value": 1.5,
+      "text": "1,50"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 8,
+      "value": 1.7,
+      "text": "1,70"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 9,
+      "value": 1.8,
+      "text": "1,80"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 10,
+      "value": 1.9,
+      "text": "1,90"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 11,
+      "value": 2,
+      "text": "2,00"
+    },
+    {
+      "city": "nizhny",
+      "kind": "annual",
+      "key": "afterEnteredExpenses",
+      "value": 11084237,
+      "text": "11 084 237"
+    },
+    {
+      "city": "nizhny",
+      "kind": "fact",
+      "key": "revenue",
+      "value": 37782000,
+      "text": "37 782 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 1,
+      "value": 756000,
+      "text": "756 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 2,
+      "value": 1152000,
+      "text": "1 152 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 3,
+      "value": 1800000,
+      "text": "1 800 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 4,
+      "value": 2376000,
+      "text": "2 376 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 5,
+      "value": 2808000,
+      "text": "2 808 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 6,
+      "value": 3042000,
+      "text": "3 042 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 7,
+      "value": 3780000,
+      "text": "3 780 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 8,
+      "value": 4590000,
+      "text": "4 590 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 9,
+      "value": 5184000,
+      "text": "5 184 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 10,
+      "value": 5814000,
+      "text": "5 814 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 11,
+      "value": 6480000,
+      "text": "6 480 000"
+    },
+    {
+      "city": "nizhny",
+      "kind": "annual",
+      "key": "paybackSourceValue",
+      "value": 4604237,
+      "text": "4 604 237"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 0,
+      "value": 3,
+      "text": "3"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 1,
+      "value": 6,
+      "text": "6"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 2,
+      "value": 8,
+      "text": "8"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 4,
+      "value": 11,
+      "text": "11"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 5,
+      "value": 12,
+      "text": "12"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 6,
+      "value": 13,
+      "text": "13"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 7,
+      "value": 14,
+      "text": "14"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 8,
+      "value": 15,
+      "text": "15"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 9,
+      "value": 16,
+      "text": "16"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 10,
+      "value": 17,
+      "text": "17"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 11,
+      "value": 18,
+      "text": "18"
+    },
+    {
+      "city": "samara",
+      "kind": "annual",
+      "key": "annualRevenue",
+      "value": 40720600,
+      "text": "40 720 600"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 1,
+      "value": 4.2,
+      "text": "4"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 2,
+      "value": 6.4,
+      "text": "6"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 4,
+      "value": 13.2,
+      "text": "13"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 5,
+      "value": 15.6,
+      "text": "16"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 6,
+      "value": 16.9,
+      "text": "17"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 7,
+      "value": 21,
+      "text": "21"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 8,
+      "value": 25.5,
+      "text": "26"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 9,
+      "value": 28.8,
+      "text": "29"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 10,
+      "value": 32.3,
+      "text": "32"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 11,
+      "value": 36,
+      "text": "36"
+    },
+    {
+      "city": "samara",
+      "kind": "annual",
+      "key": "agentPayment",
+      "value": 20360300,
+      "text": "20 360 300"
+    },
+    {
+      "city": "samara",
+      "kind": "fact",
+      "key": "secondary",
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 0,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 1,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 2,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 3,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 4,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 5,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 6,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 7,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 8,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 9,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 10,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 11,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "samara",
+      "kind": "annual",
+      "key": "ropPayment",
+      "value": 4072060,
+      "text": "4 072 060"
+    },
+    {
+      "city": "samara",
+      "kind": "fact",
+      "key": "primary",
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 0,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 1,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 2,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 3,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 4,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 5,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 6,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 7,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 8,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 9,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 10,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 11,
+      "value": 243000,
+      "text": "243 000"
+    },
+    {
+      "city": "samara",
+      "kind": "annual",
+      "key": "afterAgentPayment",
+      "value": 20360300,
+      "text": "20 360 300"
+    },
+    {
+      "city": "samara",
+      "kind": "fact",
+      "key": "average",
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 0,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 1,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 2,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 3,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 4,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 5,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 6,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 7,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 8,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 9,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 10,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "average",
+      "month": 11,
+      "value": 194000,
+      "text": "194 000"
+    },
+    {
+      "city": "samara",
+      "kind": "annual",
+      "key": "expensesIncludingRop",
+      "value": 8321623,
+      "text": "8 321 623"
+    },
+    {
+      "city": "samara",
+      "kind": "fact",
+      "key": "productivity",
+      "value": 1.2666666666666666,
+      "text": "1,27"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 0,
+      "value": 0,
+      "text": "0,00"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 1,
+      "value": 0.7,
+      "text": "0,70"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 2,
+      "value": 0.8,
+      "text": "0,80"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 3,
+      "value": 1,
+      "text": "1,00"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 4,
+      "value": 1.2,
+      "text": "1,20"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 5,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 6,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 7,
+      "value": 1.5,
+      "text": "1,50"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 8,
+      "value": 1.7,
+      "text": "1,70"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 9,
+      "value": 1.8,
+      "text": "1,80"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 10,
+      "value": 1.9,
+      "text": "1,90"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 11,
+      "value": 2,
+      "text": "2,00"
+    },
+    {
+      "city": "samara",
+      "kind": "annual",
+      "key": "afterEnteredExpenses",
+      "value": 12038677,
+      "text": "12 038 677"
+    },
+    {
+      "city": "samara",
+      "kind": "fact",
+      "key": "revenue",
+      "value": 40720600,
+      "text": "40 720 600"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 1,
+      "value": 814800,
+      "text": "814 800"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 2,
+      "value": 1241600,
+      "text": "1 241 600"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 3,
+      "value": 1940000,
+      "text": "1 940 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 4,
+      "value": 2560800,
+      "text": "2 560 800"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 5,
+      "value": 3026400,
+      "text": "3 026 400"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 6,
+      "value": 3278600,
+      "text": "3 278 600"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 7,
+      "value": 4074000,
+      "text": "4 074 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 8,
+      "value": 4947000,
+      "text": "4 947 000"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 9,
+      "value": 5587200,
+      "text": "5 587 200"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 10,
+      "value": 6266200,
+      "text": "6 266 200"
+    },
+    {
+      "city": "samara",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 11,
+      "value": 6984000,
+      "text": "6 984 000"
+    },
+    {
+      "city": "samara",
+      "kind": "annual",
+      "key": "paybackSourceValue",
+      "value": 5054677,
+      "text": "5 054 677"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 0,
+      "value": 3,
+      "text": "3"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 1,
+      "value": 6,
+      "text": "6"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 2,
+      "value": 8,
+      "text": "8"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 4,
+      "value": 11,
+      "text": "11"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 5,
+      "value": 12,
+      "text": "12"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 6,
+      "value": 13,
+      "text": "13"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 7,
+      "value": 14,
+      "text": "14"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 8,
+      "value": 15,
+      "text": "15"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 9,
+      "value": 16,
+      "text": "16"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 10,
+      "value": 17,
+      "text": "17"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 11,
+      "value": 18,
+      "text": "18"
+    },
+    {
+      "city": "rostov",
+      "kind": "annual",
+      "key": "annualRevenue",
+      "value": 40405750,
+      "text": "40 405 750"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 1,
+      "value": 4.2,
+      "text": "4"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 2,
+      "value": 6.4,
+      "text": "6"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 4,
+      "value": 13.2,
+      "text": "13"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 5,
+      "value": 15.6,
+      "text": "16"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 6,
+      "value": 16.9,
+      "text": "17"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 7,
+      "value": 21,
+      "text": "21"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 8,
+      "value": 25.5,
+      "text": "26"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 9,
+      "value": 28.8,
+      "text": "29"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 10,
+      "value": 32.3,
+      "text": "32"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 11,
+      "value": 36,
+      "text": "36"
+    },
+    {
+      "city": "rostov",
+      "kind": "annual",
+      "key": "agentPayment",
+      "value": 20202875,
+      "text": "20 202 875"
+    },
+    {
+      "city": "rostov",
+      "kind": "fact",
+      "key": "secondary",
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 0,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 1,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 2,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 3,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 4,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 5,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 6,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 7,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 8,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 9,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 10,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 11,
+      "value": 140000,
+      "text": "140 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "annual",
+      "key": "ropPayment",
+      "value": 4040575,
+      "text": "4 040 575"
+    },
+    {
+      "city": "rostov",
+      "kind": "fact",
+      "key": "primary",
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 0,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 1,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 2,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 3,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 4,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 5,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 6,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 7,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 8,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 9,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 10,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 11,
+      "value": 245000,
+      "text": "245 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "annual",
+      "key": "afterAgentPayment",
+      "value": 20202875,
+      "text": "20 202 875"
+    },
+    {
+      "city": "rostov",
+      "kind": "fact",
+      "key": "average",
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 0,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 1,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 2,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 3,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 4,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 5,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 6,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 7,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 8,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 9,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 10,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "average",
+      "month": 11,
+      "value": 192500,
+      "text": "192 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "annual",
+      "key": "expensesIncludingRop",
+      "value": 8095138,
+      "text": "8 095 138"
+    },
+    {
+      "city": "rostov",
+      "kind": "fact",
+      "key": "productivity",
+      "value": 1.2666666666666666,
+      "text": "1,27"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 0,
+      "value": 0,
+      "text": "0,00"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 1,
+      "value": 0.7,
+      "text": "0,70"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 2,
+      "value": 0.8,
+      "text": "0,80"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 3,
+      "value": 1,
+      "text": "1,00"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 4,
+      "value": 1.2,
+      "text": "1,20"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 5,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 6,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 7,
+      "value": 1.5,
+      "text": "1,50"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 8,
+      "value": 1.7,
+      "text": "1,70"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 9,
+      "value": 1.8,
+      "text": "1,80"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 10,
+      "value": 1.9,
+      "text": "1,90"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 11,
+      "value": 2,
+      "text": "2,00"
+    },
+    {
+      "city": "rostov",
+      "kind": "annual",
+      "key": "afterEnteredExpenses",
+      "value": 12107737,
+      "text": "12 107 737"
+    },
+    {
+      "city": "rostov",
+      "kind": "fact",
+      "key": "revenue",
+      "value": 40405750,
+      "text": "40 405 750"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 1,
+      "value": 808500,
+      "text": "808 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 2,
+      "value": 1232000,
+      "text": "1 232 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 3,
+      "value": 1925000,
+      "text": "1 925 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 4,
+      "value": 2541000,
+      "text": "2 541 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 5,
+      "value": 3003000,
+      "text": "3 003 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 6,
+      "value": 3253250,
+      "text": "3 253 250"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 7,
+      "value": 4042500,
+      "text": "4 042 500"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 8,
+      "value": 4908750,
+      "text": "4 908 750"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 9,
+      "value": 5544000,
+      "text": "5 544 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 10,
+      "value": 6217750,
+      "text": "6 217 750"
+    },
+    {
+      "city": "rostov",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 11,
+      "value": 6930000,
+      "text": "6 930 000"
+    },
+    {
+      "city": "rostov",
+      "kind": "annual",
+      "key": "paybackSourceValue",
+      "value": 5177737,
+      "text": "5 177 737"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 0,
+      "value": 3,
+      "text": "3"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 1,
+      "value": 6,
+      "text": "6"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 2,
+      "value": 8,
+      "text": "8"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 4,
+      "value": 11,
+      "text": "11"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 5,
+      "value": 12,
+      "text": "12"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 6,
+      "value": 13,
+      "text": "13"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 7,
+      "value": 14,
+      "text": "14"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 8,
+      "value": 15,
+      "text": "15"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 9,
+      "value": 16,
+      "text": "16"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 10,
+      "value": 17,
+      "text": "17"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "agents",
+      "month": 11,
+      "value": 18,
+      "text": "18"
+    },
+    {
+      "city": "ufa",
+      "kind": "annual",
+      "key": "annualRevenue",
+      "value": 45968100,
+      "text": "45 968 100"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 1,
+      "value": 4.2,
+      "text": "4"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 2,
+      "value": 6.4,
+      "text": "6"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 3,
+      "value": 10,
+      "text": "10"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 4,
+      "value": 13.2,
+      "text": "13"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 5,
+      "value": 15.6,
+      "text": "16"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 6,
+      "value": 16.9,
+      "text": "17"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 7,
+      "value": 21,
+      "text": "21"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 8,
+      "value": 25.5,
+      "text": "26"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 9,
+      "value": 28.8,
+      "text": "29"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 10,
+      "value": 32.3,
+      "text": "32"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "deals",
+      "month": 11,
+      "value": 36,
+      "text": "36"
+    },
+    {
+      "city": "ufa",
+      "kind": "annual",
+      "key": "agentPayment",
+      "value": 22984050,
+      "text": "22 984 050"
+    },
+    {
+      "city": "ufa",
+      "kind": "fact",
+      "key": "secondary",
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 0,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 1,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 2,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 3,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 4,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 5,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 6,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 7,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 8,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 9,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 10,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "secondary",
+      "month": 11,
+      "value": 145000,
+      "text": "145 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "annual",
+      "key": "ropPayment",
+      "value": 4596810,
+      "text": "4 596 810"
+    },
+    {
+      "city": "ufa",
+      "kind": "fact",
+      "key": "primary",
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 0,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 1,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 2,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 3,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 4,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 5,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 6,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 7,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 8,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 9,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 10,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "primary",
+      "month": 11,
+      "value": 293000,
+      "text": "293 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "annual",
+      "key": "afterAgentPayment",
+      "value": 22984050,
+      "text": "22 984 050"
+    },
+    {
+      "city": "ufa",
+      "kind": "fact",
+      "key": "average",
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 0,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 1,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 2,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 3,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 4,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 5,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 6,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 7,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 8,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 9,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 10,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "average",
+      "month": 11,
+      "value": 219000,
+      "text": "219 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "annual",
+      "key": "expensesIncludingRop",
+      "value": 8391373,
+      "text": "8 391 373"
+    },
+    {
+      "city": "ufa",
+      "kind": "fact",
+      "key": "productivity",
+      "value": 1.2666666666666666,
+      "text": "1,27"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 0,
+      "value": 0,
+      "text": "0,00"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 1,
+      "value": 0.7,
+      "text": "0,70"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 2,
+      "value": 0.8,
+      "text": "0,80"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 3,
+      "value": 1,
+      "text": "1,00"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 4,
+      "value": 1.2,
+      "text": "1,20"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 5,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 6,
+      "value": 1.3,
+      "text": "1,30"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 7,
+      "value": 1.5,
+      "text": "1,50"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 8,
+      "value": 1.7,
+      "text": "1,70"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 9,
+      "value": 1.8,
+      "text": "1,80"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 10,
+      "value": 1.9,
+      "text": "1,90"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "productivity",
+      "month": 11,
+      "value": 2,
+      "text": "2,00"
+    },
+    {
+      "city": "ufa",
+      "kind": "annual",
+      "key": "afterEnteredExpenses",
+      "value": 14592677,
+      "text": "14 592 677"
+    },
+    {
+      "city": "ufa",
+      "kind": "fact",
+      "key": "revenue",
+      "value": 45968100,
+      "text": "45 968 100"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 0,
+      "value": 0,
+      "text": "0"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 1,
+      "value": 919800,
+      "text": "919 800"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 2,
+      "value": 1401600,
+      "text": "1 401 600"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 3,
+      "value": 2190000,
+      "text": "2 190 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 4,
+      "value": 2890800,
+      "text": "2 890 800"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 5,
+      "value": 3416400,
+      "text": "3 416 400"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 6,
+      "value": 3701100,
+      "text": "3 701 100"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 7,
+      "value": 4599000,
+      "text": "4 599 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 8,
+      "value": 5584500,
+      "text": "5 584 500"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 9,
+      "value": 6307200,
+      "text": "6 307 200"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 10,
+      "value": 7073700,
+      "text": "7 073 700"
+    },
+    {
+      "city": "ufa",
+      "kind": "monthly",
+      "key": "revenue",
+      "month": 11,
+      "value": 7884000,
+      "text": "7 884 000"
+    },
+    {
+      "city": "ufa",
+      "kind": "annual",
+      "key": "paybackSourceValue",
+      "value": 6708677,
+      "text": "6 708 677"
+    }
+  ],
+  "assetSha256": "de84795fce9dd00d2a1b19deaa2e26bb5640066329c62025d2ff66a2b2ff40ca",
+  "glyphFitAdjustments": []
+}

@@ -1,0 +1,176 @@
+{
+  "source": {
+    "latestSummarySource": "company_screenshot",
+    "asOf": "2026-11-06",
+    "asset": "assets/calculations-source-20261106.jpg",
+    "sha256": "56764cfe8a6b94ed3512e938313dd6620be3c5e861942cf30063ed7c19f0c9f4",
+    "dimensions": [
+      1280,
+      546
+    ],
+    "lastFullSheetAudit": "2026-11-04",
+    "lineItemBudgetAsOf": "2026-11-04",
+    "note": "Обновлены своды расходов, послеагентский остаток и окупаемость. Помесячный план и детализация офисных расходов сохранены; надбавка РОП равна 10% помесячной ВВ."
+  },
+  "rows": [
+    "annualRevenue",
+    "agentPayment",
+    "ropPayment",
+    "afterAgentPayment",
+    "expensesIncludingRop",
+    "afterEnteredExpenses",
+    "paybackSourceValue"
+  ],
+  "cities": [
+    {
+      "id": "ekaterinburg",
+      "name": "Екатеринбург",
+      "before": {
+        "annualRevenue": 42609700,
+        "agentPayment": 21304850,
+        "ropPayment": 4260970,
+        "afterAgentPayment": null,
+        "expensesIncludingRop": null,
+        "afterEnteredExpenses": 13314317,
+        "paybackSourceValue": 6006317,
+        "paybackMonths": 11,
+        "paybackSourceFormula": "=R8-O9"
+      },
+      "after": {
+        "annualRevenue": 42609700,
+        "agentPayment": 21304850,
+        "ropPayment": 4260970,
+        "afterAgentPayment": 21304850,
+        "expensesIncludingRop": 7990533,
+        "afterEnteredExpenses": 13314317,
+        "paybackSourceValue": 6006317,
+        "paybackMonths": 11,
+        "paybackSourceFormula": null
+      }
+    },
+    {
+      "id": "nizhny",
+      "name": "Нижний Новгород",
+      "before": {
+        "annualRevenue": 37782000,
+        "agentPayment": 18891000,
+        "ropPayment": 3778200,
+        "afterAgentPayment": null,
+        "expensesIncludingRop": null,
+        "afterEnteredExpenses": 11084237,
+        "paybackSourceValue": 4604237,
+        "paybackMonths": 11,
+        "paybackSourceFormula": "=R16-O17"
+      },
+      "after": {
+        "annualRevenue": 37782000,
+        "agentPayment": 18891000,
+        "ropPayment": 3778200,
+        "afterAgentPayment": 18891000,
+        "expensesIncludingRop": 7806763,
+        "afterEnteredExpenses": 11084237,
+        "paybackSourceValue": 4604237,
+        "paybackMonths": 11,
+        "paybackSourceFormula": null
+      }
+    },
+    {
+      "id": "samara",
+      "name": "Самара",
+      "before": {
+        "annualRevenue": 40720600,
+        "agentPayment": 20360300,
+        "ropPayment": 4072060,
+        "afterAgentPayment": null,
+        "expensesIncludingRop": null,
+        "afterEnteredExpenses": 12038677,
+        "paybackSourceValue": 5054677,
+        "paybackMonths": 11,
+        "paybackSourceFormula": "=R24-O25"
+      },
+      "after": {
+        "annualRevenue": 40720600,
+        "agentPayment": 20360300,
+        "ropPayment": 4072060,
+        "afterAgentPayment": 20360300,
+        "expensesIncludingRop": 8321623,
+        "afterEnteredExpenses": 12038677,
+        "paybackSourceValue": 5054677,
+        "paybackMonths": 11,
+        "paybackSourceFormula": null
+      }
+    },
+    {
+      "id": "rostov",
+      "name": "Ростов-на-Дону",
+      "before": {
+        "annualRevenue": 40405750,
+        "agentPayment": 20202875,
+        "ropPayment": 4040575,
+        "afterAgentPayment": null,
+        "expensesIncludingRop": null,
+        "afterEnteredExpenses": 12107737,
+        "paybackSourceValue": 345985,
+        "paybackMonths": 10,
+        "paybackSourceFormula": "=R32-O32-N33-M33"
+      },
+      "after": {
+        "annualRevenue": 40405750,
+        "agentPayment": 20202875,
+        "ropPayment": 4040575,
+        "afterAgentPayment": 20202875,
+        "expensesIncludingRop": 8095138,
+        "afterEnteredExpenses": 12107737,
+        "paybackSourceValue": 5177737,
+        "paybackMonths": 11,
+        "paybackSourceFormula": null
+      }
+    },
+    {
+      "id": "ufa",
+      "name": "Уфа",
+      "before": {
+        "annualRevenue": 45968100,
+        "agentPayment": 22984050,
+        "ropPayment": 4596810,
+        "afterAgentPayment": null,
+        "expensesIncludingRop": null,
+        "afterEnteredExpenses": 14592677,
+        "paybackSourceValue": 1211775,
+        "paybackMonths": 10,
+        "paybackSourceFormula": "=R40-O40-N41-M41"
+      },
+      "after": {
+        "annualRevenue": 45968100,
+        "agentPayment": 22984050,
+        "ropPayment": 4596810,
+        "afterAgentPayment": 22984050,
+        "expensesIncludingRop": 8391373,
+        "afterEnteredExpenses": 14592677,
+        "paybackSourceValue": 6708677,
+        "paybackMonths": 11,
+        "paybackSourceFormula": null
+      }
+    }
+  ],
+  "annual": {
+    "revenue": 207486150,
+    "deals": 1049.5,
+    "agentPayment": 103743075,
+    "ropPayment": 20748615,
+    "beforeExpenses": 82994460,
+    "expenses": 19856815,
+    "afterEnteredExpenses": 63137645,
+    "afterAgentPayment": 103743075,
+    "expensesIncludingRop": 40605430
+  },
+  "invariants": {
+    "monthlyPlanUnchanged": true,
+    "averageChecksUnchanged": true,
+    "revenueUnchanged": true,
+    "afterEnteredExpensesUnchanged": true,
+    "expenseIncreaseIsRopReclassification": true,
+    "allPaybackMonths": 11
+  },
+  "dataSourceSha256": "7b89073f44c4fb2bf6ba06c17bf0de68613407faa19774dbe3be08d9a1b21c69"
+}

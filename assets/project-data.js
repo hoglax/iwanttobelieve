@@ -1,5 +1,5 @@
 window.PROJECT = {
-  "asOf": "04.11.2026",
+  "asOf": "06.11.2026",
   "sourceUrl": "https://docs.google.com/spreadsheets/d/17VLUhYE2MeV78FpBGQdUhig3JvAh2j_HaQ3GlzqCpIE/edit",
   "strategyGid": 1145813300,
   "cities": [
@@ -79,14 +79,32 @@ window.PROJECT = {
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R9",
       "paybackSourceValue": 6006317,
-      "paybackSourceFormula": "=R8-O9",
+      "paybackSourceFormula": null,
       "landmark": "Панорама центра Екатеринбурга",
-      "paybackBasis": "source_note",
+      "paybackBasis": "company_screenshot_notes",
       "paybackNoteCell": "P3",
       "imagePosition": "50% 50%",
       "cardPosition": "50% 50%",
       "cardImage": "assets/ekaterinburg-city-panorama-card.webp?v=20261105-reference-update",
-      "cardLandmark": "Панорама центра Екатеринбурга"
+      "cardLandmark": "Панорама центра Екатеринбурга",
+      "afterAgentPayment": 21304850,
+      "expensesIncludingRop": 7990533,
+      "snapshotAsOf": "06.11.2026",
+      "snapshotAsset": "assets/calculations-source-20261106.jpg",
+      "ropMonths": [
+        0,
+        85260,
+        129920,
+        203000,
+        267960,
+        316680,
+        343070,
+        426300,
+        517650,
+        584640,
+        655690,
+        730800
+      ]
     },
     {
       "id": "nizhny",
@@ -164,14 +182,32 @@ window.PROJECT = {
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R17",
       "paybackSourceValue": 4604237,
-      "paybackSourceFormula": "=R16-O17",
+      "paybackSourceFormula": null,
       "landmark": "Чкаловская лестница и Нижегородский кремль",
-      "paybackBasis": "source_note",
+      "paybackBasis": "company_screenshot_notes",
       "paybackNoteCell": "P11",
       "imagePosition": "62% 0%",
       "cardPosition": "50% 50%",
       "cardImage": "assets/nizhny-card.webp?v=20261105-gold-network",
-      "cardLandmark": "Нижегородский кремль, набережная и центр города с высоты"
+      "cardLandmark": "Нижегородский кремль, набережная и центр города с высоты",
+      "afterAgentPayment": 18891000,
+      "expensesIncludingRop": 7806763,
+      "snapshotAsOf": "06.11.2026",
+      "snapshotAsset": "assets/calculations-source-20261106.jpg",
+      "ropMonths": [
+        0,
+        75600,
+        115200,
+        180000,
+        237600,
+        280800,
+        304200,
+        378000,
+        459000,
+        518400,
+        581400,
+        648000
+      ]
     },
     {
       "id": "samara",
@@ -249,13 +285,31 @@ window.PROJECT = {
       "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R25",
       "paybackSourceValue": 5054677,
-      "paybackSourceFormula": "=R24-O25",
-      "paybackBasis": "source_note",
+      "paybackSourceFormula": null,
+      "paybackBasis": "company_screenshot_notes",
       "paybackNoteCell": "P19",
       "landmark": "Монумент Славы и панорама Самары",
       "imagePosition": "33% 35%",
       "cardPosition": "33% 35%",
-      "cardImage": "assets/samara-card.webp?v=20261104-postcards-43"
+      "cardImage": "assets/samara-card.webp?v=20261104-postcards-43",
+      "afterAgentPayment": 20360300,
+      "expensesIncludingRop": 8321623,
+      "snapshotAsOf": "06.11.2026",
+      "snapshotAsset": "assets/calculations-source-20261106.jpg",
+      "ropMonths": [
+        0,
+        81480,
+        124160,
+        194000,
+        256080,
+        302640,
+        327860,
+        407400,
+        494700,
+        558720,
+        626620,
+        698400
+      ]
     },
     {
       "id": "rostov",
@@ -327,20 +381,38 @@ window.PROJECT = {
       "ropPayment": 4040575,
       "beforeExpenses": 16162300,
       "operatingExpenses": 4054563,
-      "paybackMonths": 10,
+      "paybackMonths": 11,
       "afterEnteredExpenses": 12107737,
       "paybackCalendarMonth": null,
-      "sourcePeriodNote": "За 10 месяцев",
+      "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R33",
-      "paybackSourceValue": 345985,
-      "paybackSourceFormula": "=R32-O32-N33-M33",
+      "paybackSourceValue": 5177737,
+      "paybackSourceFormula": null,
       "landmark": "Железнодорожный мост через Дон и панорама Ростова-на-Дону",
-      "paybackBasis": "source_note",
+      "paybackBasis": "company_screenshot_notes",
       "paybackNoteCell": "P27",
       "imagePosition": "50% 50%",
       "cardPosition": "50% 50%",
       "cardImage": "assets/rostov-company-panorama.jpg?v=20261105-company-photos",
-      "cardLandmark": "Железнодорожный мост через Дон и панорама Ростова-на-Дону"
+      "cardLandmark": "Железнодорожный мост через Дон и панорама Ростова-на-Дону",
+      "afterAgentPayment": 20202875,
+      "expensesIncludingRop": 8095138,
+      "snapshotAsOf": "06.11.2026",
+      "snapshotAsset": "assets/calculations-source-20261106.jpg",
+      "ropMonths": [
+        0,
+        80850,
+        123200,
+        192500,
+        254100,
+        300300,
+        325325,
+        404250,
+        490875,
+        554400,
+        621775,
+        693000
+      ]
     },
     {
       "id": "ufa",
@@ -412,20 +484,38 @@ window.PROJECT = {
       "ropPayment": 4596810,
       "beforeExpenses": 18387240,
       "operatingExpenses": 3794563,
-      "paybackMonths": 10,
+      "paybackMonths": 11,
       "afterEnteredExpenses": 14592677,
       "paybackCalendarMonth": null,
-      "sourcePeriodNote": "За 10 месяцев",
+      "sourcePeriodNote": "За 11 месяцев",
       "paybackSourceCell": "R41",
-      "paybackSourceValue": 1211775,
-      "paybackSourceFormula": "=R40-O40-N41-M41",
+      "paybackSourceValue": 6708677,
+      "paybackSourceFormula": null,
       "landmark": "Памятник Салавату Юлаеву и панорама центра Уфы",
-      "paybackBasis": "source_note",
+      "paybackBasis": "company_screenshot_notes",
       "paybackNoteCell": "P35",
       "imagePosition": "50% 50%",
       "cardPosition": "50% 50%",
       "cardImage": "assets/ufa-company-panorama.jpg?v=20261105-company-photos",
-      "cardLandmark": "Памятник Салавату Юлаеву и панорама центра Уфы"
+      "cardLandmark": "Памятник Салавату Юлаеву и панорама центра Уфы",
+      "afterAgentPayment": 22984050,
+      "expensesIncludingRop": 8391373,
+      "snapshotAsOf": "06.11.2026",
+      "snapshotAsset": "assets/calculations-source-20261106.jpg",
+      "ropMonths": [
+        0,
+        91980,
+        140160,
+        219000,
+        289080,
+        341640,
+        370110,
+        459900,
+        558450,
+        630720,
+        707370,
+        788400
+      ]
     }
   ],
   "months": [
@@ -569,7 +659,9 @@ window.PROJECT = {
     "ropPayment": 20748615,
     "beforeExpenses": 82994460,
     "expenses": 19856815,
-    "afterEnteredExpenses": 63137645
+    "afterEnteredExpenses": 63137645,
+    "afterAgentPayment": 103743075,
+    "expensesIncludingRop": 40605430
   },
   "verified": true,
   "strategyRange": "A1:S41",
@@ -858,7 +950,37 @@ window.PROJECT = {
           209682,
           365682
         ],
-        "december": 365682
+        "december": 365682,
+        "ropAnnual": 4260970,
+        "ropMonths": [
+          0,
+          85260,
+          129920,
+          203000,
+          267960,
+          316680,
+          343070,
+          426300,
+          517650,
+          584640,
+          655690,
+          730800
+        ],
+        "annualIncludingRop": 7990533,
+        "monthsIncludingRop": [
+          448061,
+          294942,
+          360602,
+          463682,
+          543642,
+          607362,
+          642752,
+          740982,
+          847332,
+          929322,
+          1015372,
+          1096482
+        ]
       },
       {
         "id": "nizhny",
@@ -1141,7 +1263,37 @@ window.PROJECT = {
           232682,
           388682
         ],
-        "december": 388682
+        "december": 388682,
+        "ropAnnual": 3778200,
+        "ropMonths": [
+          0,
+          75600,
+          115200,
+          180000,
+          237600,
+          280800,
+          304200,
+          378000,
+          459000,
+          518400,
+          581400,
+          648000
+        ],
+        "annualIncludingRop": 7806763,
+        "monthsIncludingRop": [
+          494061,
+          308282,
+          368882,
+          463682,
+          536282,
+          594482,
+          626882,
+          715682,
+          811682,
+          886082,
+          964082,
+          1036682
+        ]
       },
       {
         "id": "samara",
@@ -1424,7 +1576,37 @@ window.PROJECT = {
           249682,
           405682
         ],
-        "december": 405682
+        "december": 405682,
+        "ropAnnual": 4072060,
+        "ropMonths": [
+          0,
+          81480,
+          124160,
+          194000,
+          256080,
+          302640,
+          327860,
+          407400,
+          494700,
+          558720,
+          626620,
+          698400
+        ],
+        "annualIncludingRop": 8321623,
+        "monthsIncludingRop": [
+          528061,
+          331162,
+          394842,
+          494682,
+          571762,
+          633322,
+          667542,
+          762082,
+          864382,
+          943402,
+          1026302,
+          1104082
+        ]
       },
       {
         "id": "rostov",
@@ -1707,7 +1889,37 @@ window.PROJECT = {
           234682,
           390682
         ],
-        "december": 390682
+        "december": 390682,
+        "ropAnnual": 4040575,
+        "ropMonths": [
+          0,
+          80850,
+          123200,
+          192500,
+          254100,
+          300300,
+          325325,
+          404250,
+          490875,
+          554400,
+          621775,
+          693000
+        ],
+        "annualIncludingRop": 8095138,
+        "monthsIncludingRop": [
+          498061,
+          315532,
+          378882,
+          478182,
+          554782,
+          615982,
+          650007,
+          743932,
+          845557,
+          924082,
+          1006457,
+          1083682
+        ]
       },
       {
         "id": "ufa",
@@ -1990,7 +2202,37 @@ window.PROJECT = {
           214682,
           370682
         ],
-        "december": 370682
+        "december": 370682,
+        "ropAnnual": 4596810,
+        "ropMonths": [
+          0,
+          91980,
+          140160,
+          219000,
+          289080,
+          341640,
+          370110,
+          459900,
+          558450,
+          630720,
+          707370,
+          788400
+        ],
+        "annualIncludingRop": 8391373,
+        "monthsIncludingRop": [
+          458061,
+          306662,
+          375842,
+          484682,
+          569762,
+          637322,
+          674792,
+          779582,
+          893132,
+          980402,
+          1072052,
+          1159082
+        ]
       }
     ],
     "reportedTotal": 19856815,
@@ -2016,22 +2258,40 @@ window.PROJECT = {
     "integrationComplete": true,
     "asOf": "04.11.2026",
     "includesAdvertising": true,
-    "monthlyBudgetsVary": true
+    "monthlyBudgetsVary": true,
+    "reportedTotalIncludingRop": 40605430,
+    "reportedMonthsIncludingRop": [
+      2426305,
+      1556580,
+      1879050,
+      2384910,
+      2776230,
+      3088470,
+      3261975,
+      3742260,
+      4262085,
+      4663290,
+      5084265,
+      5480010
+    ],
+    "ropTotal": 20748615,
+    "summaryAsOf": "06.11.2026",
+    "expenseDefinition": "Расходы офисов плюс вознаграждение РОП 10% ВВ. Выплаты агентам учитываются отдельно."
   },
   "payback": {
-    "asOf": "04.11.2026",
+    "asOf": "06.11.2026",
     "sourceRange": "P3:P35",
     "computedCities": 0,
-    "months": null,
-    "minMonths": 10,
+    "months": 11,
+    "minMonths": 11,
     "maxMonths": 11,
     "manualMonths": null,
     "sourcePeriodNotes": {
       "ekaterinburg": "За 11 месяцев",
       "nizhny": "За 11 месяцев",
       "samara": "За 11 месяцев",
-      "rostov": "За 10 месяцев",
-      "ufa": "За 10 месяцев"
+      "rostov": "За 11 месяцев",
+      "ufa": "За 11 месяцев"
     },
     "sourceCells": {
       "ekaterinburg": "P3",
@@ -2040,13 +2300,13 @@ window.PROJECT = {
       "rostov": "P27",
       "ufa": "P35"
     },
-    "status": "10–11 месяцев по пометкам таблицы.",
+    "status": "11 месяцев во всех пяти городах по обновлённой таблице компании.",
     "sourceReturnsMonths": false,
     "costsComplete": true,
     "scenarioAdvertising": true,
-    "method": "Сроки из пометок P3, P11, P19, P27 и P35 используются в презентации по указанию представителя компании.",
+    "method": "Сроки и денежные остатки сверены с предоставленным скриншотом компании от 06.11.2026. Формулы ячеек в изображении не показаны.",
     "reportedCities": 5,
-    "displaySource": "source_notes",
+    "displaySource": "company_screenshot_notes",
     "formulaCells": {
       "ekaterinburg": "R9",
       "nizhny": "R17",
@@ -2058,9 +2318,10 @@ window.PROJECT = {
       "ekaterinburg": 11,
       "nizhny": 11,
       "samara": 11,
-      "rostov": 10,
-      "ufa": 10
-    }
+      "rostov": 11,
+      "ufa": 11
+    },
+    "sourceAsset": "assets/calculations-source-20261106.jpg"
   },
   "advertising2027": {
     "gid": 2027110201,
@@ -2512,5 +2773,18 @@ window.PROJECT = {
     "listingSharePerPlatform": 0.5,
     "placementMethod": "На каждую площадку размещаются 50% объектов базы: одни и те же объекты на ЦИАН и Авито."
   },
-  "strategyTitle": "Базовая стратегия"
+  "strategyTitle": "Базовая стратегия",
+  "sourceProvenance": {
+    "latestSummarySource": "company_screenshot",
+    "asOf": "2026-11-06",
+    "asset": "assets/calculations-source-20261106.jpg",
+    "sha256": "56764cfe8a6b94ed3512e938313dd6620be3c5e861942cf30063ed7c19f0c9f4",
+    "dimensions": [
+      1280,
+      546
+    ],
+    "lastFullSheetAudit": "2026-11-04",
+    "lineItemBudgetAsOf": "2026-11-04",
+    "note": "Обновлены своды расходов, послеагентский остаток и окупаемость. Помесячный план и детализация офисных расходов сохранены; надбавка РОП равна 10% помесячной ВВ."
+  }
 };

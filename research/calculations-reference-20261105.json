@@ -95,5 +95,7 @@
       541
     ],
     "adaptation": "Original bytes, colors and numbers preserved. Full image in a dark-and-gold frame; click opens a scrollable enlarged image."
-  }
+  },
+  "supersededBy": "research/calculations-reference-20261106.json",
+  "historicalReference": true
 }

@@ -1,0 +1,99 @@
+{
+  "reference": "User-provided screenshot, 2026-11-06",
+  "year": 2027,
+  "currency": "RUB",
+  "excludes": "Воронеж",
+  "rows": [
+    "annualRevenue",
+    "agentPayment",
+    "ropPayment",
+    "afterAgentPayment",
+    "expensesIncludingRop",
+    "afterEnteredExpenses",
+    "paybackSourceValue"
+  ],
+  "cities": [
+    {
+      "id": "ekaterinburg",
+      "name": "Екатеринбург",
+      "values": {
+        "annualRevenue": 42609700,
+        "agentPayment": 21304850,
+        "ropPayment": 4260970,
+        "afterAgentPayment": 21304850,
+        "expensesIncludingRop": 7990533,
+        "afterEnteredExpenses": 13314317,
+        "paybackSourceValue": 6006317
+      },
+      "paybackMonths": 11
+    },
+    {
+      "id": "nizhny",
+      "name": "Нижний Новгород",
+      "values": {
+        "annualRevenue": 37782000,
+        "agentPayment": 18891000,
+        "ropPayment": 3778200,
+        "afterAgentPayment": 18891000,
+        "expensesIncludingRop": 7806763,
+        "afterEnteredExpenses": 11084237,
+        "paybackSourceValue": 4604237
+      },
+      "paybackMonths": 11
+    },
+    {
+      "id": "samara",
+      "name": "Самара",
+      "values": {
+        "annualRevenue": 40720600,
+        "agentPayment": 20360300,
+        "ropPayment": 4072060,
+        "afterAgentPayment": 20360300,
+        "expensesIncludingRop": 8321623,
+        "afterEnteredExpenses": 12038677,
+        "paybackSourceValue": 5054677
+      },
+      "paybackMonths": 11
+    },
+    {
+      "id": "rostov",
+      "name": "Ростов-на-Дону",
+      "values": {
+        "annualRevenue": 40405750,
+        "agentPayment": 20202875,
+        "ropPayment": 4040575,
+        "afterAgentPayment": 20202875,
+        "expensesIncludingRop": 8095138,
+        "afterEnteredExpenses": 12107737,
+        "paybackSourceValue": 5177737
+      },
+      "paybackMonths": 11
+    },
+    {
+      "id": "ufa",
+      "name": "Уфа",
+      "values": {
+        "annualRevenue": 45968100,
+        "agentPayment": 22984050,
+        "ropPayment": 4596810,
+        "afterAgentPayment": 22984050,
+        "expensesIncludingRop": 8391373,
+        "afterEnteredExpenses": 14592677,
+        "paybackSourceValue": 6708677
+      },
+      "paybackMonths": 11
+    }
+  ],
+  "presentationImage": {
+    "asset": "assets/calculations-source-20261106.jpg",
+    "source": "User-provided attachment, 2026-11-06",
+    "sourceFilename": "1-Фото-1.jpg",
+    "sha256": "56764cfe8a6b94ed3512e938313dd6620be3c5e861942cf30063ed7c19f0c9f4",
+    "dimensions": [
+      1280,
+      546
+    ],
+    "adaptation": "Original screenshot bytes preserved. Whole image without scrolling or cropping. Faithful vector companion used for the PDF table."
+  },
+  "vectorAsset": "assets/calculations-full-20261106.svg"
+}
